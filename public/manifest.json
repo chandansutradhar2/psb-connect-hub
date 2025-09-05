@@ -1,0 +1,33 @@
+{
+  "name": "PSB Connect Hub",
+  "short_name": "PSB Hub",
+  "description": "Punjab & Sind Bank Mobile Banking Application",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#00B800",
+  "theme_color": "#00B800",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/simbollogo-psb.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/fulllogo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "business"],
+  "screenshots": [
+    {
+      "src": "/images/fulllogo.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ]
+}

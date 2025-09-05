@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>Punjab & Sind Bank - Mobile Banking</title>
+    <meta name="description" content="Secure mobile banking app for Punjab & Sind Bank customers. Transfer funds, pay bills, and manage accounts with advanced security features." />
+    <meta name="author" content="Punjab & Sind Bank" />
+    <meta name="keywords" content="mobile banking, Punjab Sind Bank, PSB, digital banking, UPI payments, fund transfer, bill payment" />
+
+    <!-- Progressive Web App -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#00B800">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FFFFFF">
+    <meta name="apple-mobile-web-app-title" content="PSB Connect Hub">
+    <link rel="apple-touch-icon" href="/images/simbollogo-psb.png">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Service Worker -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js');
+        });
+      }
+    </script>
+
+    <meta property="og:title" content="Punjab & Sind Bank - Mobile Banking" />
+    <meta property="og:description" content="Secure mobile banking app for Punjab & Sind Bank customers. Transfer funds, pay bills, and manage accounts with advanced security features." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

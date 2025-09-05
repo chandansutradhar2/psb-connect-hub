@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+    --primary: 120 100% 29%; /* PSB Green */
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 120 100% 35%;
+    --primary-dark: 120 100% 25%;
+    --secondary: 45 100% 50%; /* PSB Gold */
+    --secondary-foreground: 0 0% 0%;
+    --secondary-light: 45 100% 60%;
+    --secondary-dark: 45 100% 40%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 120 100% 95%;
+    --accent-foreground: 120 100% 25%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 120 100% 29%;
+    --radius: 0.75rem;
+    --success: 120 100% 29%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 220 13% 18%;
+    --info: 199 89% 48%;
+    --info-foreground: 210 40% 98%;
+    
+    /* PSB Professional shadows */
+    --shadow-sm: 0 1px 2px 0 rgb(0 128 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 128 0 / 0.1), 0 1px 2px -1px rgb(0 128 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 128 0 / 0.1), 0 2px 4px -2px rgb(0 128 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 128 0 / 0.1), 0 4px 6px -4px rgb(0 128 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 128 0 / 0.1), 0 8px 10px -6px rgb(0 128 0 / 0.1);
+    --shadow-psb: 0 4px 20px -2px rgb(0 128 0 / 0.08);
+  }
+
+  .dark {
+    --background: 220 13% 9%;
+    --foreground: 210 40% 98%;
+    --card: 220 13% 11%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 13% 11%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 120 100% 35%;
+    --primary-foreground: 0 0% 0%;
+    --primary-light: 120 100% 45%;
+    --primary-dark: 120 100% 25%;
+    --secondary: 45 100% 60%;
+    --secondary-foreground: 0 0% 0%;
+    --secondary-light: 45 100% 70%;
+    --secondary-dark: 45 100% 50%;
+    --muted: 220 13% 14%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 220 13% 14%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62% 55%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 13% 20%;
+    --input: 220 13% 20%;
+    --ring: 120 100% 35%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* PSB Professional typography scale */
+  h1 { @apply text-2xl font-bold tracking-tight; }
+  h2 { @apply text-xl font-semibold tracking-tight; }
+  h3 { @apply text-lg font-semibold; }
+  h4 { @apply text-base font-semibold; }
+  h5 { @apply text-sm font-semibold; }
+  h6 { @apply text-xs font-semibold uppercase tracking-wider; }
+  
+  /* PSB Professional button styles */
+  .btn-primary {
+    @apply bg-primary hover:bg-primary/90 text-primary-foreground font-medium rounded-lg px-4 py-2.5 transition-all duration-200 shadow-sm hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/80 text-secondary-foreground font-medium rounded-lg px-4 py-2.5 transition-all duration-200 border border-border;
+  }
+  
+  /* PSB Professional card styles */
+  .card-professional {
+    @apply bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-200;
+  }
+  
+  /* PSB Professional input styles */
+  .input-professional {
+    @apply bg-background border border-input rounded-lg px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  
+  /* PSB specific gradients */
+  .psb-gradient {
+    @apply bg-gradient-to-br from-primary via-primary to-primary-dark;
+  }
+  
+  .psb-card-gradient {
+    @apply bg-gradient-to-br from-card via-card to-accent/20 border border-border/50;
+  }
+  
+  .psb-gold-gradient {
+    @apply bg-gradient-to-br from-secondary via-secondary to-secondary-dark;
+  }
+  
+  /* Professional animations */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideUp {
+    from { 
+      opacity: 0; 
+      transform: translateY(10px); 
+    }
+    to { 
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+  }
+  
+  /* Professional scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/30 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/50;
+  }
+}
+
+/* Professional focus styles */
+@layer utilities {
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+  }
+  
+  .focus-ring-inset {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-inset;
+  }
+}
