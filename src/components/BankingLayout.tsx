@@ -29,7 +29,7 @@
 //                 </div>
 //                 <div>
 //                   <h1 className="font-banking text-lg font-semibold text-foreground">
-//                     {title || "Punjab & Sind Bank"}
+//                     {title || "Bank Name"}
 //                   </h1>
 //                   <p className="text-xs text-muted-foreground">Mobile Banking</p>
 //                 </div>
@@ -79,7 +79,7 @@ export const BankingLayout = ({
                 </div>
                 <div>
                   <h1 className="font-banking text-base sm:text-lg font-semibold text-foreground">
-                    {title || "Punjab & Sind Bank"}
+                    {title || "Bank Name"}
                   </h1>
                   <p className="text-xs text-muted-foreground">
                     Mobile Banking

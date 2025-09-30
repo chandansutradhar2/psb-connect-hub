@@ -69,7 +69,7 @@ export const AccountBalance = ({
           </p>
         </div>
         <div className="text-right">
-          <p className="text-primary-foreground/80 text-xs">Punjab & Sind Bank</p>
+          <p className="text-primary-foreground/80 text-xs">Bank Name</p>
           <p className="text-primary-foreground/80 text-xs">IFSC: PSIB0000001</p>
         </div>
       </div>

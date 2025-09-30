@@ -80,10 +80,10 @@ const LoanReviewConsent = () => {
   };
 
   const termsContent = `
-PUNJAB & SIND BANK - LOAN TERMS & CONDITIONS
+Bank Name - LOAN TERMS & CONDITIONS
 
 1. LOAN AGREEMENT
-This loan agreement is between Punjab & Sind Bank ("Bank") and the borrower for the loan amount specified.
+This loan agreement is between Bank Name ("Bank") and the borrower for the loan amount specified.
 
 2. INTEREST RATE
 The interest rate is fixed at ${loanDetails.interestRate}% per annum for the entire tenure.
@@ -295,7 +295,7 @@ Loans offered based on repayment capacity assessment.
             <div className="flex-1">
               <h4 className="font-semibold text-primary mb-2">Final Authorization</h4>
               <p className="text-sm text-muted-foreground mb-3">
-                By checking this box, you authorize Punjab & Sind Bank to process your loan application 
+                By checking this box, you authorize Bank Name to process your loan application 
                 and disburse the approved amount to your account.
               </p>
               <div className="flex items-start space-x-3">

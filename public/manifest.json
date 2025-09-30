@@ -1,7 +1,7 @@
 {
   "name": "PSB Connect Hub",
   "short_name": "PSB Hub",
-  "description": "Punjab & Sind Bank Mobile Banking Application",
+  "description": "Bank Name Mobile Banking Application",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#00B800",

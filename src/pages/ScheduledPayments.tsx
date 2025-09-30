@@ -61,7 +61,7 @@ const ScheduledPayments = () => {
       amount: 35000,
       frequency: 'Monthly',
       nextDate: '2024-01-10',
-      toAccount: 'Punjab Sind Bank Loan Account',
+      toAccount: 'Bank Name Loan Account',
       status: 'Active',
       autoDebit: true
     },

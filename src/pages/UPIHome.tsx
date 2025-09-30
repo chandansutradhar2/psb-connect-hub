@@ -25,8 +25,8 @@ const UPIHome = () => {
   const [upiPin, setUpiPin] = useState('');
 
   const upiIds = [
-    { id: '1', upi: 'rajesh@psbank', bank: 'Punjab & Sind Bank', status: 'Primary', isDefault: true },
-    { id: '2', upi: 'rajesh.kumar@psbank', bank: 'Punjab & Sind Bank', status: 'Active', isDefault: false },
+    { id: '1', upi: 'rajesh@psbank', bank: 'Bank Name', status: 'Primary', isDefault: true },
+    { id: '2', upi: 'rajesh.kumar@psbank', bank: 'Bank Name', status: 'Active', isDefault: false },
   ];
 
   const recentTransactions = [

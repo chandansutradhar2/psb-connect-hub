@@ -81,6 +81,13 @@ import SpendingAnalytics from '@/pages/SpendingAnalytics';
 import ApplyNowFlow from './pages/ApplyNowFlow';
 import AddCardFlow from './pages/AddCardFlow';
 import CardManagement from '@/pages/CardsManagement';
+import Mandates from '@/pages/Mandates';
+import MandateCreate from '@/pages/MandateCreate';
+import MandateReview from '@/pages/MandateReview';
+import MandateSuccess from '@/pages/MandateSuccess';
+import { Card, CardContent } from '@/components/ui/card';
+import { CheckCircle2 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const queryClient = new QueryClient();
 
@@ -169,6 +176,11 @@ function App() {
           <Route path="/insurance-document-upload" element={<InsuranceDocumentUpload />} />
           <Route path="/insurance-review-payment" element={<InsuranceReviewPayment />} />
           <Route path="/insurance-policy-success" element={<InsurancePolicySuccess />} />
+           <Route path="/mandates" element={<Mandates />} />
+          <Route path="/mandate-create" element={<MandateCreate />} />
+          <Route path="/mandate-transfer" element={<MandateCreate />} />
+          <Route path="/mandate-review" element={<MandateReview />} />
+          <Route path="/mandate-success" element={<MandateSuccess />} />
           <Route path="*" element={<NotFound />} />
             </Routes>
             <Toaster />

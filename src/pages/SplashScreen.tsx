@@ -12,7 +12,7 @@ const SplashScreen = () => {
     {
       icon: <Smartphone className="h-16 w-16 text-white" />,
       title: "Mobile Banking Made Simple",
-      description: "Bank anytime, anywhere with Punjab & Sind Bank's secure mobile app"
+      description: "Bank anytime, anywhere with Bank Name's secure mobile app"
     },
     {
       icon: <Shield className="h-16 w-16 text-white" />,
@@ -27,7 +27,7 @@ const SplashScreen = () => {
     {
       icon: <Users className="h-16 w-16 text-white" />,
       title: "Trusted by Millions",
-      description: "Join millions of customers who trust Punjab & Sind Bank for their banking needs"
+      description: "Join millions of customers who trust Bank Name for their banking needs"
     }
   ];
 
@@ -56,15 +56,15 @@ const SplashScreen = () => {
         <div className="text-center">
           {/* <div className="w-24 h-24 mx-auto mb-6 rounded-3xl bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center">
           </div> */}
-          <div className="w-40 h-40 mx-auto  rounded-full bg-yellow-400 backdrop-blur-sm border-4 border-red-800 flex items-center justify-center">
+          {/* <div className="w-40 h-40 mx-auto  rounded-full bg-yellow-400 backdrop-blur-sm border-4 border-red-800 flex items-center justify-center">
   <img 
     src="images/simbollogo-psb.png" 
-    alt="Punjab & Sind Bank" 
+    alt="Bank Name" 
     className="w-38 h-38 object-contain"
   />
-</div>
+</div> */}
 
-          <h1 className="text-3xl font-bold text-white mb-2">Punjab & Sind Bank</h1>
+          <h1 className="text-3xl font-bold text-white mb-2">Bank Name</h1>
           <p className="text-white/80 mb-8">Mobile Banking</p>
           
           <p className="text-white/60 text-sm">Loading...</p>

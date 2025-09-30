@@ -16,12 +16,14 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Skeleton } from '@/components/ui/skeleton';
+
 import {
   Bell, Search, Eye, EyeOff, Send, Smartphone, Zap, QrCode, User, Phone, Lightbulb,
   Home, Gift, CreditCard, PiggyBank, TrendingUp, Shield, Building,
   PieChart, Calendar, AlertCircle, ChevronRight, ArrowUpRight, ArrowDownLeft,
   Receipt, Headphones, MapPin, HelpCircle, Clock, Wallet, BarChart2,
-  MessageCircle
+  MessageCircle,
+  Repeat
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -37,7 +39,7 @@ import {
   BoltIcon,
   CurrencyRupeeIcon,
 } from "@heroicons/react/24/solid";
-import RecentContacts from './RecentContacts';
+import { RecentContacts } from './RecentContacts';
 
 const EnhancedPSBDashboard = () => {
   const navigate = useNavigate();
@@ -208,7 +210,8 @@ const EnhancedPSBDashboard = () => {
 
 const quickActions = [
   { icon: PaperAirplaneIcon, label: "Transfer", path: "/transfer", color: "from-green-500 to-emerald-600" },
-  { icon: QrCodeIcon, label: "Scan & Pay", path: "/qr-payment", color: "from-green-500 to-emerald-600" },
+    { icon: Repeat, label: "Autopay", path: "/mandates", color: "from-green-500 to-emerald-600" },
+  // { icon: QrCodeIcon, label: "Scan & Pay", path: "/qr-payment", color: "from-green-500 to-emerald-600" },
   { icon: ReceiptPercentIcon, label: "Pay Bills", path: "/bills", color: "from-green-500 to-emerald-600" },
   { icon: DevicePhoneMobileIcon, label: "Recharge", path: "/recharge", color: "from-green-500 to-emerald-600" },
   { icon: ChartBarIcon, label: "Mutual Fund", path: "/investments", color: "from-green-500 to-emerald-600" },
@@ -503,8 +506,100 @@ const quickActions = [
 
 
 </div>
+{/* <RecentContacts  /> */}
+<RecentContacts
+  recentContacts={[
+    {
+      name: 'Anita Desai',
+      avatar: '/avatars/avatar1.jpg',
+      id: '1',
+      lastTransaction: '₹500',
+      lastInteraction: '2 days ago',
+      identifier: 'anita.desai@psb',
+      type: 'upi',
+    },
+    {
+      name: 'Vikram Singh',
+      avatar: '/avatars/avatar2.jpg',
+      id: '2',
+      lastTransaction: '₹1000',
+      lastInteraction: '1 week ago',
+      identifier: '9876543210',
+      type: 'mobile',
+    },
+    {
+      name: 'Sunita Kapoor',
+      avatar: '/avatars/avatar3.jpg',
+      id: '3',
+      lastTransaction: '₹2000',
+      lastInteraction: '3 days ago',
+      identifier: '12345678901234',
+      type: 'account',
+      bankName: 'Bank Name',
+    },
+    // {
+    //   name: 'Rohan Mehta',
+    //   avatar: '/avatars/avatar4.jpg',
+    //   id: '4',
+    //   lastTransaction: '₹1500',
+    //   lastInteraction: '5 hours ago',
+    //   identifier: 'rohan.mehta@psb',
+    //   type: 'upi',
+    // },
+    // {
+    //   name: 'Priya Nair',
+    //   avatar: '/avatars/avatar5.jpg',
+    //   id: '5',
+    //   lastTransaction: '₹800',
+    //   lastInteraction: '1 day ago',
+    //   identifier: 'priya.nair@psb',
+    //   type: 'upi',
+    // },
+    // {
+    //   name: 'Amitabh Joshi',
+    //   avatar: '/avatars/avatar6.jpg',
+    //   id: '6',
+    //   lastTransaction: '₹1200',
+    //   lastInteraction: '4 days ago',
+    //   identifier: '9876543211',
+    //   type: 'mobile',
+    // },
+  ]}
+/>
 
-<RecentContacts/>
+{/* <RecentContacts recentContacts={[
+  {
+    name: 'Anita Desai', avatar: '/avatars/avatar1.jpg', id: '1',
+    lastTransaction: '',
+    lastInteraction: ''
+  },
+  {
+    name: 'Vikram Singh', avatar: '/avatars/avatar2.jpg', id: '2',
+    lastTransaction: '',
+    lastInteraction: ''
+  },
+  {
+    name: 'Sunita Kapoor', avatar: '/avatars/avatar3.jpg', id: '3',
+    lastTransaction: '',
+    lastInteraction: ''
+  },
+  {
+    name: 'Rohan Mehta', avatar: '/avatars/avatar4.jpg', id: '4',
+    lastTransaction: '',
+    lastInteraction: ''
+  },
+  {
+    name: 'Priya Nair', avatar: '/avatars/avatar5.jpg', id: '5',
+    lastTransaction: '',
+    lastInteraction: ''
+  },
+  {
+    name: 'Amitabh Joshi', avatar: '/avatars/avatar6.jpg', id: '6',
+    lastTransaction: '',
+    lastInteraction: ''
+  },
+  
+]} /> */}
 
           {/* Recent Transactions Preview */}
           <Card className="rounded-xl shadow-sm border-0 bg-white">

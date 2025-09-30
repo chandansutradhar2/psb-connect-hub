@@ -65,17 +65,17 @@ const Login = () => {
       <div className="relative w-full max-w-md">
         {/* Bank Logo */}
         <div className="text-center mb-8">
-          <div className="w-20 h-20 mx-auto  rounded-full bg-yellow-400 backdrop-blur-sm border-4 border-red-800 flex items-center justify-center">
+          {/* <div className="w-20 h-20 mx-auto  rounded-full bg-yellow-400 backdrop-blur-sm border-4 border-red-800 flex items-center justify-center">
   <img 
     src="images/simbollogo-psb.png" 
-    alt="Punjab & Sind Bank" 
+    alt="Bank Name" 
     className="w-20 h-20 object-contain"
   />
-</div>
+</div> */}
           {/* <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 mb-4">
             <span className="text-2xl font-bold text-white">PSB</span>
           </div> */}
-          <h1 className="text-xl font-bold text-white mt-2">Punjab Sind Bank</h1>
+          <h1 className="text-xl font-bold text-white mt-2">Bank Name</h1>
         </div>
 
         <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-2xl">

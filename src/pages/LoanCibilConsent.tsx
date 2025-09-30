@@ -215,7 +215,7 @@ const LoanCibilConsent = () => {
                   />
                   <div className="text-sm text-gray-700">
                     <label htmlFor="consent" className="font-medium cursor-pointer">
-                      I authorize Punjab & Sind Bank to access and process my credit score for loan eligibility assessment.
+                      I authorize Bank Name to access and process my credit score for loan eligibility assessment.
                     </label>
                     <p className="text-xs text-gray-500 mt-1">
                       This is a soft inquiry that will not affect your credit score. Your information is securely stored in compliance with RBI guidelines.

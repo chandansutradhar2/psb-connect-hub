@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { 
@@ -19,6 +20,9 @@ interface Contact {
   avatar: string;
   lastTransaction: string;
   lastInteraction: string;
+  identifier?: string; // Added to match Transfer's RecentRecipient
+  type?: 'account' | 'upi' | 'mobile' | 'qr' | null; // Added to match Transfer's RecentRecipient
+  bankName?: string; // Optional, for account transfers
 }
 
 interface RecentContactsProps {
@@ -37,12 +41,20 @@ export const RecentContacts = ({
   className = '' 
 }: RecentContactsProps) => {
   const [selectedContact, setSelectedContact] = useState<Contact | null>(null);
+  const navigate = useNavigate();
 
-  // Show only first 4 contacts
   const displayContacts = recentContacts.slice(0, 4);
 
   const handleContactClick = (contact: Contact) => {
-    setSelectedContact(contact);
+    // Navigate to transfer page and pass contact data
+    // navigate(`/transfer/${contact.id}`, {
+    //   state: {
+    //     name: contact.name,
+    //     identifier: contact.identifier || '',
+    //     type: contact.type || null,
+    //     bankName: contact.bankName || '',
+    //   },
+    // });
     onContactSelect?.(contact);
   };
 
@@ -59,12 +71,10 @@ export const RecentContacts = ({
 
   return (
     <section className={`px-2 ${className}`}>
-      {/* Header */}
       {showHeader && (
         <div className="flex items-center justify-between mb-2">
           <div>
             <h3 className="text-base font-semibold text-gray-800">Recent Contacts</h3>
-            {/* <p className="text-sm text-gray-500 mt-1">Your frequently contacted people</p> */}
           </div>
           <Button 
             variant="ghost" 
@@ -77,8 +87,7 @@ export const RecentContacts = ({
         </div>
       )}
 
-      {/* Contacts Grid */}
-      <div className="grid grid-cols-5 gap-2 pb-2">
+      <div className="grid grid-cols-4 gap-2 pb-2">
         {displayContacts.map((contact) => (
           <div 
             key={contact.id} 
@@ -94,14 +103,16 @@ export const RecentContacts = ({
               </Avatar>
             </div>
             <div className="text-center">
-              <p className="text-xs gap-2 text-gray-800 truncate max-w-[80px]">{contact.name}</p>
-              {/* <p className="text-xs text-[#134e5e] font-medium mt-1">{contact.lastTransaction}</p> */}
-              {/* <p className="text-xs text-gray-500 mt-1">{contact.lastInteraction}</p> */}
+              <p 
+                className="text-xs gap-2 text-gray-800 truncate max-w-[80px] hover:text-[#134e5e] cursor-pointer"
+                onClick={() => handleContactClick(contact)}
+              >
+                {contact.name}
+              </p>
             </div>
           </div>
         ))}
         
-        {/* Add New Contact Button */}
         <div 
           className="flex flex-col items-center p-3 rounded-xl hover:bg-gradient-to-br hover:from-[#134e5e]/5 hover:to-[#71b280]/5 cursor-pointer transition-all duration-200 group"
           onClick={handleAddContact}
@@ -113,7 +124,6 @@ export const RecentContacts = ({
         </div>
       </div>
 
-      {/* Selected Contact Modal */}
       {selectedContact && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl p-6 w-full max-w-md">
@@ -136,12 +146,16 @@ export const RecentContacts = ({
                   {selectedContact.name.split(' ').map(n => n[0]).join('')}
                 </AvatarFallback>
               </Avatar>
-              <h4 className="text-xl font-semibold text-gray-800 mb-1">{selectedContact.name}</h4>
+              <h4 
+                className="text-xl font-semibold text-gray-800 mb-1 hover:text-[#134e5e] cursor-pointer"
+                onClick={() => handleContactClick(selectedContact)}
+              >
+                {selectedContact.name}
+              </h4>
               <p className="text-gray-500">Last transaction: {selectedContact.lastTransaction}</p>
               <p className="text-sm text-gray-400 mt-2">{selectedContact.lastInteraction}</p>
             </div>
 
-            {/* Action Buttons */}
             <div className="grid grid-cols-2 gap-3 mb-6">
               {contactActions.map((action, index) => {
                 const IconComponent = action.icon;
@@ -159,8 +173,21 @@ export const RecentContacts = ({
               })}
             </div>
 
-            {/* Additional Actions */}
             <div className="flex space-x-3">
+              <Button 
+                variant="outline" 
+                className="flex-1 rounded-xl border-gray-200 hover:border-[#134e5e] hover:bg-[#134e5e]/5"
+                onClick={() => navigate(`/transfer/${selectedContact.id}`, {
+                  state: {
+                    name: selectedContact.name,
+                    identifier: selectedContact.identifier || '',
+                    type: selectedContact.type || null,
+                    bankName: selectedContact.bankName || '',
+                  },
+                })}
+              >
+                <span className="text-[#134e5e]">Transfer</span>
+              </Button>
               <Button 
                 variant="outline" 
                 className="flex-1 rounded-xl border-gray-200 hover:border-[#134e5e] hover:bg-[#134e5e]/5"
@@ -183,46 +210,4 @@ export const RecentContacts = ({
   );
 };
 
-// Default export with sampl@e data for storybook or testing
 export default RecentContacts;
-
-// Sample data with Indian names only
-RecentContacts.defaultProps = {
-  recentContacts: [
-    {
-      id: '1',
-      name: 'Rajesh Kumar',
-      avatar: '',
-      lastTransaction: '₹5,000',
-      lastInteraction: '2 hours ago'
-    },
-    {
-      id: '2',
-      name: 'Priya Sharma',
-      avatar: '',
-      lastTransaction: '₹2,500',
-      lastInteraction: '1 day ago'
-    },
-    {
-      id: '3',
-      name: 'Amit Patel',
-      avatar: '',
-      lastTransaction: '₹7,800',
-      lastInteraction: '3 days ago'
-    },
-    {
-      id: '4',
-      name: 'Sunita Singh',
-      avatar: '',
-      lastTransaction: '₹1,200',
-      lastInteraction: '5 days ago'
-    },
-    {
-      id: '5',
-      name: 'Vikram Malhotra',  
-      avatar: '',
-      lastTransaction: '₹3,400',
-      lastInteraction: '1 week ago'
-    }
-  ]
-};
