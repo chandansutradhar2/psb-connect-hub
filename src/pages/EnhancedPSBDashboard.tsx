@@ -770,7 +770,7 @@ const moreServices = [
                 <Button 
                   variant="outline" 
                   className="flex-col h-16 rounded-xl hover:shadow-sm transition-all duration-200"
-                  onClick={() => navigate('/faq')}
+                  // onClick={() => navigate('/faq')}
                 >
                   <HelpCircle className="h-4 w-4 mb-1.5 text-purple-500" />
                   <span className="text-xs font-medium">FAQs</span>
@@ -778,7 +778,7 @@ const moreServices = [
                 <Button 
                   variant="outline" 
                   className="flex-col h-16 rounded-xl hover:shadow-sm transition-all duration-200"
-                  onClick={() => navigate('/feedback')}
+                  // onClick={() => navigate('/feedback')}
                 >
                   <Headphones className="h-4 w-4 mb-1.5 text-orange-500" />
                   <span className="text-xs font-medium">Feedback</span>

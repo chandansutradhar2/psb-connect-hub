@@ -129,7 +129,7 @@ const Bills = () => {
               {billCategories.map((category) => (
                 <button
                   key={category.key}
-                  onClick={() => handleCategorySelect(category.key)}
+                  // onClick={() => handleCategorySelect(category.key)}
                   className="flex flex-col items-center p-3 rounded-xl border border-gray-200 hover:border-primary/30 transition-all hover:shadow-sm"
                 >
                   <div className={`p-2 rounded-full text-white ${category.color} mb-2`}>

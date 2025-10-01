@@ -254,15 +254,15 @@ const ChatSupport = () => {
               <div key={msg.id} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
                 <div className={`flex items-start gap-2 max-w-[85%] ${msg.sender === "user" ? "flex-row-reverse" : ""}`}>
                   <Avatar className="h-8 w-8">
-                    <AvatarFallback className={msg.sender === "user" ? "bg-blue-100" : "bg-gray-100"}>
+                    <AvatarFallback className={msg.sender === "user" ? "bg-[#134e5e2e]" : "bg-gray-100"}>
                       {msg.sender === "user" ? 
-                        <User className="h-4 w-4 text-blue-600" /> : 
+                        <User className="h-4 w-4 text-[#52845e]" /> : 
                         <Bot className="h-4 w-4 text-gray-600" />
                       }
                     </AvatarFallback>
                   </Avatar>
                   <div className={`${msg.sender === "user" ? "items-end" : "items-start"} flex flex-col`}>
-                    <Card className={`${msg.sender === "user" ? "bg-blue-600 text-white" : "bg-white"} shadow-sm rounded-2xl`}>
+                    <Card className={`${msg.sender === "user" ? "bg-gradient-to-r from-[#134e5e] to-[#52845e] text-white" : "bg-white"} shadow-sm rounded-2xl`}>
                       <CardContent className="p-3">
                         {msg.type === "text" && (
                           <p className="text-sm">{msg.message}</p>

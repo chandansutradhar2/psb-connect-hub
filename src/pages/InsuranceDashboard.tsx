@@ -159,7 +159,7 @@ const InsuranceDashboard = () => {
             <Button
               variant="outline"
               className="h-20 flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 active:bg-orange-100 shadow-sm active:scale-95 transition-all duration-200"
-              onClick={() => navigate('/initiate-claim')}
+              // onClick={() => navigate('/initiate-claim')}
             >
               <AlertTriangle className="h-6 w-6 text-orange-500" />
               <span className="text-xs font-semibold text-gray-800">Make a Claim</span>
@@ -233,7 +233,7 @@ const InsuranceDashboard = () => {
                       variant="outline" 
                       size="sm" 
                       className="flex-1 rounded-lg text-xs h-8"
-                      onClick={() => navigate('/initiate-claim', { state: { policyId: policy.id } })}
+                      // onClick={() => navigate('/initiate-claim', { state: { policyId: policy.id } })}
                     >
                       Claim
                     </Button>
