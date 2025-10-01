@@ -88,6 +88,9 @@ import MandateSuccess from '@/pages/MandateSuccess';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle2 } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import EmiCalculator from './pages/EmiCalculator';
+import Shopping from './pages/Shopping';
+import Flights from './pages/Flights';
 
 const queryClient = new QueryClient();
 
@@ -182,6 +185,9 @@ function App() {
           <Route path="/mandate-review" element={<MandateReview />} />
           <Route path="/mandate-success" element={<MandateSuccess />} />
           <Route path="*" element={<NotFound />} />
+           <Route path="/emi-calculator" element={<EmiCalculator />} /> {/* New route */}
+           <Route path="/shopping" element={<Shopping />} />
+        <Route path="/flights" element={<Flights />} />
             </Routes>
             <Toaster />
           </MobileNavigation>

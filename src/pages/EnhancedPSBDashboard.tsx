@@ -23,7 +23,8 @@ import {
   PieChart, Calendar, AlertCircle, ChevronRight, ArrowUpRight, ArrowDownLeft,
   Receipt, Headphones, MapPin, HelpCircle, Clock, Wallet, BarChart2,
   MessageCircle,
-  Repeat
+  Repeat,
+  PlaneIcon
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useMediaQuery } from '@/hooks/useMediaQuery';
@@ -38,6 +39,7 @@ import {
   MegaphoneIcon,
   BoltIcon,
   CurrencyRupeeIcon,
+  ShoppingCartIcon,
 } from "@heroicons/react/24/solid";
 import { RecentContacts } from './RecentContacts';
 
@@ -196,29 +198,36 @@ const EnhancedPSBDashboard = () => {
     }
   ];
 
-  // Quick actions grid
-  // const quickActions = [
-  //   { icon: <Send className="h-6 w-6 text-white" />, label: 'Transfer', path: '/transfer', color: 'bg-blue-500' },
-  //   { icon: <QrCode className="h-6 w-6 text-white" />, label: 'Scan & Pay', path: '/qr-payment', color: 'bg-green-500' },
-  //   { icon: <Receipt className="h-6 w-6 text-white" />, label: 'Pay Bills', path: '/bills', color: 'bg-orange-500' },
-  //   { icon: <Smartphone className="h-6 w-6 text-white" />, label: 'Recharge', path: '/recharge', color: 'bg-purple-500' },
-  //   { icon: <TrendingUp className="h-6 w-6 text-white" />, label: 'Invest', path: '/investments', color: 'bg-emerald-500' },
-  //   { icon: <PiggyBank className="h-6 w-6 text-white" />, label: 'Deposits', path: '/deposit-management', color: 'bg-cyan-500' },
-  //   { icon: <Shield className="h-6 w-6 text-white" />, label: 'Insurance', path: '/insurance-dashboard', color: 'bg-indigo-500' },
-  //   { icon: <Headphones className="h-6 w-6 text-white" />, label: 'Support', path: '/support', color: 'bg-pink-500' }
-  // ];
+
+// const quickActions = [
+//   { icon: PaperAirplaneIcon, label: "Transfer", path: "/transfer", color: "from-green-500 to-emerald-600" },
+//     { icon: Repeat, label: "Autopay", path: "/mandates", color: "from-green-500 to-emerald-600" },
+//   // { icon: QrCodeIcon, label: "Scan & Pay", path: "/qr-payment", color: "from-green-500 to-emerald-600" },
+//   { icon: ReceiptPercentIcon, label: "Pay Bills", path: "/bills", color: "from-green-500 to-emerald-600" },
+//   { icon: DevicePhoneMobileIcon, label: "Recharge", path: "/recharge", color: "from-green-500 to-emerald-600" },
+//   { icon: ChartBarIcon, label: "Mutual Fund", path: "/investments", color: "from-green-500 to-emerald-600" },
+//   { icon: BanknotesIcon, label: "Deposits", path: "/deposit-management", color: "from-green-500 to-emerald-600" },
+//   { icon: ShieldCheckIcon, label: "Insurance", path: "/insurance-dashboard", color: "from-green-500 to-emerald-600" },
+//   { icon: CurrencyRupeeIcon, label: "Loan", path: "/loans", color: "from-green-500 to-emerald-600" },
+// ];
 
 const quickActions = [
   { icon: PaperAirplaneIcon, label: "Transfer", path: "/transfer", color: "from-green-500 to-emerald-600" },
-    { icon: Repeat, label: "Autopay", path: "/mandates", color: "from-green-500 to-emerald-600" },
-  // { icon: QrCodeIcon, label: "Scan & Pay", path: "/qr-payment", color: "from-green-500 to-emerald-600" },
+  { icon: Repeat, label: "Autopay", path: "/mandates", color: "from-green-500 to-emerald-600" },
   { icon: ReceiptPercentIcon, label: "Pay Bills", path: "/bills", color: "from-green-500 to-emerald-600" },
   { icon: DevicePhoneMobileIcon, label: "Recharge", path: "/recharge", color: "from-green-500 to-emerald-600" },
+];
+
+const moreServices = [
   { icon: ChartBarIcon, label: "Mutual Fund", path: "/investments", color: "from-green-500 to-emerald-600" },
   { icon: BanknotesIcon, label: "Deposits", path: "/deposit-management", color: "from-green-500 to-emerald-600" },
   { icon: ShieldCheckIcon, label: "Insurance", path: "/insurance-dashboard", color: "from-green-500 to-emerald-600" },
   { icon: CurrencyRupeeIcon, label: "Loan", path: "/loans", color: "from-green-500 to-emerald-600" },
+  { icon: ShoppingCartIcon, label: "Shopping", path: "/shopping", color: "from-green-500 to-emerald-600" },
+  { icon: PlaneIcon, label: "Flights", path: "/flights", color: "from-green-500 to-emerald-600" },
 ];
+
+
   // Spending categories for insights
   const spendingData = [
     { category: 'Food & Dining', amount: 8500, percentage: 35, color: 'bg-red-500', icon: <Receipt className="h-4 w-4" /> },
@@ -503,6 +512,46 @@ const quickActions = [
         ))}
       </div>
     </div>
+    {/* More Services */}
+  <Card className="rounded-xl shadow-sm border-0 bg-white">
+    <CardHeader className="pb-3 px-4 pt-4">
+      <div className="flex items-center justify-between">
+        <CardTitle className="text-base font-bold flex items-center">
+          <Zap className="h-4 w-4 text-primary mr-2" />
+          More Services
+        </CardTitle>
+        <Button
+          variant="ghost"
+          size="sm"
+          className="text-primary font-medium hover:bg-primary/10 rounded-lg h-8 px-2"
+          onClick={() => navigate('/services')}
+        >
+          View All <ChevronRight className="h-3 w-3 ml-1" />
+        </Button>
+      </div>
+    </CardHeader>
+    <CardContent className="px-4 py-2">
+      <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-4">
+        {moreServices.map((service, idx) => (
+          <button
+            key={idx}
+            onClick={() => navigate(service.path)}
+            aria-label={service.label}
+            className="flex flex-col items-center p-2 rounded-lg focus:ring-2 focus:ring-primary/50 focus:outline-none transition-all duration-200 group hover:bg-gray-50"
+          >
+            <div
+              className={`w-14 h-14 flex items-center justify-center rounded-xl ${service.color} mb-2 group-hover:scale-110 transition-transform border -1 bg-green-50 duration-200 shadow-sm`}
+            >
+              <service.icon className="h-8 w-8 text-green-900" />
+            </div>
+            <span className="text-xs font-medium text-gray-800 text-center leading-tight">
+              {service.label}
+            </span>
+          </button>
+        ))}
+      </div>
+    </CardContent>
+  </Card>
 
 
 </div>
@@ -537,69 +586,9 @@ const quickActions = [
       type: 'account',
       bankName: 'Bank Name',
     },
-    // {
-    //   name: 'Rohan Mehta',
-    //   avatar: '/avatars/avatar4.jpg',
-    //   id: '4',
-    //   lastTransaction: '₹1500',
-    //   lastInteraction: '5 hours ago',
-    //   identifier: 'rohan.mehta@psb',
-    //   type: 'upi',
-    // },
-    // {
-    //   name: 'Priya Nair',
-    //   avatar: '/avatars/avatar5.jpg',
-    //   id: '5',
-    //   lastTransaction: '₹800',
-    //   lastInteraction: '1 day ago',
-    //   identifier: 'priya.nair@psb',
-    //   type: 'upi',
-    // },
-    // {
-    //   name: 'Amitabh Joshi',
-    //   avatar: '/avatars/avatar6.jpg',
-    //   id: '6',
-    //   lastTransaction: '₹1200',
-    //   lastInteraction: '4 days ago',
-    //   identifier: '9876543211',
-    //   type: 'mobile',
-    // },
   ]}
 />
 
-{/* <RecentContacts recentContacts={[
-  {
-    name: 'Anita Desai', avatar: '/avatars/avatar1.jpg', id: '1',
-    lastTransaction: '',
-    lastInteraction: ''
-  },
-  {
-    name: 'Vikram Singh', avatar: '/avatars/avatar2.jpg', id: '2',
-    lastTransaction: '',
-    lastInteraction: ''
-  },
-  {
-    name: 'Sunita Kapoor', avatar: '/avatars/avatar3.jpg', id: '3',
-    lastTransaction: '',
-    lastInteraction: ''
-  },
-  {
-    name: 'Rohan Mehta', avatar: '/avatars/avatar4.jpg', id: '4',
-    lastTransaction: '',
-    lastInteraction: ''
-  },
-  {
-    name: 'Priya Nair', avatar: '/avatars/avatar5.jpg', id: '5',
-    lastTransaction: '',
-    lastInteraction: ''
-  },
-  {
-    name: 'Amitabh Joshi', avatar: '/avatars/avatar6.jpg', id: '6',
-    lastTransaction: '',
-    lastInteraction: ''
-  },
-  
-]} /> */}
 
           {/* Recent Transactions Preview */}
           <Card className="rounded-xl shadow-sm border-0 bg-white">
@@ -719,114 +708,6 @@ const quickActions = [
             </CardContent>
           </Card>
 
-          {/* Financial Overview Widget */}
-          {/* <Card className="rounded-xl shadow-sm border-0 bg-white">
-            <CardHeader className="pb-3 px-4 pt-4">
-              <CardTitle className="text-base font-bold flex items-center">
-                <BarChart2 className="h-4 w-4 text-indigo-500 mr-2" />
-                Financial Overview
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="px-4 py-2">
-              <div className="grid grid-cols-2 gap-4">
-                <div className="bg-blue-50 p-3 rounded-lg">
-                  <p className="text-xs text-blue-600 font-medium mb-1">Total Assets</p>
-                  <p className="text-lg font-bold text-blue-800">{formatCurrency(395710.5)}</p>
-                  <p className="text-xs text-blue-600 mt-1 flex items-center">
-                    <TrendingUp className="h-3 w-3 mr-1" /> +3.2% from last month
-                  </p>
-                </div>
-                <div className="bg-green-50 p-3 rounded-lg">
-                  <p className="text-xs text-green-600 font-medium mb-1">Monthly Income</p>
-                  <p className="text-lg font-bold text-green-800">{formatCurrency(15000)}</p>
-                  <p className="text-xs text-green-600 mt-1">Last credit: 1 day ago</p>
-                </div>
-                <div className="bg-amber-50 p-3 rounded-lg">
-                  <p className="text-xs text-amber-600 font-medium mb-1">Monthly Spend</p>
-                  <p className="text-lg font-bold text-amber-800">{formatCurrency(24400)}</p>
-                  <p className="text-xs text-amber-600 mt-1">+12% from last month</p>
-                </div>
-                <div className="bg-purple-50 p-3 rounded-lg">
-                  <p className="text-xs text-purple-600 font-medium mb-1">Savings Rate</p>
-                  <p className="text-lg font-bold text-purple-800">18.5%</p>
-                  <p className="text-xs text-purple-600 mt-1">Goal: 20%</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card> */}
-
-          {/* Credit Score Widget */}
-          {/* <CibilScoreWidget /> */}
-
-          {/* Loan Offers Widget */}
-          {/* <LoanOffersWidget /> */}
-
-          {/* Cards Snapshot */}
-          {/* <CardsSnapshotWidget /> */}
-
-          {/* Notifications & Alerts */}
-          {/* <NotificationAlertsWidget /> */}
-
-          {/* Rewards & Loyalty */}
-          {/* <RewardsLoyaltyWidget /> */}
-
-          {/* Insurance & Investment Summary */}
-          {/* <InsuranceInvestmentWidget /> */}
-
-          {/* Security Controls */}
-          {/* <SecurityControlsWidget /> */}
-
-          {/* Discover Services */}
-          {/* <DiscoverServicesWidget /> */}
-
-          {/* Chatbot & Support */}
-          <ChatbotWidget />
-
-          {/* Spending Insights */}
-          {/* <Card className="rounded-xl shadow-sm border-0 bg-white">
-            <CardHeader className="pb-3 px-4 pt-4">
-              <div className="flex items-center justify-between">
-                <CardTitle className="text-base font-bold flex items-center">
-                  <PieChart className="h-4 w-4 text-purple-500 mr-2" />
-                  Spending Insights
-                </CardTitle>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="text-purple-500 font-medium hover:bg-purple-500/10 rounded-lg h-8 px-2" 
-                  onClick={() => navigate('/spending-analytics')}
-                >
-                  View Details <ChevronRight className="h-3 w-3 ml-1" />
-                </Button>
-              </div>
-              <CardDescription className="text-xs text-gray-500">
-                August 2023 • Compared to last month
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="px-4 py-2">
-              <div className="space-y-3">
-                {spendingData.map((item, index) => (
-                  <div key={index} className="space-y-1.5">
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center space-x-2">
-                        <div className={`p-1 rounded ${item.color}/10 ${item.color}/20`}>
-                          {item.icon}
-                        </div>
-                        <span className="text-xs font-medium text-gray-700">{item.category}</span>
-                      </div>
-                      <span className="text-xs font-bold text-gray-900">{formatCurrency(item.amount)}</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-1.5">
-                      <div 
-                        className={`h-1.5 rounded-full ${item.color} transition-all duration-500`}
-                        style={{ width: `${item.percentage}%` }}
-                      ></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card> */}
 
           {/* Offers & Promotions */}
           <Card className="rounded-xl shadow-sm border-0 bg-gradient-to-r from-purple-500 to-pink-500 text-white">
