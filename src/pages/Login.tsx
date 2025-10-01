@@ -235,13 +235,13 @@ const Login = () => {
               <div className="flex justify-between text-sm">
                 <button 
                   className="text-primary hover:underline"
-                  onClick={() => navigate('/forgot-mpin')}
+                  // onClick={() => navigate('/forgot-mpin')}
                 >
                   Forgot MPIN?
                 </button>
                 <button 
                   className="text-primary hover:underline"
-                  onClick={() => navigate('/forgot-password')}
+                  // onClick={() => navigate('/forgot-password')}
                 >
                   Forgot Password?
                 </button>
@@ -252,7 +252,7 @@ const Login = () => {
                   New to mobile banking?{' '}
                   <button 
                     className="text-primary font-medium hover:underline"
-                    onClick={() => navigate('/register')}
+                    // onClick={() => navigate('/register')}
                   >
                     Register Now
                   </button>
