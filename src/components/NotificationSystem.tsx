@@ -56,7 +56,7 @@ export const NotificationSystem = () => {
 
   const getIcon = (type: string) => {
     switch (type) {
-      case 'success': return <CheckCircle className="h-5 w-5 text-green-600" />;
+      case 'success': return <CheckCircle className="h-5 w-5 text-blue-600" />;
       case 'warning': return <AlertTriangle className="h-5 w-5 text-orange-600" />;
       case 'error': return <AlertTriangle className="h-5 w-5 text-red-600" />;
       default: return <Info className="h-5 w-5 text-blue-600" />;

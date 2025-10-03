@@ -160,7 +160,7 @@ const AccountDetails = () => {
           <CardContent className="p-6">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-semibold">Account Information</h3>
-              <Badge className={accountInfo.accountStatus === 'Active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}>
+              <Badge className={accountInfo.accountStatus === 'Active' ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800'}>
                 {accountInfo.accountStatus}
               </Badge>
             </div>
@@ -201,7 +201,7 @@ const AccountDetails = () => {
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <p className="text-sm text-muted-foreground">Available Balance</p>
-                  <p className="font-medium text-green-600">₹{accountInfo.availableBalance.toLocaleString()}</p>
+                  <p className="font-medium text-blue-600">₹{accountInfo.availableBalance.toLocaleString()}</p>
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Branch Code</p>

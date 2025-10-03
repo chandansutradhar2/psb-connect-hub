@@ -28,7 +28,7 @@ const CreditCardManagement = () => {
   const services = [
     { title: "Block/Unblock Card", icon: <Lock className="h-5 w-5" />, color: "bg-red-50 text-red-600" },
     { title: "Set PIN", icon: <Settings className="h-5 w-5" />, color: "bg-blue-50 text-blue-600" },
-    { title: "View Statement", icon: <FileText className="h-5 w-5" />, color: "bg-green-50 text-green-600" },
+    { title: "View Statement", icon: <FileText className="h-5 w-5" />, color: "bg-blue-50 text-blue-600" },
     { title: "Rewards & Offers", icon: <Gift className="h-5 w-5" />, color: "bg-purple-50 text-purple-600" },
     { title: "Set Limits", icon: <Settings className="h-5 w-5" />, color: "bg-orange-50 text-orange-600" },
     { title: "Request New Card", icon: <CreditCard className="h-5 w-5" />, color: "bg-indigo-50 text-indigo-600" }

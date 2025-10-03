@@ -171,7 +171,7 @@ const SecuritySettings = () => {
                     <div className="flex items-start justify-between">
                       <div className="flex items-start gap-3">
                         <div className={`p-2 rounded-lg ${
-                          activity.status === "success" ? "bg-green-100 text-green-600" : "bg-red-100 text-red-600"
+                          activity.status === "success" ? "bg-blue-100 text-blue-600" : "bg-red-100 text-red-600"
                         }`}>
                           {activity.status === "success" ? <Shield className="h-4 w-4" /> : <AlertTriangle className="h-4 w-4" />}
                         </div>

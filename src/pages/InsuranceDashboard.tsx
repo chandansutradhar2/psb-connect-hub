@@ -19,6 +19,7 @@ import {
   ArrowRight,
   AlertTriangle
 } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
 
 const InsuranceDashboard = () => {
   const navigate = useNavigate();
@@ -45,6 +46,13 @@ const InsuranceDashboard = () => {
       insurer: 'HDFC Life'
     }
   ];
+  const handleComingSoon = (feature: string) => {
+    toast({
+      title: "Coming Soon",
+      description: `${feature} feature is coming soon!`,
+      duration: 3000,
+    });
+  };
 
   const insuranceTypes = [
     {
@@ -62,7 +70,7 @@ const InsuranceDashboard = () => {
       subtitle: 'Medical Coverage',
       description: 'Cashless treatment at 10,000+ hospitals',
       icon: <Shield className="h-5 w-5" />,
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       features: ['Cashless claims', 'Family floater', 'Pre-existing conditions covered']
     },
     {
@@ -160,6 +168,8 @@ const InsuranceDashboard = () => {
               variant="outline"
               className="h-20 flex flex-col items-center justify-center gap-2 rounded-xl border-2 border-gray-200 hover:border-orange-500 hover:bg-orange-50 active:bg-orange-100 shadow-sm active:scale-95 transition-all duration-200"
               // onClick={() => navigate('/initiate-claim')}
+                          onClick={() => handleComingSoon("Claim")}
+
             >
               <AlertTriangle className="h-6 w-6 text-orange-500" />
               <span className="text-xs font-semibold text-gray-800">Make a Claim</span>
@@ -173,7 +183,9 @@ const InsuranceDashboard = () => {
             <div className="flex items-center justify-between mb-3">
               <h1 className="text-lg font-semibold text-gray-800">Active Policies</h1>
               <button 
-                onClick={() => navigate('/all-policies')}
+                                        onClick={() => handleComingSoon("View All")}
+
+                // onClick={() => navigate('/all-policies')}
                 className="text-xs text-primary font-medium"
               >
                 View All
@@ -225,7 +237,8 @@ const InsuranceDashboard = () => {
                       variant="outline" 
                       size="sm" 
                       className="flex-1 rounded-lg text-xs h-8"
-                      onClick={() => navigate('/policy-details', { state: { policyId: policy.id } })}
+                      // onClick={() => navigate('/policy-details', { state: { policyId: policy.id } })}
+                      onClick={() => handleComingSoon("Details")}
                     >
                       Details
                     </Button>
@@ -372,7 +385,7 @@ export default InsuranceDashboard;
 //       subtitle: 'Medical Coverage',
 //       description: 'Cashless treatment at 10,000+ hospitals',
 //       icon: <Shield className="h-6 w-6" />,
-//       color: 'bg-green-500',
+//       color: 'bg-blue-500',
 //       features: ['Cashless claims', 'Family floater', 'Pre-existing conditions covered']
 //     },
 //     {

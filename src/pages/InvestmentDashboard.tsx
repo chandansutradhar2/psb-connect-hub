@@ -206,7 +206,7 @@
 //                   </div>
 //                   <div className="bg-white/10 rounded-2xl p-4">
 //                     <p className="text-white/80 text-xs">Return %</p>
-//                     <div className="flex items-center space-x-1 text-green-300">
+//                     <div className="flex items-center space-x-1 text-blue-300">
 //                       <ArrowUpRight className="h-3 w-3" />
 //                       <span className="font-semibold text-sm">{returnsPercent.toFixed(1)}%</span>
 //                     </div>
@@ -286,7 +286,7 @@
 //                     </div>
 //                     <div className="text-right">
 //                       <p className="font-semibold">₹{fund.current.toLocaleString()}</p>
-//                       <div className="flex items-center text-xs text-green-600">
+//                       <div className="flex items-center text-xs text-blue-600">
 //                         <TrendingUp className="h-3 w-3 mr-1" />
 //                         +{fund.returns}%
 //                       </div>
@@ -636,7 +636,7 @@ const InvestmentDashboard = () => {
                   </div>
                   <div className="bg-white/10 rounded-2xl p-4">
                     <p className="text-white/80 text-xs">Return %</p>
-                    <div className="flex items-center space-x-1 text-green-300">
+                    <div className="flex items-center space-x-1 text-blue-300">
                       <ArrowUpRight className="h-3 w-3" />
                       <span className="font-semibold text-sm">{returnsPercent.toFixed(1)}%</span>
                     </div>
@@ -716,7 +716,7 @@ const InvestmentDashboard = () => {
                     </div>
                     <div className="text-right">
                       <p className="font-semibold">₹{fund.current.toLocaleString()}</p>
-                      <div className={`flex items-center text-xs ${fund.returns >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                      <div className={`flex items-center text-xs ${fund.returns >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
                         {fund.returns >= 0 ? (
                           <TrendingUp className="h-3 w-3 mr-1" />
                         ) : (

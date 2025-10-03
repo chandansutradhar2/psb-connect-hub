@@ -215,7 +215,7 @@ const DepositDashboard = () => {
                       </div>
                       <div className="text-right">
                         <p className="font-semibold">₹{deposit.currentValue.toLocaleString()}</p>
-                        <div className="flex items-center text-xs text-green-600">
+                        <div className="flex items-center text-xs text-blue-600">
                           <TrendingUp className="h-3 w-3 mr-1" />
                           +₹{deposit.interestEarned.toLocaleString()}
                         </div>
@@ -273,7 +273,7 @@ const DepositDashboard = () => {
                     </div>
                     <div className="text-right">
                       <p className="font-semibold">₹{deposit.maturityAmount.toLocaleString()}</p>
-                      <div className="flex items-center text-xs text-green-600">
+                      <div className="flex items-center text-xs text-blue-600">
                         <Award className="h-3 w-3 mr-1" />
                         +₹{deposit.interestEarned.toLocaleString()}
                       </div>
@@ -349,7 +349,7 @@ const DepositDashboard = () => {
                 <div className="bg-muted/30 rounded-xl p-4 text-center">
                   <p className="text-sm text-muted-foreground">Estimated Maturity Amount</p>
                   <p className="text-2xl font-bold text-primary">₹1,15,562</p>
-                  <p className="text-sm text-green-600">Interest Earned: ₹15,562</p>
+                  <p className="text-sm text-blue-600">Interest Earned: ₹15,562</p>
                 </div>
               </div>
             </BankingCard>

@@ -39,8 +39,8 @@ const Notifications = () => {
       time: '2 hours ago',
       read: false,
       icon: CheckCircle,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10'
     },
     {
       id: '2',
@@ -94,8 +94,8 @@ const Notifications = () => {
       time: '5 days ago',
       read: false,
       icon: CheckCircle,
-      color: 'text-green-400',
-      bgColor: 'bg-green-500/10'
+      color: 'text-blue-400',
+      bgColor: 'bg-blue-500/10'
     }
   ]);
 
@@ -184,9 +184,9 @@ const Notifications = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#134e5e] to-[#71b280]">
+    <div className="min-h-screen bg-gradient-to-b from-[#1178AC] to-[#1397DA]">
       {/* Fixed Header */}
-      <header className="sticky top-0 z-50 bg-gradient-to-b from-[#134e5e] to-[#2a7d70] shadow-lg">
+      <header className="sticky top-0 z-50 bg-gradient-to-b from-[#1178AC] to-[#2a7d70] shadow-lg">
         <div className="px-4 py-4">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center space-x-4">
@@ -227,19 +227,19 @@ const Notifications = () => {
           {/* Filter Tabs */}
           <Tabs defaultValue="all" value={filter} onValueChange={setFilter} className="w-full mb-3">
             <TabsList className="w-full grid grid-cols-5 rounded-xl bg-white/10 backdrop-blur-sm p-1 h-12">
-              <TabsTrigger value="all" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#134e5e] text-white py-2 text-xs">
+              <TabsTrigger value="all" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#1178AC] text-white py-2 text-xs">
                 All
               </TabsTrigger>
-              <TabsTrigger value="transaction" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#134e5e] text-white py-2 text-xs">
+              <TabsTrigger value="transaction" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#1178AC] text-white py-2 text-xs">
                 Transactions
               </TabsTrigger>
-              <TabsTrigger value="security" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#134e5e] text-white py-2 text-xs">
+              <TabsTrigger value="security" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#1178AC] text-white py-2 text-xs">
                 Security
               </TabsTrigger>
-              <TabsTrigger value="offer" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#134e5e] text-white py-2 text-xs">
+              <TabsTrigger value="offer" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#1178AC] text-white py-2 text-xs">
                 Offers
               </TabsTrigger>
-              <TabsTrigger value="payment" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#134e5e] text-white py-2 text-xs">
+              <TabsTrigger value="payment" className="rounded-lg data-[state=active]:bg-white data-[state=active]:text-[#1178AC] text-white py-2 text-xs">
                 Payments
               </TabsTrigger>
             </TabsList>
@@ -268,7 +268,7 @@ const Notifications = () => {
                       onClick={markAllAsRead}
                       className="w-full text-left px-4 py-2 text-sm hover:bg-gray-100 flex items-center"
                     >
-                      <CheckCircle className="h-4 w-4 mr-2 text-green-500" />
+                      <CheckCircle className="h-4 w-4 mr-2 text-blue-500" />
                       Mark all as read
                     </button>
                     <button

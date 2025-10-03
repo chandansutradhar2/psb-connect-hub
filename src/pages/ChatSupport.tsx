@@ -24,6 +24,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { BankingLayout } from "@/components/BankingLayout";
 import { Badge } from "@/components/ui/badge";
+import { toast } from '@/components/ui/use-toast';
 
 const ChatSupport = () => {
   const navigate = useNavigate();
@@ -154,6 +155,13 @@ const ChatSupport = () => {
       simulateBotResponse(message);
     }
   };
+    const handleComingSoon = (feature: string) => {
+    toast({
+      title: "Coming Soon",
+      description: `${feature} feature is coming soon!`,
+      duration: 3000,
+    });
+  };
 
   const handleQuickAction = (action) => {
     const newMessage = {
@@ -214,7 +222,7 @@ const ChatSupport = () => {
                 <div>
                   <h1 className="text-lg font-semibold">PSB Support</h1>
                   <div className="flex items-center gap-1">
-                    <div className={`h-2 w-2 rounded-full ${isConnected ? 'bg-green-500' : 'bg-gray-400'}`}></div>
+                    <div className={`h-2 w-2 rounded-full ${isConnected ? 'bg-blue-500' : 'bg-gray-400'}`}></div>
                     <p className="text-xs text-gray-500">{isTyping ? 'Typing...' : isConnected ? 'Online' : 'Offline'}</p>
                   </div>
                 </div>
@@ -225,7 +233,9 @@ const ChatSupport = () => {
                 size="sm" 
                 variant="outline" 
                 className="rounded-full"
-                onClick={handleCallSupport}
+                // onClick={handleCallSupport}
+                            onClick={() => handleComingSoon("Share")}
+
               >
                 <Phone className="h-4 w-4" />
               </Button>
@@ -233,7 +243,9 @@ const ChatSupport = () => {
                 size="sm" 
                 variant="outline" 
                 className="rounded-full"
-                onClick={handleVideoCall}
+                // onClick={handleVideoCall}
+                            onClick={() => handleComingSoon("Share")}
+
               >
                 <Video className="h-4 w-4" />
               </Button>
@@ -254,7 +266,7 @@ const ChatSupport = () => {
               <div key={msg.id} className={`flex ${msg.sender === "user" ? "justify-end" : "justify-start"}`}>
                 <div className={`flex items-start gap-2 max-w-[85%] ${msg.sender === "user" ? "flex-row-reverse" : ""}`}>
                   <Avatar className="h-8 w-8">
-                    <AvatarFallback className={msg.sender === "user" ? "bg-[#134e5e2e]" : "bg-gray-100"}>
+                    <AvatarFallback className={msg.sender === "user" ? "bg-[#1178AC2e]" : "bg-gray-100"}>
                       {msg.sender === "user" ? 
                         <User className="h-4 w-4 text-[#52845e]" /> : 
                         <Bot className="h-4 w-4 text-gray-600" />
@@ -262,7 +274,7 @@ const ChatSupport = () => {
                     </AvatarFallback>
                   </Avatar>
                   <div className={`${msg.sender === "user" ? "items-end" : "items-start"} flex flex-col`}>
-                    <Card className={`${msg.sender === "user" ? "bg-gradient-to-r from-[#134e5e] to-[#52845e] text-white" : "bg-white"} shadow-sm rounded-2xl`}>
+                    <Card className={`${msg.sender === "user" ? "bg-gradient-to-r from-[#1178AC] to-[#1178AC] text-white" : "bg-white"} shadow-sm rounded-2xl`}>
                       <CardContent className="p-3">
                         {msg.type === "text" && (
                           <p className="text-sm">{msg.message}</p>

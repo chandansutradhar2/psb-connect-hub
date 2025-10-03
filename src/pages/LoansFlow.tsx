@@ -75,7 +75,7 @@ const LoansFlow = () => {
       title: 'Home Loan', 
       subtitle: 'Up to ₹10Cr at 8.5% p.a.', 
       icon: <Home className="h-6 w-6" />,
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       features: ['Tax benefits', 'Attractive rates', 'Balance transfer']
     },
     { 
@@ -331,13 +331,13 @@ const LoansFlow = () => {
             </BankingCard>
 
             {/* CIBIL Check Promotion */}
-            <BankingCard title="Check Your CIBIL Score" className="rounded-2xl bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
+            <BankingCard title="Check Your CIBIL Score" className="rounded-2xl bg-gradient-to-r from-blue-50 to-blue-50 border-blue-200">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-semibold text-green-800">Free CIBIL Score Check</h3>
-                  <p className="text-sm text-green-600">Know your eligibility before applying</p>
+                  <h3 className="font-semibold text-blue-800">Free CIBIL Score Check</h3>
+                  <p className="text-sm text-blue-600">Know your eligibility before applying</p>
                 </div>
-                <Button className="bg-green-600 hover:bg-green-700" onClick={() => navigate('/cibil-check')}>
+                <Button className="bg-blue-600 hover:bg-blue-700" onClick={() => navigate('/cibil-check')}>
                   <TrendingUp className="h-4 w-4 mr-2" />
                   Check Now
                 </Button>

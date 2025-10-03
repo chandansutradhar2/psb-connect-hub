@@ -387,8 +387,8 @@ const Mandates = () => {
       <CardContent className="p-3 sm:p-4">
         <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
           <div className="flex items-start space-x-3 flex-1">
-            <div className="w-10 h-10 rounded-full bg-[#134e5e]/10 flex items-center justify-center flex-shrink-0">
-              <span className="text-[#134e5e] font-semibold text-sm">
+            <div className="w-10 h-10 rounded-full bg-[#1178AC]/10 flex items-center justify-center flex-shrink-0">
+              <span className="text-[#1178AC] font-semibold text-sm">
                 {mandate.payeeName.charAt(0)}
               </span>
             </div>
@@ -446,13 +446,13 @@ const Mandates = () => {
         </div>
 
         <div className="mt-3 flex items-center justify-between">
-          <Badge variant="outline" className="text-xs bg-[#134e5e]/10 text-[#134e5e] border-[#134e5e]/20">
+          <Badge variant="outline" className="text-xs bg-[#1178AC]/10 text-[#1178AC] border-[#1178AC]/20">
             Created on {mandate.createdOn}
           </Badge>
           <Button
             size="sm"
             onClick={() => handleTransferMandate(mandate)}
-            className="bg-[#134e5e] hover:bg-[#71b280] text-white text-xs px-3"
+            className="bg-[#1178AC] hover:bg-[#1397DA] text-white text-xs px-3"
           >
             Transfer
           </Button>
@@ -464,7 +464,7 @@ const Mandates = () => {
   return (
     <div className="flex flex-col min-h-screen pb-16 bg-background">
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#134e5e] to-[#71b280] border-b border-border sticky top-0 z-40 w-full">
+      <div className="bg-gradient-to-r from-[#1178AC] to-[#1397DA] border-b border-border sticky top-0 z-40 w-full">
         <div className="px-4 sm:px-6 py-3 max-w-screen-xl mx-auto">
           <div className="flex items-center space-x-3">
             <Button
@@ -477,7 +477,7 @@ const Mandates = () => {
             </Button>
             <div>
               <h1 className="text-lg sm:text-xl font-bold text-white">Mandates</h1>
-              <p className="text-xs text-white/80">↓ Pull down to refresh</p>
+              {/* <p className="text-xs text-white/80">↓ Pull down to refresh</p> */}
             </div>
           </div>
         </div>
@@ -489,19 +489,19 @@ const Mandates = () => {
           <TabsList className="w-full grid grid-cols-3 mb-3 h-auto bg-muted/30">
             <TabsTrigger 
               value="account" 
-              className="text-xs py-2 data-[state=active]:bg-[#134e5e] data-[state=active]:text-white"
+              className="text-xs py-2 data-[state=active]:bg-[#1178AC] data-[state=active]:text-white"
             >
               Active on Account
             </TabsTrigger>
             <TabsTrigger 
               value="bhim" 
-              className="text-xs py-2 data-[state=active]:bg-[#134e5e] data-[state=active]:text-white"
+              className="text-xs py-2 data-[state=active]:bg-[#1178AC] data-[state=active]:text-white"
             >
               Active on BHIM
             </TabsTrigger>
             <TabsTrigger 
               value="pending" 
-              className="text-xs py-2 data-[state=active]:bg-[#134e5e] data-[state=active]:text-white"
+              className="text-xs py-2 data-[state=active]:bg-[#1178AC] data-[state=active]:text-white"
             >
               Pending
             </TabsTrigger>
@@ -509,7 +509,7 @@ const Mandates = () => {
 
           <TabsContent value="account" className="mt-0">
             <div className="flex items-center justify-between mb-3">
-              <Badge variant="outline" className="bg-[#134e5e]/10 text-[#134e5e] border-[#134e5e]/20">
+              <Badge variant="outline" className="bg-[#1178AC]/10 text-[#1178AC] border-[#1178AC]/20">
                 Created on PhonePe
               </Badge>
               <Badge variant="outline" className="bg-destructive/10 text-destructive border-destructive/20">
@@ -548,7 +548,7 @@ const Mandates = () => {
       <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-border z-50">
         <div className="px-4 sm:px-6 py-3 max-w-screen-xl mx-auto">
           <Button
-            className="w-full h-11 bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-semibold text-sm transition-colors duration-200"
+            className="w-full h-11 bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-semibold text-sm transition-colors duration-200"
             onClick={() => navigate('/mandate-create')}
           >
             <Plus className="h-4 w-4 mr-1.5" />

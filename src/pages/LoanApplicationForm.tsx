@@ -139,7 +139,7 @@ const LoanApplicationForm = () => {
             </div>
             <div>
               <p className="text-sm text-muted-foreground">CIBIL Score</p>
-              <p className="font-bold text-green-600">{creditScore}</p>
+              <p className="font-bold text-blue-600">{creditScore}</p>
             </div>
           </div>
         </BankingCard>

@@ -131,7 +131,7 @@ const MutualFundsFlow = () => {
 
   const fundCategories = [
     { id: 'equity', name: 'Equity Funds', risk: 'High', returns: '12-15%', color: 'bg-red-50 text-red-600' },
-    { id: 'debt', name: 'Debt Funds', risk: 'Low', returns: '6-8%', color: 'bg-green-50 text-green-600' },
+    { id: 'debt', name: 'Debt Funds', risk: 'Low', returns: '6-8%', color: 'bg-blue-50 text-blue-600' },
     { id: 'hybrid', name: 'Hybrid Funds', risk: 'Moderate', returns: '8-12%', color: 'bg-blue-50 text-blue-600' },
     { id: 'elss', name: 'Tax Saver ELSS', risk: 'High', returns: '10-14%', color: 'bg-purple-50 text-purple-600' }
   ];
@@ -200,7 +200,7 @@ const MutualFundsFlow = () => {
                   <p className="text-primary-foreground/80 text-xs">Total Returns</p>
                   <div className="flex items-center space-x-1">
                     <span className="font-semibold">₹{returns.toLocaleString()}</span>
-                    <div className={`flex items-center text-xs ${returns >= 0 ? 'text-green-200' : 'text-red-200'}`}>
+                    <div className={`flex items-center text-xs ${returns >= 0 ? 'text-blue-200' : 'text-red-200'}`}>
                       {returns >= 0 ? <ArrowUpRight className="h-3 w-3" /> : <ArrowDownRight className="h-3 w-3" />}
                       {Math.abs(returnsPercentage).toFixed(1)}%
                     </div>
@@ -261,7 +261,7 @@ const MutualFundsFlow = () => {
                           </div>
                           <div className="text-right">
                             <p className="font-semibold text-sm">₹{investment.current.toLocaleString()}</p>
-                            <div className={`flex items-center text-xs ${investment.returns >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                            <div className={`flex items-center text-xs ${investment.returns >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
                               {investment.returns >= 0 ? <TrendingUp className="h-3 w-3 mr-1" /> : <TrendingDown className="h-3 w-3 mr-1" />}
                               {investment.returnsPercent > 0 ? '+' : ''}{investment.returnsPercent}%
                             </div>
@@ -369,15 +369,15 @@ const MutualFundsFlow = () => {
                     <div className="grid grid-cols-3 gap-2 text-xs mb-3">
                       <div>
                         <p className="text-muted-foreground">1Y Return</p>
-                        <p className="font-medium text-green-600">+{fund.returns['1y']}%</p>
+                        <p className="font-medium text-blue-600">+{fund.returns['1y']}%</p>
                       </div>
                       <div>
                         <p className="text-muted-foreground">3Y Return</p>
-                        <p className="font-medium text-green-600">+{fund.returns['3y']}%</p>
+                        <p className="font-medium text-blue-600">+{fund.returns['3y']}%</p>
                       </div>
                       <div>
                         <p className="text-muted-foreground">5Y Return</p>
-                        <p className="font-medium text-green-600">+{fund.returns['5y']}%</p>
+                        <p className="font-medium text-blue-600">+{fund.returns['5y']}%</p>
                       </div>
                     </div>
 
@@ -389,7 +389,7 @@ const MutualFundsFlow = () => {
                         <Badge variant="outline" className={`text-xs ${
                           fund.riskLevel === 'High' ? 'border-red-200 text-red-600' : 
                           fund.riskLevel === 'Moderate' ? 'border-orange-200 text-orange-600' : 
-                          'border-green-200 text-green-600'
+                          'border-blue-200 text-blue-600'
                         }`}>
                           {fund.riskLevel} Risk
                         </Badge>
@@ -404,13 +404,13 @@ const MutualFundsFlow = () => {
             </BankingCard>
 
             {/* SIP Promotion */}
-            <BankingCard title="Start SIP Today" className="rounded-2xl bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
+            <BankingCard title="Start SIP Today" className="rounded-2xl bg-gradient-to-r from-blue-50 to-blue-50 border-blue-200">
               <div className="flex items-center justify-between">
                 <div>
-                  <h3 className="font-semibold text-green-800">Systematic Investment Plan</h3>
-                  <p className="text-sm text-green-600">Build wealth with disciplined investing</p>
+                  <h3 className="font-semibold text-blue-800">Systematic Investment Plan</h3>
+                  <p className="text-sm text-blue-600">Build wealth with disciplined investing</p>
                 </div>
-                <Button className="bg-green-600 hover:bg-green-700" onClick={() => navigate('/start-sip')}>
+                <Button className="bg-blue-600 hover:bg-blue-700" onClick={() => navigate('/start-sip')}>
                   <TrendingUp className="h-4 w-4 mr-2" />
                   Start SIP
                 </Button>

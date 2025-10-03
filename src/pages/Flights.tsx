@@ -52,7 +52,7 @@ const Flights = () => {
     <BankingLayout>
       <div className="min-h-screen bg-gradient-to-br from-primary/5 via-white to-secondary/5  sm:p-6">
         {/* Header */}
-        <header className="bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white p-4 rounded-b-2xl shadow-md sticky top-0 z-10">
+        <header className="bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white p-4 rounded-b-2xl shadow-md sticky top-0 z-10">
           <div className="flex items-center justify-between">
             <Button
               variant="ghost"
@@ -79,7 +79,7 @@ const Flights = () => {
                   value={formData.from}
                   onChange={(e) => setFormData({ ...formData, from: e.target.value })}
                   onFocus={() => setActiveField('from')}
-                  className="pl-10 pr-4 py-2 rounded-lg border-gray-200 focus:ring-2 focus:ring-[#71b280] transition-all"
+                  className="pl-10 pr-4 py-2 rounded-lg border-gray-200 focus:ring-2 focus:ring-[#1397DA] transition-all"
                   aria-label="Departure city"
                 />
                 <AnimatePresence>
@@ -113,7 +113,7 @@ const Flights = () => {
                   value={formData.to}
                   onChange={(e) => setFormData({ ...formData, to: e.target.value })}
                   onFocus={() => setActiveField('to')}
-                  className="pl-10 pr-4 py-2 rounded-lg border-gray-200 focus:ring-2 focus:ring-[#71b280] transition-all"
+                  className="pl-10 pr-4 py-2 rounded-lg border-gray-200 focus:ring-2 focus:ring-[#1397DA] transition-all"
                   aria-label="Destination city"
                 />
                 <AnimatePresence>
@@ -147,14 +147,14 @@ const Flights = () => {
                   placeholder="Departure Date"
                   value={formData.departureDate}
                   onChange={(e) => setFormData({ ...formData, departureDate: e.target.value })}
-                  className="pl-10 pr-4 py-2 rounded-lg border-gray-200 focus:ring-2 focus:ring-[#71b280] transition-all"
+                  className="pl-10 pr-4 py-2 rounded-lg border-gray-200 focus:ring-2 focus:ring-[#1397DA] transition-all"
                   aria-label="Departure date"
                 />
               </div>
             </div>
             <motion.div whileHover={{ scale: 1.05 }} className="mb-6">
               <Button
-                className="w-full rounded-lg bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4b] hover:to-[#5f9b6a] text-white"
+                className="w-full rounded-lg bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4b] hover:to-[#5f9b6a] text-white"
                 // onClick={handleSearch}
                 disabled={!formData.from || !formData.to || !formData.departureDate}
                 aria-label="Search flights"
@@ -167,7 +167,7 @@ const Flights = () => {
             {formData.from && formData.to && formData.departureDate && (
               <div className="mt-6">
                 <h3 className="text-base font-bold mb-4 flex items-center">
-                  <Plane className="h-4 w-4 text-[#71b280] mr-2" />
+                  <Plane className="h-4 w-4 text-[#1397DA] mr-2" />
                   Available Flights
                 </h3>
                 <div className="space-y-4">
@@ -189,7 +189,7 @@ const Flights = () => {
                           <p className="font-bold text-gray-900">₹{flight.price.toLocaleString('en-IN')}</p>
                           {/* <Button
                             variant="outline"
-                            className="mt-2 rounded-lg border-[#71b280] text-[#71b280] hover:bg-[#71b280]/10"
+                            className="mt-2 rounded-lg border-[#1397DA] text-[#1397DA] hover:bg-[#1397DA]/10"
                             onClick={(e) => {
                               e.stopPropagation();
                               navigate(`/flight/${flight.id}`);

@@ -123,10 +123,10 @@ const SpendingAnalytics = () => {
               <div className="text-center">
                 <div className="flex items-center justify-center gap-1 mb-1">
                   <p className="text-2xl font-bold text-blue-600">₹49,000</p>
-                  <TrendingDown className="h-5 w-5 text-green-600" />
+                  <TrendingDown className="h-5 w-5 text-blue-600" />
                 </div>
                 <p className="text-sm text-muted-foreground">This Month</p>
-                <p className="text-xs text-green-600">↓ 12% vs last month</p>
+                <p className="text-xs text-blue-600">↓ 12% vs last month</p>
               </div>
             </BankingCard>
             
@@ -150,7 +150,7 @@ const SpendingAnalytics = () => {
                   key={index}
                   className={`p-3 rounded-xl border ${
                     insight.type === 'warning' ? 'bg-red-50 border-red-200' :
-                    insight.type === 'positive' ? 'bg-green-50 border-green-200' :
+                    insight.type === 'positive' ? 'bg-blue-50 border-blue-200' :
                     'bg-blue-50 border-blue-200'
                   }`}
                 >
@@ -158,14 +158,14 @@ const SpendingAnalytics = () => {
                     <div className="flex-1">
                       <h4 className={`font-semibold ${
                         insight.type === 'warning' ? 'text-red-800' :
-                        insight.type === 'positive' ? 'text-green-800' :
+                        insight.type === 'positive' ? 'text-blue-800' :
                         'text-blue-800'
                       }`}>
                         {insight.title}
                       </h4>
                       <p className={`text-sm mt-1 ${
                         insight.type === 'warning' ? 'text-red-700' :
-                        insight.type === 'positive' ? 'text-green-700' :
+                        insight.type === 'positive' ? 'text-blue-700' :
                         'text-blue-700'
                       }`}>
                         {insight.description}
@@ -176,7 +176,7 @@ const SpendingAnalytics = () => {
                       size="sm"
                       className={
                         insight.type === 'warning' ? 'text-red-600 hover:text-red-700' :
-                        insight.type === 'positive' ? 'text-green-600 hover:text-green-700' :
+                        insight.type === 'positive' ? 'text-blue-600 hover:text-blue-700' :
                         'text-blue-600 hover:text-blue-700'
                       }
                     >
@@ -272,7 +272,7 @@ const SpendingAnalytics = () => {
                         <div className="flex justify-between items-center">
                           <span className="text-sm font-medium">{item.category}</span>
                           <div className="text-right">
-                            <span className={`font-semibold ${isOverBudget ? 'text-red-600' : 'text-green-600'}`}>
+                            <span className={`font-semibold ${isOverBudget ? 'text-red-600' : 'text-blue-600'}`}>
                               {formatCurrency(item.spent)}
                             </span>
                             <span className="text-muted-foreground text-sm"> / {formatCurrency(item.budget)}</span>

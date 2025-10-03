@@ -92,7 +92,7 @@
 //                 "flex flex-col items-center justify-center transition-all duration-300 relative group",
 //                 item.isCenter 
 //                   ? cn(
-//                     "bg-gradient-to-br from-[#134e5e] to-[#71b280] text-white",
+//                     "bg-gradient-to-br from-[#1178AC] to-[#1397DA] text-white",
 //                       // "bg-gradient-to-br from-primary via-primary to-primary-dark text-white",
 //                       "rounded-3xl p-5 shadow-xl transform -translate-y-6",
 //                       "hover:scale-105 hover:shadow-2xl focus-ring",
@@ -295,7 +295,7 @@ export const BottomNavigation = () => {
                 "flex flex-col items-center justify-center transition-all duration-300 relative group",
                 item.isCenter 
                   ? cn(
-                      "bg-gradient-to-br from-[#134e5e] to-[#71b280] text-white",
+                      "bg-gradient-to-br from-[#1178AC] to-[#1397DA] text-white",
                       "rounded-3xl p-5 shadow-xl transform -translate-y-6",
                       "hover:scale-105 hover:shadow-2xl focus-ring",
                       "border-2 border-white-50 hover:border-primary/50 focus:border-primary/50",

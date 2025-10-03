@@ -132,8 +132,8 @@ const InsurancePlanDetails = () => {
                         <span className="text-xs font-medium">{plan.insurerRating}/5</span>
                       </div>
                       <div className="flex items-center gap-1">
-                        <TrendingUp className="h-4 w-4 text-green-500" />
-                        <span className="text-xs font-medium text-green-600">
+                        <TrendingUp className="h-4 w-4 text-blue-500" />
+                        <span className="text-xs font-medium text-blue-600">
                           {plan.claimRatio}% Claim Settlement
                         </span>
                       </div>
@@ -156,8 +156,8 @@ const InsurancePlanDetails = () => {
                 <p className="text-xl font-bold text-blue-600">{formatCurrency(plan.premium)}</p>
                 <p className="text-xs text-gray-500">Annual Premium</p>
               </div>
-              <div className="bg-green-50 rounded-lg p-4 text-center">
-                <p className="text-xl font-bold text-green-600">{formatCurrency(plan.premiumMonthly)}</p>
+              <div className="bg-blue-50 rounded-lg p-4 text-center">
+                <p className="text-xl font-bold text-blue-600">{formatCurrency(plan.premiumMonthly)}</p>
                 <p className="text-xs text-gray-500">Monthly Premium</p>
               </div>
             </div>
@@ -169,7 +169,7 @@ const InsurancePlanDetails = () => {
             <div className="space-y-3">
               {plan.keyBenefits.map((benefit: string, index: number) => (
                 <div key={index} className="flex items-start gap-3">
-                  <CheckCircle2 className="h-5 w-5 text-green-500 mt-0.5 flex-shrink-0" />
+                  <CheckCircle2 className="h-5 w-5 text-blue-500 mt-0.5 flex-shrink-0" />
                   <span className="text-sm text-gray-700">{benefit}</span>
                 </div>
               ))}
@@ -337,8 +337,8 @@ export default InsurancePlanDetails;
 //                   <h2 className="text-xl font-bold text-psb-primary">{plan.name}</h2>
 //                   <p className="text-sm text-muted-foreground">{plan.insurer}</p>
 //                   <div className="flex items-center space-x-2 mt-1">
-//                     <TrendingUp className="h-4 w-4 text-green-600" />
-//                     <span className="text-sm font-medium text-green-600">Claim Ratio: {plan.claimRatio}</span>
+//                     <TrendingUp className="h-4 w-4 text-blue-600" />
+//                     <span className="text-sm font-medium text-blue-600">Claim Ratio: {plan.claimRatio}</span>
 //                   </div>
 //                 </div>
 //               </div>
@@ -353,8 +353,8 @@ export default InsurancePlanDetails;
 //         {/* Premium Details */}
 //         <BankingCard title="Premium & Coverage" className="rounded-2xl">
 //           <div className="grid grid-cols-2 gap-4">
-//             <div className="text-center p-4 rounded-xl bg-green-50">
-//               <p className="text-xl font-bold text-green-600">{plan.premium}</p>
+//             <div className="text-center p-4 rounded-xl bg-blue-50">
+//               <p className="text-xl font-bold text-blue-600">{plan.premium}</p>
 //               <p className="text-sm text-muted-foreground">Annual Premium</p>
 //             </div>
 //             <div className="text-center p-4 rounded-xl bg-blue-50">
@@ -369,7 +369,7 @@ export default InsurancePlanDetails;
 //           <div className="space-y-3">
 //             {plan.keyBenefits.map((benefit: string, index: number) => (
 //               <div key={index} className="flex items-start space-x-3">
-//                 <CheckCircle className="h-5 w-5 text-green-600 mt-0.5" />
+//                 <CheckCircle className="h-5 w-5 text-blue-600 mt-0.5" />
 //                 <span className="text-sm">{benefit}</span>
 //               </div>
 //             ))}

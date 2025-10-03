@@ -181,7 +181,7 @@ const InsurancePlans = () => {
                     </Badge>
                   )}
                   {plan.recommended && (
-                    <Badge className="bg-green-100 text-green-700 border-green-200">
+                    <Badge className="bg-blue-100 text-blue-700 border-blue-200">
                       Recommended
                     </Badge>
                   )}
@@ -216,8 +216,8 @@ const InsurancePlans = () => {
                     <p className="font-bold text-blue-600">{formatCurrency(plan.premium)}</p>
                     <p className="text-xs text-gray-500">Annual</p>
                   </div>
-                  <div className="bg-green-50 rounded-lg p-2 text-center">
-                    <p className="font-bold text-green-600">{formatCurrency(plan.premiumMonthly)}</p>
+                  <div className="bg-blue-50 rounded-lg p-2 text-center">
+                    <p className="font-bold text-blue-600">{formatCurrency(plan.premiumMonthly)}</p>
                     <p className="text-xs text-gray-500">Monthly</p>
                   </div>
                   <div className="bg-purple-50 rounded-lg p-2 text-center">
@@ -232,7 +232,7 @@ const InsurancePlans = () => {
                   <div className="space-y-2">
                     {plan.keyBenefits.map((benefit, index) => (
                       <div key={index} className="flex items-start gap-2">
-                        <CheckCircle className="h-4 w-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="h-4 w-4 text-blue-500 mt-0.5 flex-shrink-0" />
                         <span className="text-sm text-gray-600">{benefit}</span>
                       </div>
                     ))}

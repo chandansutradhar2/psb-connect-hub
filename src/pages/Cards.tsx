@@ -265,7 +265,7 @@ const Cards: React.FC = () => {
               <div className="grid grid-cols-2 gap-4">
                 {[
                   { icon: 'shield', text: 'Card Security', color: 'text-blue-600' },
-                  { icon: 'calendar', text: 'Statements', color: 'text-green-600' },
+                  { icon: 'calendar', text: 'Statements', color: 'text-blue-600' },
                   { icon: 'arrow-up-right', text: 'Upgrade Card', color: 'text-purple-600' },
                   { icon: 'smartphone', text: 'Digital Wallet', color: 'text-orange-600' },
                 ].map((action, index) => {
@@ -321,7 +321,7 @@ const Cards: React.FC = () => {
                         <p className="text-xs text-gray-500">{transaction.date}</p>
                       </div>
                     </div>
-                    <span className={`font-semibold text-sm ${transaction.amount < 0 ? 'text-red-600' : 'text-green-600'}`}>
+                    <span className={`font-semibold text-sm ${transaction.amount < 0 ? 'text-red-600' : 'text-blue-600'}`}>
                       {transaction.amount < 0 ? '-' : '+'}₹{Math.abs(transaction.amount).toLocaleString('en-IN')}
                     </span>
                   </div>
@@ -344,7 +344,7 @@ const Cards: React.FC = () => {
                     onClick={() => handleBlockCard(selectedCard.id)}
                     className={`w-full px-4 py-2 rounded-lg flex items-center justify-center text-sm font-medium ${
                       selectedCard.isBlocked
-                        ? 'bg-green-600 text-white hover:bg-green-700'
+                        ? 'bg-blue-600 text-white hover:bg-blue-700'
                         : 'bg-red-600 text-white hover:bg-red-700'
                     }`}
                     aria-label={selectedCard.isBlocked ? 'Unblock card' : 'Block card'}

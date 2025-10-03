@@ -155,7 +155,7 @@
 //   const cardServices = [
 //     { title: "Block/Unblock Card", icon: <Lock className="h-4 w-4" />, color: "bg-red-50 text-red-600", action: "block" },
 //     { title: "Set/Change PIN", icon: <Key className="h-4 w-4" />, color: "bg-blue-50 text-blue-600", action: "pin" },
-//     { title: "View Statement", icon: <FileText className="h-4 w-4" />, color: "bg-green-50 text-green-600", action: "statement" },
+//     { title: "View Statement", icon: <FileText className="h-4 w-4" />, color: "bg-blue-50 text-blue-600", action: "statement" },
 //     { title: "Rewards & Offers", icon: <Gift className="h-4 w-4" />, color: "bg-purple-50 text-purple-600", action: "rewards" },
 //     { title: "Set Limits", icon: <BarChart3 className="h-4 w-4" />, color: "bg-orange-50 text-orange-600", action: "limits" },
 //     { title: "Report Lost Card", icon: <Phone className="h-4 w-4" />, color: "bg-red-50 text-red-600", action: "report" },
@@ -180,7 +180,7 @@
 //       description: "Perfect for business expenses and transactions",
 //       features: ["Business expense tracking", "Higher credit limits", "GST benefits"],
 //       fee: "₹4,999",
-//       color: "bg-gradient-to-br from-green-600 to-green-700",
+//       color: "bg-gradient-to-br from-blue-600 to-blue-700",
 //       eligibility: "Registered business required",
 //       processingTime: "5-7 business days",
 //       type: "Credit Card",
@@ -377,7 +377,7 @@
 //   };
 
 //   const getCardUsageColor = (percentage: number) => {
-//     if (percentage < 50) return "bg-green-500";
+//     if (percentage < 50) return "bg-blue-500";
 //     if (percentage < 80) return "bg-yellow-500";
 //     return "bg-red-500";
 //   };
@@ -394,7 +394,7 @@
 //             <div className="ml-auto">
 //               <Button 
 //                 size="sm" 
-//                 className="flex items-center gap-1 h-9 rounded-full bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white" 
+//                 className="flex items-center gap-1 h-9 rounded-full bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white" 
 //                 onClick={() => navigate("/add-new-card")}
 //               >
 //                 <Plus className="h-4 w-4" />
@@ -713,7 +713,7 @@
 //                           <ul className="space-y-1">
 //                             {application.features.map((feature, featureIndex) => (
 //                               <li key={featureIndex} className="text-xs text-muted-foreground flex items-center gap-2">
-//                                 <div className="w-1 h-1 rounded-full bg-green-500"></div>
+//                                 <div className="w-1 h-1 rounded-full bg-blue-500"></div>
 //                                 {feature}
 //                               </li>
 //                             ))}
@@ -969,7 +969,7 @@
 //   const cardServices = [
 //     { title: "Block/Unblock Card", icon: <Lock className="h-4 w-4" />, color: "bg-red-50 text-red-600", action: "block" },
 //     { title: "Set/Change PIN", icon: <Key className="h-4 w-4" />, color: "bg-blue-50 text-blue-600", action: "pin" },
-//     { title: "View Statement", icon: <FileText className="h-4 w-4" />, color: "bg-green-50 text-green-600", action: "statement" },
+//     { title: "View Statement", icon: <FileText className="h-4 w-4" />, color: "bg-blue-50 text-blue-600", action: "statement" },
 //     { title: "Rewards & Offers", icon: <Gift className="h-4 w-4" />, color: "bg-purple-50 text-purple-600", action: "rewards" },
 //     { title: "Set Limits", icon: <BarChart3 className="h-4 w-4" />, color: "bg-orange-50 text-orange-600", action: "limits" },
 //     { title: "Report Lost Card", icon: <Phone className="h-4 w-4" />, color: "bg-red-50 text-red-600", action: "report" },
@@ -994,7 +994,7 @@
 //       description: "Perfect for business expenses and transactions",
 //       features: ["Business expense tracking", "Higher credit limits", "GST benefits"],
 //       fee: "₹4,999",
-//       color: "bg-gradient-to-br from-green-600 to-green-700",
+//       color: "bg-gradient-to-br from-blue-600 to-blue-700",
 //       eligibility: "Registered business required",
 //       processingTime: "5-7 business days",
 //       type: "Credit Card",
@@ -1198,7 +1198,7 @@
 //   };
 
 //   const getCardUsageColor = (percentage: number) => {
-//     if (percentage < 50) return "bg-green-500";
+//     if (percentage < 50) return "bg-blue-500";
 //     if (percentage < 80) return "bg-yellow-500";
 //     return "bg-red-500";
 //   };
@@ -1215,7 +1215,7 @@
 //             <div className="ml-auto">
 //               <Button 
 //                 size="sm" 
-//                 className="flex items-center gap-1 h-9 rounded-full bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white" 
+//                 className="flex items-center gap-1 h-9 rounded-full bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white" 
 //                 onClick={() => navigate("/add-new-card")}
 //               >
 //                 <Plus className="h-4 w-4" />
@@ -1529,7 +1529,7 @@
 //                           <ul className="space-y-1">
 //                             {application.features.map((feature, featureIndex) => (
 //                               <li key={featureIndex} className="text-xs text-muted-foreground flex items-center gap-2">
-//                                 <div className="w-1 h-1 rounded-full bg-green-500"></div>
+//                                 <div className="w-1 h-1 rounded-full bg-blue-500"></div>
 //                                 {feature}
 //                               </li>
 //                             ))}
@@ -1584,7 +1584,7 @@
 //                             Your application for {application.title} is incomplete. Please complete the remaining steps to proceed.
 //                           </p>
 //                           <Button
-//                             className="w-full h-9 rounded-full bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white"
+//                             className="w-full h-9 rounded-full bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white"
 //                             onClick={() => handleResumeApplication(application)}
 //                           >
 //                             Resume Application
@@ -1820,7 +1820,7 @@ const CardManagement = () => {
   const cardServices = [
     { title: "Block/Unblock Card", icon: <Lock className="h-4 w-4" />, color: "bg-red-50 text-red-600", action: "block" },
     { title: "Set/Change PIN", icon: <Key className="h-4 w-4" />, color: "bg-blue-50 text-blue-600", action: "pin" },
-    { title: "View Statement", icon: <FileText className="h-4 w-4" />, color: "bg-green-50 text-green-600", action: "statement" },
+    { title: "View Statement", icon: <FileText className="h-4 w-4" />, color: "bg-blue-50 text-blue-600", action: "statement" },
     { title: "Rewards & Offers", icon: <Gift className="h-4 w-4" />, color: "bg-purple-50 text-purple-600", action: "rewards" },
     { title: "Set Limits", icon: <BarChart3 className="h-4 w-4" />, color: "bg-orange-50 text-orange-600", action: "limits" },
     { title: "Report Lost Card", icon: <Phone className="h-4 w-4" />, color: "bg-red-50 text-red-600", action: "report" },
@@ -1833,7 +1833,7 @@ const CardManagement = () => {
       description: "Exclusive benefits with premium lifestyle rewards",
       features: ["5% cashback on dining", "Airport lounge access", "Travel insurance"],
       fee: "₹2,999",
-      color: "bg-gradient-to-r from-[#134e5e] to-[#71b280]",
+      color: "bg-gradient-to-r from-[#1178AC] to-[#1397DA]",
       eligibility: "Min. ₹75,000 monthly income",
       processingTime: "3-5 business days",
       type: "Credit Card",
@@ -1846,7 +1846,7 @@ const CardManagement = () => {
       description: "Perfect for business expenses and transactions",
       features: ["Business expense tracking", "Higher credit limits", "GST benefits"],
       fee: "₹4,999",
-      color: "bg-gradient-to-r from-[#134e5e] to-[#71b280]",
+      color: "bg-gradient-to-r from-[#1178AC] to-[#1397DA]",
       eligibility: "Registered business required",
       processingTime: "5-7 business days",
       type: "Credit Card",
@@ -1859,7 +1859,7 @@ const CardManagement = () => {
       description: "Best for frequent travelers and international transactions",
       features: ["Zero forex markup", "Travel rewards", "Emergency assistance"],
       fee: "₹1,999",
-      color: "bg-gradient-to-r from-[#134e5e] to-[#71b280]",
+      color: "bg-gradient-to-r from-[#1178AC] to-[#1397DA]",
       eligibility: "Min. ₹50,000 monthly income",
       processingTime: "3-5 business days",
       type: "Credit Card",
@@ -2022,7 +2022,7 @@ const CardManagement = () => {
     toast({
       title: "Application Deleted",
       description: "Your pending application has been successfully removed.",
-      className: "bg-green-50 border-green-200 text-green-800",
+      className: "bg-blue-50 border-blue-200 text-blue-800",
     });
   };
 
@@ -2048,14 +2048,21 @@ const CardManagement = () => {
   const getCardNetworkIcon = (network: string) => {
     switch (network) {
       case "Visa":
-        return <div className="text-[#134e5e] font-bold text-xs">Visa</div>;
+        return <div className="text-[#1178AC] font-bold text-xs">Visa</div>;
       case "Mastercard":
-        return <div className="text-[#134e5e] font-bold text-xs">Mastercard</div>;
+        return <div className="text-[#1178AC] font-bold text-xs">Mastercard</div>;
       case "RuPay":
-        return <div className="text-[#134e5e] font-bold text-xs">RuPay</div>;
+        return <div className="text-[#1178AC] font-bold text-xs">RuPay</div>;
       default:
         return null;
     }
+  };
+   const handleComingSoon = (feature: string) => {
+    toast({
+      title: "Coming Soon",
+      description: `${feature} feature is coming soon!`,
+      duration: 3000,
+    });
   };
 
   const getCardUsagePercentage = (card: CardType) => {
@@ -2064,7 +2071,7 @@ const CardManagement = () => {
   };
 
   const getCardUsageColor = (percentage: number) => {
-    if (percentage < 50) return "bg-green-500";
+    if (percentage < 50) return "bg-blue-500";
     if (percentage < 80) return "bg-yellow-500";
     return "bg-red-500";
   };
@@ -2073,7 +2080,7 @@ const CardManagement = () => {
     <BankingLayout>
       <div className="flex flex-col min-h-screen pb-24 bg-gray-50">
         {/* Header */}
-        <div className="bg-gradient-to-r from-[#134e5e] to-[#71b280] border-b border-[#134e5e]/20 sticky top-0 z-40 w-full shadow-sm">
+        <div className="bg-gradient-to-r from-[#1178AC] to-[#1397DA] border-b border-[#1178AC]/20 sticky top-0 z-40 w-full shadow-sm">
           <div className="flex items-center gap-3 px-4 sm:px-6 py-3 max-w-screen-xl mx-auto">
             <Button variant="ghost" size="icon" onClick={() => navigate("/dashboard")} className="h-9 w-9 rounded-full text-white hover:bg-white/20">
               <ArrowLeft className="h-4 w-4" />
@@ -2082,7 +2089,7 @@ const CardManagement = () => {
             <div className="ml-auto">
               <Button 
                 size="sm" 
-                className="flex items-center gap-1 h-9 rounded-lg bg-gradient-to-r from-[#0f3f4b] to-[#5e9b6a] hover:from-[#134e5e] hover:to-[#71b280] text-white font-medium" 
+                className="flex items-center gap-1 h-9 rounded-lg bg-gradient-to-r from-[#ffffff] to-[#ddf4ff] hover:from-[#1178AC] hover:to-[#1397DA] text-[#0b75aa] font-medium" 
                 onClick={() => navigate("/add-new-card")}
               >
                 <Plus className="h-4 w-4" />
@@ -2096,9 +2103,9 @@ const CardManagement = () => {
         <div className="flex-1 px-4 sm:px-6 py-5 max-w-screen-xl mx-auto w-full">
           <Tabs defaultValue="my-cards" value={activeTab} onValueChange={setActiveTab} className="w-full">
             <TabsList className="grid w-full grid-cols-3 h-10 bg-muted/50 p-1 rounded-lg mb-4">
-              <TabsTrigger value="my-cards" className="text-xs font-medium rounded-md data-[state=active]:bg-[#22515d] data-[state=active]:text-gray-50 data-[state=active]:shadow-sm">My Cards</TabsTrigger>
-              <TabsTrigger value="services" className="text-xs font-medium rounded-md data-[state=active]:bg-[#22515d]  data-[state=active]:text-gray-50  data-[state=active]:shadow-sm">Services</TabsTrigger>
-              <TabsTrigger value="apply" className="text-xs font-medium rounded-md data-[state=active]:bg-[#22515d]  data-[state=active]:text-gray-50  data-[state=active]:shadow-sm">Apply</TabsTrigger>
+              <TabsTrigger value="my-cards" className="text-xs font-medium rounded-md data-[state=active]:bg-[#1178AC] data-[state=active]:text-gray-50 data-[state=active]:shadow-sm">My Cards</TabsTrigger>
+              <TabsTrigger value="services" className="text-xs font-medium rounded-md data-[state=active]:bg-[#1178AC]  data-[state=active]:text-gray-50  data-[state=active]:shadow-sm">Services</TabsTrigger>
+              <TabsTrigger value="apply" className="text-xs font-medium rounded-md data-[state=active]:bg-[#1178AC]  data-[state=active]:text-gray-50  data-[state=active]:shadow-sm">Apply</TabsTrigger>
             </TabsList>
 
             <TabsContent value="my-cards" className="space-y-4">
@@ -2116,7 +2123,7 @@ const CardManagement = () => {
                   <h3 className="text-lg font-semibold">No cards found</h3>
                   <p className="text-sm text-muted-foreground">You haven't added any cards yet</p>
                   <Button 
-                    className="h-9 rounded-lg bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white font-medium" 
+                    className="h-9 rounded-lg bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white font-medium" 
                     onClick={() => setActiveTab("apply")}
                   >
                     Apply for a new card
@@ -2125,14 +2132,14 @@ const CardManagement = () => {
               ) : (
                 <div className="space-y-4">
                   {cards.map((card) => (
-                    <div key={card.id} className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#134e5e]/20">
+                    <div key={card.id} className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#1178AC]/20">
                       <div
-                        className={`${card.type === "Credit Card" ? "bg-gradient-to-r from-[#22515d] to-[#283f2e]" : "bg-gradient-to-r from-[#22515d] to-[#88c998]"} text-white p-5 relative cursor-pointer`}
+                        className={`${card.type === "Credit Card" ? "bg-gradient-to-r from-[#1178AC] to-[#1397DA]" : "bg-gradient-to-r from-[#1178AC] to-[#1397DA]"} text-white p-5 relative cursor-pointer`}
                         onClick={() => toggleCardExpand(card.id)}
                       >
-                        <div className="absolute top-4 right-4 opacity-80">
+                        {/* <div className="absolute top-4 right-4 opacity-80">
                           {getCardNetworkIcon(card.cardNetwork || "Visa")}
-                        </div>
+                        </div> */}
                         
                         <div className="flex justify-between items-start mb-5">
                           <div>
@@ -2225,18 +2232,18 @@ const CardManagement = () => {
                           )}
 
                           {card.rewardPoints > 0 && (
-                            <div className="bg-gradient-to-r from-[#134e5e]/10 to-[#71b280]/10 p-3 rounded-lg border border-[#134e5e]/20">
+                            <div className="bg-gradient-to-r from-[#1178AC]/10 to-[#1397DA]/10 p-3 rounded-lg border border-[#1178AC]/20">
                               <div className="flex items-center justify-between">
                                 <div>
-                                  <p className="text-xs text-[#134e5e] mb-1 flex items-center gap-1">
+                                  <p className="text-xs text-[#1178AC] mb-1 flex items-center gap-1">
                                     <Coins className="h-3 w-3" /> Reward Points
                                   </p>
-                                  <p className="text-sm font-semibold text-[#134e5e]">{card.rewardPoints.toLocaleString()} pts</p>
+                                  <p className="text-sm font-semibold text-[#1178AC]">{card.rewardPoints.toLocaleString()} pts</p>
                                 </div>
                                 <Button
                                   variant="outline"
                                   size="sm"
-                                  className="h-8 text-xs rounded-lg bg-[#134e5e]/10 border-[#134e5e]/20 text-[#134e5e] hover:bg-[#71b280]/20"
+                                  className="h-8 text-xs rounded-lg bg-[#1178AC]/10 border-[#1178AC]/20 text-[#1178AC] hover:bg-[#1397DA]/20"
                                   onClick={() => handleCardAction("rewards")}
                                   disabled={actionLoading}
                                 >
@@ -2254,7 +2261,7 @@ const CardManagement = () => {
                             <Button
                               variant="outline"
                               size="sm"
-                              className="h-9 text-xs flex-1 rounded-lg border-[#134e5e]/20"
+                              className="h-9 text-xs flex-1 rounded-lg border-[#1178AC]/20"
                               onClick={() => handleCardAction("statement", card)}
                               disabled={actionLoading && selectedCard?.id === card.id}
                             >
@@ -2267,7 +2274,7 @@ const CardManagement = () => {
                             <Button
                               variant="outline"
                               size="sm"
-                              className="h-9 text-xs flex-1 rounded-lg border-[#134e5e]/20"
+                              className="h-9 text-xs flex-1 rounded-lg border-[#1178AC]/20"
                               onClick={() => handleCardAction(card.status === "Active" ? "block" : "unblock", card)}
                               disabled={actionLoading && selectedCard?.id === card.id}
                             >
@@ -2282,7 +2289,7 @@ const CardManagement = () => {
                             </Button>
                             <DropdownMenu>
                               <DropdownMenuTrigger asChild>
-                                <Button variant="outline" size="sm" className="h-9 w-9 p-0 rounded-lg border-[#134e5e]/20">
+                                <Button variant="outline" size="sm" className="h-9 w-9 p-0 rounded-lg border-[#1178AC]/20">
                                   <MoreHorizontal className="h-4 w-4" />
                                 </Button>
                               </DropdownMenuTrigger>
@@ -2317,8 +2324,9 @@ const CardManagement = () => {
                   {cardServices.map((service, index) => (
                     <div 
                       key={index} 
-                      className="bg-white rounded-lg p-4 cursor-pointer hover:shadow-md transition-shadow border border-[#134e5e]/20"
-                      onClick={() => handleCardAction(service.action)}
+                      className="bg-white rounded-lg p-4 cursor-pointer hover:shadow-md transition-shadow border border-[#1178AC]/20"
+                      // onClick={() => handleCardAction(service.action)}
+                           onClick={() => handleComingSoon("Filter")}
                     >
                       <div className={`w-12 h-12 rounded-lg ${service.color} flex items-center justify-center mb-2`}>
                         {service.icon}
@@ -2329,10 +2337,10 @@ const CardManagement = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#134e5e]/20">
-                <div className="p-4 border-b border-[#134e5e]/20">
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#1178AC]/20">
+                <div className="p-4 border-b border-[#1178AC]/20">
                   <h2 className="text-lg font-semibold flex items-center gap-1.5">
-                    <Shield className="h-4 w-4 text-[#134e5e]" />
+                    <Shield className="h-4 w-4 text-[#1178AC]" />
                     Card Security & Controls
                   </h2>
                   <p className="text-xs text-muted-foreground">Manage your card security settings</p>
@@ -2357,7 +2365,7 @@ const CardManagement = () => {
                       <p className="text-sm font-medium">ATM Withdrawals</p>
                       <p className="text-xs text-muted-foreground">Set daily withdrawal limits</p>
                     </div>
-                    <Button variant="outline" size="sm" className="h-8 text-xs rounded-lg border-[#134e5e]/20">Manage</Button>
+                    <Button variant="outline" size="sm" className="h-8 text-xs rounded-lg border-[#1178AC]/20">Manage</Button>
                   </div>
                   <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                     <div>
@@ -2375,7 +2383,7 @@ const CardManagement = () => {
                 <h2 className="text-lg font-semibold mb-3">Apply for New Card</h2>
                 <div className="space-y-3">
                   {cardApplications.map((application) => (
-                    <div key={application.id} className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#134e5e]/20">
+                    <div key={application.id} className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#1178AC]/20">
                       <div className="p-4">
                         <div className="flex items-start justify-between mb-3">
                           <div>
@@ -2383,7 +2391,7 @@ const CardManagement = () => {
                             <p className="text-xs text-muted-foreground">{application.description}</p>
                           </div>
                           <div className="text-right">
-                            <p className="text-xs font-medium text-[#134e5e]">Annual Fee</p>
+                            <p className="text-xs font-medium text-[#1178AC]">Annual Fee</p>
                             <p className="text-sm font-semibold">{application.fee}</p>
                           </div>
                         </div>
@@ -2393,7 +2401,7 @@ const CardManagement = () => {
                           <ul className="space-y-1">
                             {application.features.map((feature, featureIndex) => (
                               <li key={featureIndex} className="text-xs text-muted-foreground flex items-center gap-1.5">
-                                <div className="w-1 h-1 rounded-full bg-[#71b280]"></div>
+                                <div className="w-1 h-1 rounded-full bg-[#1397DA]"></div>
                                 {feature}
                               </li>
                             ))}
@@ -2414,7 +2422,7 @@ const CardManagement = () => {
                         <div className="flex gap-2">
                           <Button 
                             size="sm" 
-                            className="flex-1 h-9 rounded-lg bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium" 
+                            className="flex-1 h-9 rounded-lg bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium" 
                             onClick={() => handleApplyNow(application)}
                           >
                             Apply Now
@@ -2422,9 +2430,10 @@ const CardManagement = () => {
                           <Button 
                             size="sm" 
                             variant="outline" 
-                            className="flex-1 h-9 rounded-lg border-[#134e5e]/20 text-[#134e5e] hover:bg-[#71b280]/10"
+                            className="flex-1 h-9 rounded-lg border-[#1178AC]/20 text-[#1178AC] hover:bg-[#1397DA]/10"
+                                 onClick={() => handleComingSoon("Filter")}
                           >
-                            Learn More
+                           More Details
                           </Button>
                         </div>
                       </div>
@@ -2433,8 +2442,8 @@ const CardManagement = () => {
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#134e5e]/20">
-                <div className="p-4 border-b border-[#134e5e]/20">
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#1178AC]/20">
+                <div className="p-4 border-b border-[#1178AC]/20">
                   <h2 className="text-lg font-semibold">Application Status</h2>
                   <p className="text-xs text-muted-foreground">Track your card applications</p>
                 </div>
@@ -2442,7 +2451,7 @@ const CardManagement = () => {
                   {pendingApplications.length > 0 ? (
                     <div className="space-y-3">
                       {pendingApplications.map((application) => (
-                        <div key={application.id} className="bg-gray-50 p-4 rounded-lg border border-[#134e5e]/10">
+                        <div key={application.id} className="bg-gray-50 p-4 rounded-lg border border-[#1178AC]/10">
                           <div className="flex items-center justify-between mb-2">
                             <div>
                               <h3 className="text-base font-semibold">{application.title}</h3>
@@ -2450,14 +2459,14 @@ const CardManagement = () => {
                                 Application in progress ({application.progress}% complete)
                               </p>
                             </div>
-                            <Badge className="bg-[#134e5e]/10 text-[#134e5e] text-xs h-5">Pending</Badge>
+                            <Badge className="bg-[#1178AC]/10 text-[#1178AC] text-xs h-5">Pending</Badge>
                           </div>
-                          <p className="text-xs text-[#134e5e] mb-3">
+                          <p className="text-xs text-[#1178AC] mb-3">
                             Your application for {application.title} is incomplete. Please complete the remaining steps to proceed.
                           </p>
                           <div className="flex gap-2">
                             <Button
-                              className="flex-1 h-9 rounded-lg bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium"
+                              className="flex-1 h-9 rounded-lg bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium"
                               onClick={() => handleResumeApplication(application)}
                             >
                               Resume Application
@@ -2491,10 +2500,10 @@ const CardManagement = () => {
 
         {/* Fixed Footer for Apply Tab */}
         {activeTab === "apply" && (
-          <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-[#134e5e]/20 z-50">
+          <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-[#1178AC]/20 z-50">
             <div className="px-4 sm:px-6 py-3 max-w-screen-xl mx-auto">
               <Button
-                className="w-full h-10 bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium text-sm rounded-lg"
+                className="w-full h-10 bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium text-sm rounded-lg"
                 onClick={() => handleApplyNow()}
               >
                 Apply for New Card

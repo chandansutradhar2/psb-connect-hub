@@ -102,7 +102,7 @@
 //       icon: <Smartphone className="h-6 w-6" />,
 //       title: 'Mobile Number',
 //       description: 'Transfer using registered mobile number',
-//       color: 'text-green-600 bg-green-100',
+//       color: 'text-blue-600 bg-blue-100',
 //     },
 //     {
 //       type: 'qr' as const,
@@ -358,7 +358,7 @@
 //               {transferType === 'qr' && (
 //                 <Button
 //                   variant="default"
-//                   className="gap-2 bg-gradient-to-b from-[#134e5e] to-[#71b280] text-white hover:from-[#0f3f4b] hover:to-[#5e9a6b] h-10"
+//                   className="gap-2 bg-gradient-to-b from-[#1178AC] to-[#1397DA] text-white hover:from-[#0f3f4b] hover:to-[#5e9a6b] h-10"
 //                   aria-label="Scan QR code"
 //                 >
 //                   <QrCode className="h-4 w-4" />
@@ -444,7 +444,7 @@
 //                         type="button"
 //                         variant="default"
 //                         size="sm"
-//                         className="text-xs h-8 rounded-full bg-gradient-to-b from-[#134e5e] to-[#71b280] text-white hover:from-[#0f3f4b] hover:to-[#5e9a6b]"
+//                         className="text-xs h-8 rounded-full bg-gradient-to-b from-[#1178AC] to-[#1397DA] text-white hover:from-[#0f3f4b] hover:to-[#5e9a6b]"
 //                         onClick={() => {
 //                           setAmount(formatAmount(quickAmount.toString()));
 //                           setError(null);
@@ -477,7 +477,7 @@
 
 //                 {/* Transfer Button */}
 //                 <Button
-//                   className="w-full h-12 bg-gradient-to-b from-[#134e5e] to-[#71b280] text-white font-medium text-base rounded-xl hover:from-[#0f3f4b] hover:to-[#5e9a6b] transition-colors"
+//                   className="w-full h-12 bg-gradient-to-b from-[#1178AC] to-[#1397DA] text-white font-medium text-base rounded-xl hover:from-[#0f3f4b] hover:to-[#5e9a6b] transition-colors"
 //                   disabled={!recipient || !amount || isProcessing || !!error}
 //                   onClick={handleTransfer}
 //                   aria-label={`Send ₹${amount.replace(/,/g, '')} to recipient`}
@@ -648,7 +648,7 @@ const Transfer = () => {
       icon: <Smartphone className="h-6 w-6" />,
       title: 'Mobile Number',
       description: 'Transfer using registered mobile number',
-      color: 'text-green-600 bg-green-100',
+      color: 'text-blue-600 bg-blue-100',
     },
     {
       type: 'qr' as const,
@@ -869,13 +869,13 @@ const Transfer = () => {
           </div>
         ) : (
           <div className="space-y-6 sm:space-y-8">
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between flex-wrap gap-4">
-              <div className="flex items-center gap-3">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between flex-wrap gap-4 pt-2">
+              <div className="flex items-center gap-3  ml-2">
                 <Button
                   variant="outline"
                   size="icon"
                   onClick={() => setTransferType(null)}
-                  className="rounded-full border-gray-300 hover:border-[#F37021] hover:bg-orange-50 text-[#003087]"
+                  className="rounded-full border-gray-300 hover:border-[#F37021] hover:bg-orange-50 text-[#003087] mr-2"
                   aria-label="Go back to transfer methods"
                 >
                   <ArrowLeft className="h-5 w-5" />
@@ -884,15 +884,15 @@ const Transfer = () => {
                   <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#003087]">
                     {transferOptions.find((opt) => opt.type === transferType)?.title}
                   </h1>
-                  <p className="text-sm text-gray-500">
+                  {/* <p className="text-sm text-gray-500">
                     {transferOptions.find((opt) => opt.type === transferType)?.description}
-                  </p>
+                  </p> */}
                 </div>
               </div>
               {transferType === 'qr' && (
                 <Button
                   variant="default"
-                  className="gap-2 bg-gradient-to-b from-[#134e5e] to-[#71b280] text-white hover:from-[#0f3f4b] hover:to-[#5e9a6b] h-10"
+                  className="gap-2 bg-gradient-to-b from-[#1178AC] to-[#1397DA] text-white hover:from-[#0f3f4b] hover:to-[#5e9a6b] h-10"
                   aria-label="Scan QR code"
                 >
                   <QrCode className="h-4 w-4" />
@@ -973,7 +973,7 @@ const Transfer = () => {
                         type="button"
                         variant="default"
                         size="sm"
-                        className="text-xs h-8 rounded-full bg-gradient-to-b from-[#134e5e] to-[#71b280] text-white hover:from-[#0f3f4b] hover:to-[#5e9a6b]"
+                        className="text-xs h-8 rounded-full bg-gradient-to-b from-[#1178AC] to-[#1397DA] text-white hover:from-[#0f3f4b] hover:to-[#5e9a6b]"
                         onClick={() => {
                           setAmount(formatAmount(quickAmount.toString()));
                           setError(null);
@@ -1004,7 +1004,7 @@ const Transfer = () => {
                 </div>
 
                 <Button
-                  className="w-full h-12 bg-gradient-to-b from-[#134e5e] to-[#71b280] text-white font-medium text-base rounded-xl hover:from-[#0f3f4b] hover:to-[#5e9a6b] transition-colors"
+                  className="w-full h-12 bg-gradient-to-b from-[#1178AC] to-[#1397DA] text-white font-medium text-base rounded-xl hover:from-[#0f3f4b] hover:to-[#5e9a6b] transition-colors"
                   disabled={!recipient || !amount || isProcessing || !!error}
                   onClick={handleTransfer}
                   aria-label={`Send ₹${amount.replace(/,/g, '')} to recipient`}

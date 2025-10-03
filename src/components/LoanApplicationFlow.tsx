@@ -121,18 +121,18 @@ export const LoanApplicationFlow = ({ loanType, cibilScore }: LoanApplicationFlo
 
       {/* CIBIL Score Alert */}
       {cibilScore && (
-        <BankingCard className={`rounded-2xl ${isEligible ? 'border-green-200 bg-green-50' : 'border-red-200 bg-red-50'}`}>
+        <BankingCard className={`rounded-2xl ${isEligible ? 'border-blue-200 bg-blue-50' : 'border-red-200 bg-red-50'}`}>
           <div className="flex items-center space-x-3">
             {isEligible ? (
-              <CheckCircle className="h-6 w-6 text-green-600" />
+              <CheckCircle className="h-6 w-6 text-blue-600" />
             ) : (
               <AlertTriangle className="h-6 w-6 text-red-600" />
             )}
             <div>
-              <p className={`font-semibold ${isEligible ? 'text-green-800' : 'text-red-800'}`}>
+              <p className={`font-semibold ${isEligible ? 'text-blue-800' : 'text-red-800'}`}>
                 CIBIL Score: {cibilScore}
               </p>
-              <p className={`text-sm ${isEligible ? 'text-green-600' : 'text-red-600'}`}>
+              <p className={`text-sm ${isEligible ? 'text-blue-600' : 'text-red-600'}`}>
                 {isEligible ? 'You are eligible for this loan' : 'Your score needs improvement'}
               </p>
             </div>
@@ -141,7 +141,8 @@ export const LoanApplicationFlow = ({ loanType, cibilScore }: LoanApplicationFlo
       )}
 
       {/* Step Content */}
-      <BankingCard className="rounded-2xl">
+      <div className="px-6">
+         <BankingCard className="rounded-2xl ">
         {currentStep === 1 && (
           <div className="space-y-6">
             <div className="flex items-center space-x-3 mb-6">
@@ -268,12 +269,12 @@ export const LoanApplicationFlow = ({ loanType, cibilScore }: LoanApplicationFlo
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-green-50 border border-green-200">
+              <div className="p-4 rounded-xl bg-blue-50 border border-blue-200">
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-green-800">Ready to Submit</span>
+                  <CheckCircle className="h-5 w-5 text-blue-600" />
+                  <span className="font-semibold text-blue-800">Ready to Submit</span>
                 </div>
-                <p className="text-sm text-green-600 mt-1">
+                <p className="text-sm text-blue-600 mt-1">
                   Your application will be processed within 24-48 hours
                 </p>
               </div>
@@ -297,6 +298,8 @@ export const LoanApplicationFlow = ({ loanType, cibilScore }: LoanApplicationFlo
           </Button>
         </div>
       </BankingCard>
+      </div>
+     
     </div>
   );
 };

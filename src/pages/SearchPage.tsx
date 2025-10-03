@@ -137,7 +137,7 @@ const SearchPage = () => {
               placeholder="Search transactions, services..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 rounded-xl border-green-800"
+              className="pl-10 rounded-xl border-blue-800"
               autoFocus
             />
           </div>
@@ -243,7 +243,7 @@ const SearchPage = () => {
                         <div className="flex items-center gap-3">
                           <div className={`p-2 rounded-full ${
                             transaction.type === 'credit' 
-                              ? 'bg-green-100 text-green-600' 
+                              ? 'bg-blue-100 text-blue-600' 
                               : 'bg-muted text-muted-foreground'
                           }`}>
                             {transaction.type === 'credit' ? (
@@ -263,7 +263,7 @@ const SearchPage = () => {
                           </div>
                         </div>
                         <div className={`text-sm font-semibold ${
-                          transaction.type === 'credit' ? 'text-green-600' : 'text-foreground'
+                          transaction.type === 'credit' ? 'text-blue-600' : 'text-foreground'
                         }`}>
                           {transaction.type === 'credit' ? '+' : '-'}{formatCurrency(transaction.amount)}
                         </div>

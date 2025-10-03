@@ -40,7 +40,7 @@ const LoanEligibilityResult = () => {
   };
 
   const getScoreStatus = (score: number) => {
-    if (score >= 750) return { status: 'Excellent', color: 'text-green-600', bgColor: 'bg-green-50', borderColor: 'border-green-200' };
+    if (score >= 750) return { status: 'Excellent', color: 'text-blue-600', bgColor: 'bg-blue-50', borderColor: 'border-blue-200' };
     if (score >= 700) return { status: 'Good', color: 'text-blue-600', bgColor: 'bg-blue-50', borderColor: 'border-blue-200' };
     if (score >= 650) return { status: 'Fair', color: 'text-orange-600', bgColor: 'bg-orange-50', borderColor: 'border-orange-200' };
     return { status: 'Poor', color: 'text-red-600', bgColor: 'bg-red-50', borderColor: 'border-red-200' };
@@ -123,7 +123,7 @@ const LoanEligibilityResult = () => {
           {/* Eligibility Summary */}
           <div className="rounded-xl p-4 bg-white border border-gray-200">
             <div className="flex items-center gap-2 mb-4">
-              <CheckCircle className="h-5 w-5 text-green-600" />
+              <CheckCircle className="h-5 w-5 text-blue-600" />
               <h2 className="text-lg font-semibold text-gray-900">Congratulations! You're Eligible</h2>
             </div>
             
@@ -133,10 +133,10 @@ const LoanEligibilityResult = () => {
                 <p className="text-xs text-gray-600 mb-1">Max Amount</p>
                 <p className="font-bold text-blue-600">₹{(eligibility.maxAmount / 100000).toFixed(1)}L</p>
               </div>
-              <div className="text-center p-4 rounded-lg bg-green-50 border border-green-100">
-                <Percent className="h-5 w-5 text-green-600 mx-auto mb-2" />
+              <div className="text-center p-4 rounded-lg bg-blue-50 border border-blue-100">
+                <Percent className="h-5 w-5 text-blue-600 mx-auto mb-2" />
                 <p className="text-xs text-gray-600 mb-1">Interest Rate</p>
-                <p className="font-bold text-green-600">{eligibility.minInterestRate}%</p>
+                <p className="font-bold text-blue-600">{eligibility.minInterestRate}%</p>
               </div>
               <div className="text-center p-4 rounded-lg bg-purple-50 border border-purple-100">
                 <Calendar className="h-5 w-5 text-purple-600 mx-auto mb-2" />
@@ -227,7 +227,7 @@ const LoanEligibilityResult = () => {
           <div className="max-w-md mx-auto ">
             <Button 
               onClick={handleContinue}
-              className="w-full h-12  bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white font-medium"
+              className="w-full h-12  bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white font-medium"
             >
               Continue to Application
             </Button>

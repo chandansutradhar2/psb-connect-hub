@@ -193,8 +193,8 @@ const Investment = () => {
               className={`flex-shrink-0 px-3 py-2 rounded-full text-sm md:text-base font-medium transition-all duration-300
                 ${
                   activeTab === tab.key
-                    ? "bg-gradient-to-b from-[#134e5e] to-[#71b280] text-white shadow-sm"
-                    : "text-gray-600 hover:text-[#134e5e]"
+                    ? "bg-gradient-to-b from-[#1178AC] to-[#1397DA] text-white shadow-sm"
+                    : "text-gray-600 hover:text-[#1178AC]"
                 }`}
             >
               {tab.label}
@@ -208,7 +208,7 @@ const Investment = () => {
         {activeTab === 'overview' && (
           <div className="space-y-6">
             {/* Portfolio Summary */}
-            <BankingCard className="rounded-xl px-4 py-4 bg-gradient-to-b from-[#134e5e] to-[#71b280] text-white shadow-lg">
+            <BankingCard className="rounded-xl px-4 py-4 bg-gradient-to-b from-[#1178AC] to-[#1397DA] text-white shadow-lg">
               <div className="flex items-center justify-between">
                 <p className="text-white/70 text-xs md:text-sm font-medium">
                   Holdings ({holdingsCount})
@@ -239,13 +239,13 @@ const Investment = () => {
               <div className="space-y-2 text-xs md:text-sm">
                 <div className="flex justify-between">
                   <span className="text-white/70">1D returns</span>
-                  <span className={`font-semibold ${oneDayReturns >= 0 ? "text-green-100" : "text-red-300"}`}>
+                  <span className={`font-semibold ${oneDayReturns >= 0 ? "text-blue-100" : "text-red-300"}`}>
                     {oneDayReturns >= 0 ? "+" : ""}₹{oneDayReturns.toFixed(2)} ({oneDayPercent.toFixed(2)}%)
                   </span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-white/70">Total returns</span>
-                  <span className={`font-semibold ${totalReturns >= 0 ? "text-green-100" : "text-red-300"}`}>
+                  <span className={`font-semibold ${totalReturns >= 0 ? "text-blue-100" : "text-red-300"}`}>
                     {totalReturns >= 0 ? "+" : ""}₹{totalReturns.toLocaleString()} ({returnsPercent.toFixed(2)}%)
                   </span>
                 </div>
@@ -255,7 +255,7 @@ const Investment = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-white/70">XIRR</span>
-                  <span className={`font-semibold ${returnsPercent >= 0 ? "text-green-100" : "text-red-300"}`}>
+                  <span className={`font-semibold ${returnsPercent >= 0 ? "text-blue-100" : "text-red-300"}`}>
                     {returnsPercent.toFixed(2)}%
                   </span>
                 </div>
@@ -333,7 +333,7 @@ const Investment = () => {
                       </div>
                       <div className="text-right">
                         <p className="font-semibold">₹{fund.current.toLocaleString()}</p>
-                        <div className={`flex items-center text-xs md:text-sm ${fund.returns >= 0 ? 'text-green-600' : 'text-red-600'}`}>
+                        <div className={`flex items-center text-xs md:text-sm ${fund.returns >= 0 ? 'text-blue-600' : 'text-red-600'}`}>
                           {fund.returns >= 0 ? (
                             <TrendingUp className="h-3 w-3 md:h-4 md:w-4 mr-1" />
                           ) : (

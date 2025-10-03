@@ -35,7 +35,7 @@ export const CardsSnapshotWidget = () => {
       dueAmount: 0,
       dueDate: null,
       status: 'active',
-      color: 'from-green-600 to-green-700',
+      color: 'from-blue-600 to-blue-700',
       urgent: false
     }
   ];
@@ -102,7 +102,7 @@ export const CardsSnapshotWidget = () => {
                   >
                     {showCardNumber ? <EyeOff className="h-3 w-3" /> : <Eye className="h-3 w-3" />}
                   </Button>
-                  <Badge className={`bg-white/20 text-white border-0 text-xs ${card.status === 'active' ? 'bg-green-500/30' : 'bg-red-500/30'}`}>
+                  <Badge className={`bg-white/20 text-white border-0 text-xs ${card.status === 'active' ? 'bg-blue-500/30' : 'bg-red-500/30'}`}>
                     {card.status}
                   </Badge>
                 </div>

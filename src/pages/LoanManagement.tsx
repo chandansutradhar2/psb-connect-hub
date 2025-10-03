@@ -211,12 +211,12 @@ const LoanManagement = () => {
             </BankingCard>
 
             {/* Interest Savings */}
-            <BankingCard className="rounded-2xl bg-green-50 border-green-200">
+            <BankingCard className="rounded-2xl bg-blue-50 border-blue-200">
               <div className="flex items-start space-x-3">
-                <TrendingUp className="h-5 w-5 text-green-600 mt-0.5" />
+                <TrendingUp className="h-5 w-5 text-blue-600 mt-0.5" />
                 <div>
-                  <h4 className="font-semibold text-green-800 mb-2">Save on Interest</h4>
-                  <p className="text-sm text-green-700 mb-3">
+                  <h4 className="font-semibold text-blue-800 mb-2">Save on Interest</h4>
+                  <p className="text-sm text-blue-700 mb-3">
                     Make a part payment to reduce your interest burden and close your loan early.
                   </p>
                   <Button size="sm" variant="outline" onClick={handlePartPayment}>

@@ -52,7 +52,7 @@ const LoanOTPVerification = () => {
         toast({
           title: "OTP Verified",
           description: "Your mobile number has been verified successfully",
-          className: "bg-green-50 border-green-200 text-green-800"
+          className: "bg-blue-50 border-blue-200 text-blue-800"
         });
         
         // Navigate after a brief success display
@@ -156,7 +156,7 @@ const LoanOTPVerification = () => {
 
                 {/* Status Indicator */}
                 {verificationStatus === 'success' && (
-                  <div className="flex items-center justify-center gap-2 text-green-600 bg-green-50 p-3 rounded-lg mb-4 text-sm">
+                  <div className="flex items-center justify-center gap-2 text-blue-600 bg-blue-50 p-3 rounded-lg mb-4 text-sm">
                     <CheckCircle className="h-4 w-4" />
                     <span>Verified successfully</span>
                   </div>
@@ -182,7 +182,7 @@ const LoanOTPVerification = () => {
                     <span className="text-sm text-gray-600 mr-2">Didn't receive the code?</span>
                     <button
                       onClick={handleResendOTP}
-                      className="text-green-600 font-medium text-sm hover:text-green-700"
+                      className="text-blue-600 font-medium text-sm hover:text-blue-700"
                     >
                       Resend OTP
                     </button>
@@ -199,7 +199,7 @@ const LoanOTPVerification = () => {
             <Button 
               onClick={handleVerifyOTP}
               disabled={otp.length !== 6 || isLoading || verificationStatus === 'success'}
-              className="w-full h-12 rounded-lg bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4c] hover:to-[#5f9b6b] text-white text-sm font-medium transition-colors duration-200"
+              className="w-full h-12 rounded-lg bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4c] hover:to-[#5f9b6b] text-white text-sm font-medium transition-colors duration-200"
             >
               {isLoading ? (
                 <>

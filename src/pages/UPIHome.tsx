@@ -193,7 +193,7 @@ const UPIHome = () => {
                   <div className={`p-2 rounded-full ${
                     transaction.type === 'sent' 
                       ? 'bg-red-100 text-red-600' 
-                      : 'bg-green-100 text-green-600'
+                      : 'bg-blue-100 text-blue-600'
                   }`}>
                     {transaction.type === 'sent' ? (
                       <Send className="h-4 w-4" />
@@ -213,7 +213,7 @@ const UPIHome = () => {
                 
                 <div className="text-right">
                   <p className={`font-semibold ${
-                    transaction.type === 'sent' ? 'text-red-600' : 'text-green-600'
+                    transaction.type === 'sent' ? 'text-red-600' : 'text-blue-600'
                   }`}>
                     {transaction.type === 'sent' ? '-' : '+'}{formatCurrency(transaction.amount)}
                   </p>

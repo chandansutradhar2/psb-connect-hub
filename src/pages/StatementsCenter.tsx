@@ -29,7 +29,7 @@ const StatementsCenter = () => {
 
           <BankingCard className="cursor-pointer hover:shadow-md">
             <div className="space-y-3">
-              <Calculator className="h-8 w-8 text-green-600" />
+              <Calculator className="h-8 w-8 text-blue-600" />
               <h3 className="font-semibold">TDS Certificate</h3>
               <p className="text-sm text-muted-foreground">Download TDS certificates</p>
               <Button size="sm" className="w-full">Download</Button>

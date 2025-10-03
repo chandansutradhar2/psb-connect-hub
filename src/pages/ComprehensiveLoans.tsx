@@ -39,7 +39,7 @@ const ComprehensiveLoans = () => {
       maxAmount: "₹10,00,00,000",
       tenure: "5-30 years",
       icon: <Home className="h-6 w-6" />,
-      color: "bg-green-50 text-green-600",
+      color: "bg-blue-50 text-blue-600",
       features: ["Tax benefits", "Attractive rates", "Balance transfer", "Top-up facility"]
     },
     {
@@ -219,7 +219,7 @@ const ComprehensiveLoans = () => {
                           <div className="grid grid-cols-2 gap-1">
                             {loan.features.map((feature, index) => (
                               <div key={index} className="flex items-center gap-1 text-xs text-muted-foreground">
-                                <CheckCircle className="h-3 w-3 text-green-500" />
+                                <CheckCircle className="h-3 w-3 text-blue-500" />
                                 {feature}
                               </div>
                             ))}
@@ -254,7 +254,7 @@ const ComprehensiveLoans = () => {
                               <CardTitle className="text-base">{loan.type}</CardTitle>
                               <p className="text-sm text-muted-foreground">A/c: {loan.accountNumber}</p>
                             </div>
-                            <Badge variant="default" className="bg-green-100 text-green-700">
+                            <Badge variant="default" className="bg-blue-100 text-blue-700">
                               <CheckCircle className="h-3 w-3 mr-1" />
                               {loan.status}
                             </Badge>

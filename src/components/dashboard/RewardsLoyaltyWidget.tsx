@@ -87,11 +87,11 @@ export const RewardsLoyaltyWidget = () => {
           </div>
           <div className="space-y-1">
             <div className="flex items-center space-x-1">
-              <Sparkles className="h-4 w-4 text-green-600" />
-              <span className="text-lg font-bold text-green-600">+{rewardsData.pointsThisMonth}</span>
+              <Sparkles className="h-4 w-4 text-blue-600" />
+              <span className="text-lg font-bold text-blue-600">+{rewardsData.pointsThisMonth}</span>
             </div>
             <p className="text-xs text-muted-foreground">This Month</p>
-            <p className="text-xs text-green-600 font-medium">Keep earning!</p>
+            <p className="text-xs text-blue-600 font-medium">Keep earning!</p>
           </div>
         </div>
 

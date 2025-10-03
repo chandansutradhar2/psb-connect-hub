@@ -43,7 +43,7 @@ const DepositManagement = () => {
       features: ["Guaranteed returns", "Loan against FD", "Auto-renewal option", "Premature withdrawal"],
       minAmount: "₹1,000",
       icon: <PiggyBank className="h-5 w-5" />,
-      color: "bg-green-100 text-green-600"
+      color: "bg-blue-100 text-blue-600"
     },
     {
       type: "rd",
@@ -150,12 +150,19 @@ const DepositManagement = () => {
             <span>Interest ({rate}%):</span>
             <span className="font-medium">₹{Math.round(interest).toLocaleString()}</span>
           </div>
-          <div className="flex justify-between font-bold text-green-600">
+          <div className="flex justify-between font-bold text-blue-600">
             <span>Maturity Amount:</span>
             <span>₹{Math.round(maturityAmount).toLocaleString()}</span>
           </div>
         </div>
       ),
+    });
+  };
+  const handleComingSoon = (feature: string) => {
+    toast({
+      title: "Coming Soon",
+      description: `${feature} feature is coming soon!`,
+      duration: 3000,
     });
   };
 
@@ -199,7 +206,7 @@ const DepositManagement = () => {
             <Card className="border border-gray-200 shadow-sm">
               <CardContent className="p-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 bg-green-100 rounded-lg text-green-600">
+                  <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
                     <Banknote className="h-5 w-5" />
                   </div>
                   <div>
@@ -250,7 +257,7 @@ const DepositManagement = () => {
               <div className="space-y-4">
                 {existingDeposits.map((deposit) => (
                   <Card key={deposit.id} className="border border-gray-200 shadow-sm overflow-hidden">
-                    <div className={`h-1 ${deposit.status === "Active" ? "bg-green-500" : deposit.status === "Matured" ? "bg-blue-500" : "bg-gray-400"}`}></div>
+                    <div className={`h-1 ${deposit.status === "Active" ? "bg-blue-500" : deposit.status === "Matured" ? "bg-blue-500" : "bg-gray-400"}`}></div>
                     <CardHeader className="pb-3">
                       <div className="flex items-center justify-between">
                         <div>
@@ -260,7 +267,7 @@ const DepositManagement = () => {
                         <Badge 
                           variant="outline"
                           className={`text-xs ${
-                            deposit.status === "Active" ? "bg-green-50 text-green-700 border-green-200" : 
+                            deposit.status === "Active" ? "bg-blue-50 text-blue-700 border-blue-200" : 
                             deposit.status === "Matured" ? "bg-blue-50 text-blue-700 border-blue-200" : 
                             "bg-gray-50 text-gray-700 border-gray-200"
                           }`}
@@ -281,7 +288,7 @@ const DepositManagement = () => {
                         </div>
                         <div>
                           <p className="text-sm text-gray-500">Maturity Amount</p>
-                          <p className="text-lg font-bold text-green-600">{deposit.maturityAmount}</p>
+                          <p className="text-lg font-bold text-blue-600">{deposit.maturityAmount}</p>
                         </div>
                       </div>
                       
@@ -316,7 +323,11 @@ const DepositManagement = () => {
                       )}
 
                       <div className="flex gap-2">
-                        <Button variant="outline" className="flex-1" size="sm" onClick={() => navigate(`/deposit-statement/${deposit.id}`)}>
+                        <Button variant="outline" className="flex-1" size="sm"
+                        //  onClick={() => navigate(`/deposit-statement/${deposit.id}`)}
+                                    onClick={() => handleComingSoon("Statement")}
+
+                         >
                           Statement
                         </Button>
                         {deposit.status === "Active" && (
@@ -358,7 +369,7 @@ const DepositManagement = () => {
                           {product.rates.map((rate, index) => (
                             <div key={index} className="flex justify-between items-center text-sm">
                               <span className="text-gray-600">{rate.tenure}</span>
-                              <span className="font-medium text-green-600">{rate.rate}</span>
+                              <span className="font-medium text-blue-600">{rate.rate}</span>
                             </div>
                           ))}
                         </div>
@@ -369,7 +380,7 @@ const DepositManagement = () => {
                         <div className="grid grid-cols-2 gap-2">
                           {product.features.map((feature, index) => (
                             <div key={index} className="flex items-center gap-2 text-xs">
-                              <CheckCircle className="h-3 w-3 text-green-500" />
+                              <CheckCircle className="h-3 w-3 text-blue-500" />
                               <span>{feature}</span>
                             </div>
                           ))}
@@ -381,7 +392,11 @@ const DepositManagement = () => {
                           <p className="text-xs text-gray-500">Minimum Amount</p>
                           <p className="text-sm font-medium">{product.minAmount}</p>
                         </div>
-                        <Button onClick={() => openNewDeposit(product.type)} size="sm">
+                        <Button
+                   onClick={() => handleComingSoon("Statement")}
+
+                        //  onClick={() => openNewDeposit(product.type)} size="sm"
+                         >
                           <Plus className="h-4 w-4 mr-2" />
                           Open
                         </Button>
@@ -436,6 +451,7 @@ const DepositManagement = () => {
                         type="number"
                         step="0.5"
                         placeholder="Enter years"
+                        maxLength={2}
                         value={depositTenure}
                         onChange={(e) => setDepositTenure(e.target.value)}
                         className="h-10"
@@ -461,7 +477,7 @@ const DepositManagement = () => {
                         </div>
                         <div className="flex justify-between">
                           <span className="text-gray-600">Interest Rate:</span>
-                          <span className="font-medium text-green-600">7.0% p.a.</span>
+                          <span className="font-medium text-blue-600">7.0% p.a.</span>
                         </div>
                         <div className="border-t border-gray-200 my-2"></div>
                         {depositType === "rd" && (
@@ -472,7 +488,7 @@ const DepositManagement = () => {
                             </span>
                           </div>
                         )}
-                        <div className="flex justify-between font-bold text-green-600">
+                        <div className="flex justify-between font-bold text-blue-600">
                           <span>Estimated Maturity:</span>
                           <span>
                             ₹{Math.round(parseInt(depositAmount) * Math.pow(1.07, parseFloat(depositTenure))).toLocaleString()}

@@ -97,7 +97,7 @@ const LoanCibilConsent = () => {
       toast({
         title: "OTP Sent",
         description: "Please check your registered mobile number",
-        className: "bg-green-50 border-green-200 text-green-800"
+        className: "bg-blue-50 border-blue-200 text-blue-800"
       });
       navigate('/loan-otp-verification', { 
         state: { 
@@ -205,13 +205,13 @@ const LoanCibilConsent = () => {
               </div>
 
               {/* Consent */}
-              <div className="p-4 rounded-lg bg-green-50 border border-green-100">
+              <div className="p-4 rounded-lg bg-blue-50 border border-blue-100">
                 <div className="flex items-start gap-3">
                   <Checkbox
                     id="consent"
                     checked={formData.consent}
                     onCheckedChange={(checked) => setFormData({...formData, consent: !!checked})}
-                    className="mt-0.5 h-4 w-4 data-[state=checked]:bg-green-600 data-[state=checked]:border-green-600 focus:ring-2 focus:ring-green-500"
+                    className="mt-0.5 h-4 w-4 data-[state=checked]:bg-blue-600 data-[state=checked]:border-blue-600 focus:ring-2 focus:ring-blue-500"
                   />
                   <div className="text-sm text-gray-700">
                     <label htmlFor="consent" className="font-medium cursor-pointer">
@@ -239,7 +239,7 @@ const LoanCibilConsent = () => {
             <Button 
               onClick={handleSubmit}
               disabled={isLoading}
-              className="w-full h-12 rounded-lg bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4c] hover:to-[#5f9b6b] text-white text-sm font-medium transition-colors duration-200"
+              className="w-full h-12 rounded-lg bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4c] hover:to-[#5f9b6b] text-white text-sm font-medium transition-colors duration-200"
             >
               {isLoading ? (
                 <>

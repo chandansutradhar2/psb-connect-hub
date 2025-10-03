@@ -16,7 +16,7 @@ export const DiscoverServicesWidget = () => {
           description: 'Lock-in period of 5 years, Tax benefits under 80C',
           rate: '7.25% p.a.',
           icon: <PiggyBank className="h-4 w-4" />,
-          color: 'from-green-500 to-green-600',
+          color: 'from-blue-500 to-blue-600',
           badge: 'Tax Saver',
           path: '/deposit-management'
         },
@@ -85,7 +85,7 @@ export const DiscoverServicesWidget = () => {
         return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'Tax Saver':
       case 'Tax Free':
-        return 'bg-green-100 text-green-800 border-green-200';
+        return 'bg-blue-100 text-blue-800 border-blue-200';
       case 'Govt Scheme':
         return 'bg-blue-100 text-blue-800 border-blue-200';
       case 'Pension':

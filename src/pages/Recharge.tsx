@@ -227,12 +227,14 @@ import {
   Zap,
   Gift,
 } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
 
 const Recharge = () => {
   const navigate = useNavigate();
   const [selectedService, setSelectedService] = useState('mobile');
   const [mobileNumber, setMobileNumber] = useState('');
   const [amount, setAmount] = useState('');
+  
 
   const services = [
     { key: 'mobile', label: 'Mobile', icon: <Smartphone className="h-5 w-5" /> },
@@ -240,6 +242,14 @@ const Recharge = () => {
     { key: 'broadband', label: 'Broadband', icon: <Wifi className="h-5 w-5" /> },
     { key: 'landline', label: 'Landline', icon: <Phone className="h-5 w-5" /> },
   ];
+
+    const handleComingSoon = (feature: string) => {
+    toast({
+      title: "Coming Soon",
+      description: `${feature} feature is coming soon!`,
+      duration: 3000,
+    });
+  };
 
   const quickAmounts = [99, 199, 299, 499, 999, 1999];
 
@@ -287,7 +297,7 @@ const Recharge = () => {
             className="rounded-full p-2 min-w-[44px] min-h-[44px] hover:bg-gray-100 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none transition-colors mr-4"
             aria-label="View recharge history"
           >
-            <History className="h-5 w-5 text-gray-600" />
+            {/* <History className="h-5 w-5 text-gray-600" /> */}
           </Button>
         </header>
 
@@ -301,7 +311,7 @@ const Recharge = () => {
                 onClick={() => setSelectedService(service.key)}
                 className={`flex flex-col items-center justify-center p-3 rounded-xl transition-all duration-200 ${
                   selectedService === service.key
-                    ? 'bg-green-500 text-white shadow-md'
+                    ? 'bg-blue-500 text-white shadow-md'
                     : 'bg-gray-200 hover:bg-gray-300 border border-gray-300'
                 } min-h-[80px]`}
               >
@@ -374,8 +384,11 @@ const Recharge = () => {
 
             <Button
               className="w-full rounded-xl h-12 sm:h-14 text-sm sm:text-base min-h-[44px] bg-primary hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200"
-              onClick={handleRecharge}
-              disabled={!mobileNumber || !amount}
+              // onClick={handleRecharge}
+              // disabled={!mobileNumber || !amount}
+                          onClick={() => handleComingSoon("Recharge")}
+
+
             >
               <Zap className="h-4 w-4 mr-2" />
               Proceed to Pay
@@ -442,7 +455,7 @@ const Recharge = () => {
             ₹{recharge.amount}
           <Badge
             variant="secondary"
-            className="text-xs sm:text-sm ml-4 bg-green-100 text-green-700 border-green-200"
+            className="text-xs sm:text-sm ml-4 bg-blue-100 text-blue-700 border-blue-200"
           >
             Success
           </Badge>

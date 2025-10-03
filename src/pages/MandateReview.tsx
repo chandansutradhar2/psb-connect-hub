@@ -89,7 +89,7 @@ const MandateReview = () => {
   return (
     <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#134e5e] to-[#71b280] border-b border-[#134e5e]/20 sticky top-0 z-40 w-full shadow-sm">
+      <div className="bg-gradient-to-r from-[#1178AC] to-[#1397DA] border-b border-[#1178AC]/20 sticky top-0 z-40 w-full shadow-sm">
         <div className="px-4 sm:px-6 py-4 max-w-screen-xl mx-auto flex items-center justify-between">
           <Button
             variant="ghost"
@@ -114,7 +114,7 @@ const MandateReview = () => {
         {/* Bank Selection */}
         <div className="mb-6">
           <Select value={selectedBank} onValueChange={handleBankChange}>
-            <SelectTrigger className="h-10 text-base border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]">
+            <SelectTrigger className="h-10 text-base border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]">
               <SelectValue placeholder="Select Bank" />
             </SelectTrigger>
             <SelectContent>
@@ -138,7 +138,7 @@ const MandateReview = () => {
               <div
                 key={index}
                 className={`w-12 h-12 rounded-full border-2 flex items-center justify-center ${
-                  digit ? 'border-[#134e5e] bg-[#134e5e]/10' : 'border-border bg-background'
+                  digit ? 'border-[#1178AC] bg-[#1178AC]/10' : 'border-border bg-background'
                 }`}
               >
                 <Input
@@ -164,7 +164,7 @@ const MandateReview = () => {
                 key={num}
                 variant="ghost"
                 onClick={() => handleNumberPad(num.toString())}
-                className="h-14 text-xl font-medium hover:bg-[#134e5e]/10 rounded-lg"
+                className="h-14 text-xl font-medium hover:bg-[#1178AC]/10 rounded-lg"
               >
                 {num}
               </Button>
@@ -172,14 +172,14 @@ const MandateReview = () => {
             <Button
               variant="ghost"
               onClick={handleBackspace}
-              className="h-14 hover:bg-[#134e5e]/10 rounded-lg"
+              className="h-14 hover:bg-[#1178AC]/10 rounded-lg"
             >
               <X className="h-6 w-6 text-foreground" />
             </Button>
             <Button
               variant="ghost"
               onClick={() => handleNumberPad('0')}
-              className="h-14 text-xl font-medium hover:bg-[#134e5e]/10 rounded-lg"
+              className="h-14 text-xl font-medium hover:bg-[#1178AC]/10 rounded-lg"
             >
               0
             </Button>
@@ -189,10 +189,10 @@ const MandateReview = () => {
       </div>
 
       {/* Fixed Submit Button */}
-      <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-[#134e5e]/20 z-50">
+      <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-[#1178AC]/20 z-50">
         <div className="px-4 sm:px-6 py-4 max-w-screen-xl mx-auto">
           <Button
-            className="w-full h-11 bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium text-base rounded-lg transition-colors duration-200 disabled:opacity-50"
+            className="w-full h-11 bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium text-base rounded-lg transition-colors duration-200 disabled:opacity-50"
             onClick={handleSubmit}
             disabled={pin.some(p => !p)}
           >
@@ -203,7 +203,7 @@ const MandateReview = () => {
 
       {/* Bank Logo */}
       <div className="p-4 flex justify-center">
-        <div className="text-[#134e5e]">
+        <div className="text-[#1178AC]">
           <svg width="60" height="20" viewBox="0 0 60 20" fill="currentColor">
             <text x="0" y="16" fontSize="14" fontWeight="bold">UPI</text>
           </svg>

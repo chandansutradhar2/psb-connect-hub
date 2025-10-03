@@ -53,7 +53,7 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen  bg-gradient-to-b from-[#134e5e] to-[#71b280]  flex items-center justify-center p-4">
+    <div className="min-h-screen  bg-gradient-to-b from-[#1178AC] to-[#1397DA]  flex items-center justify-center p-4">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-20" 
@@ -124,7 +124,7 @@ const Login = () => {
 
                 <Button 
                   onClick={() => handleLogin('mpin')}
-                  className="w-full h-12  bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white flex items-center justify-center"
+                  className="w-full h-12  bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white flex items-center justify-center"
                   disabled={loading || !userId || mpin.length !== 4}
                 >
                   {loading ? (
@@ -183,7 +183,7 @@ const Login = () => {
 
                 <Button 
                   onClick={() => handleLogin('password')}
-                  className="w-full h-12  bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white flex items-center justify-center"
+                  className="w-full h-12  bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white flex items-center justify-center"
                   disabled={loading || !userId || !password}
                 >
                   {loading ? (
@@ -202,7 +202,7 @@ const Login = () => {
 
               <TabsContent value="biometric" className="space-y-4">
                 <div className="text-center py-8">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#134e5e] to-[#71b280] flex items-center justify-center">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-r from-[#1178AC] to-[#1397DA] flex items-center justify-center">
                     <Fingerprint className="h-10 w-10 text-white" />
                   </div>
                   <h3 className="font-semibold mb-2">Biometric Authentication</h3>
@@ -212,7 +212,7 @@ const Login = () => {
                   
                   <Button 
                     onClick={() => handleLogin('biometric')}
-                    className=" bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white w-full h-12 flex items-center justify-center"
+                    className=" bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white w-full h-12 flex items-center justify-center"
                     disabled={loading}
                   >
                     {loading ? (

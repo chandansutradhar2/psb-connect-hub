@@ -63,7 +63,7 @@ export const MobileNavigation = ({ children }: MobileNavigationProps) => {
 
   // Desktop sidebar for larger screens
   const DesktopSidebar = () => (
-    <div className="hidden lg:flex lg:w-72 lg:flex-col lg:fixed lg:inset-y-0 lg:bg-gradient-to-b lg:from-[#134e5e] lg:to-[#71b280] lg:shadow-lg lg:transition-all lg:duration-300">
+    <div className="hidden lg:flex lg:w-72 lg:flex-col lg:fixed lg:inset-y-0 lg:bg-gradient-to-b lg:from-[#1178AC] lg:to-[#1397DA] lg:shadow-lg lg:transition-all lg:duration-300">
       <div className="flex flex-col flex-grow pt-6 pb-4 overflow-y-auto">
         <div className="flex items-center flex-shrink-0 px-4">
           <img className="h-10 w-auto" src="/images/simbollogo-psb.png" alt="PSB Logo" />

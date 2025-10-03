@@ -154,15 +154,15 @@ const InsuranceCoverageSelection = () => {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between p-3 rounded-xl border border-border bg-green-50">
+              <div className="flex items-center justify-between p-3 rounded-xl border border-border bg-blue-50">
                 <div className="flex items-center space-x-3">
                   <RadioGroupItem value="yearly" id="yearly" />
                   <Label htmlFor="yearly" className="font-medium">Yearly</Label>
-                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">Recommended</span>
+                  <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">Recommended</span>
                 </div>
                 <div className="text-right">
-                  <p className="font-bold text-green-700">{formatCurrency(calculatePremium())}</p>
-                  <p className="text-xs text-green-600">per year • Save 10%</p>
+                  <p className="font-bold text-blue-700">{formatCurrency(calculatePremium())}</p>
+                  <p className="text-xs text-blue-600">per year • Save 10%</p>
                 </div>
               </div>
             </div>
@@ -178,7 +178,7 @@ const InsuranceCoverageSelection = () => {
                   <RadioGroupItem value={years} id={`term-${years}`} />
                   <Label htmlFor={`term-${years}`} className="text-center">
                     <span className="font-bold">{years} Year{years !== '1' ? 's' : ''}</span>
-                    {years === '5' && <span className="block text-xs text-green-600">Popular</span>}
+                    {years === '5' && <span className="block text-xs text-blue-600">Popular</span>}
                   </Label>
                 </div>
               ))}
@@ -187,13 +187,13 @@ const InsuranceCoverageSelection = () => {
         </BankingCard>
 
         {/* Premium Summary */}
-        <BankingCard className="rounded-2xl bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
+        <BankingCard className="rounded-2xl bg-gradient-to-r from-blue-50 to-blue-50 border-blue-200">
           <div className="text-center space-y-2">
-            <h3 className="font-semibold text-green-800">Your Premium</h3>
-            <p className="text-2xl font-bold text-green-700">
+            <h3 className="font-semibold text-blue-800">Your Premium</h3>
+            <p className="text-2xl font-bold text-blue-700">
               {formatCurrency(calculatePremium())}
             </p>
-            <p className="text-sm text-green-600">
+            <p className="text-sm text-blue-600">
               {premiumFrequency === 'monthly' ? 'per month' : 
                premiumFrequency === 'quarterly' ? 'per quarter' : 'per year'}
             </p>

@@ -64,7 +64,7 @@ const TransferConfirmation = () => {
         {/* Transfer Summary */}
         <BankingCard>
           <h3 className="font-semibold mb-4 flex items-center">
-            <CheckCircle className="h-5 w-5 mr-2 text-green-600" />
+            <CheckCircle className="h-5 w-5 mr-2 text-blue-600" />
             Transfer Summary
           </h3>
           
@@ -137,7 +137,7 @@ const TransferConfirmation = () => {
               <p className="text-sm text-muted-foreground">Immediate transfer</p>
             </div>
             <div className="text-right">
-              <Badge className="bg-green-100 text-green-700">
+              <Badge className="bg-blue-100 text-blue-700">
                 <Clock className="h-3 w-3 mr-1" />
                 {transferDetails.transferType}
               </Badge>

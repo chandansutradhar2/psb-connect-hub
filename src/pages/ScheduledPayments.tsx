@@ -172,7 +172,7 @@ const ScheduledPayments = () => {
           <div className="grid grid-cols-2 gap-4">
             <BankingCard className="rounded-2xl">
               <div className="text-center">
-                <p className="text-2xl font-bold text-green-600">
+                <p className="text-2xl font-bold text-blue-600">
                   {scheduledPayments.filter(p => p.status === 'Active').length}
                 </p>
                 <p className="text-sm text-muted-foreground">Active Payments</p>
@@ -196,8 +196,8 @@ const ScheduledPayments = () => {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-3">
-                      <div className={`p-2 rounded-xl ${payment.status === 'Active' ? 'bg-green-100' : 'bg-gray-100'}`}>
-                        <Repeat className={`h-5 w-5 ${payment.status === 'Active' ? 'text-green-600' : 'text-gray-600'}`} />
+                      <div className={`p-2 rounded-xl ${payment.status === 'Active' ? 'bg-blue-100' : 'bg-gray-100'}`}>
+                        <Repeat className={`h-5 w-5 ${payment.status === 'Active' ? 'text-blue-600' : 'text-gray-600'}`} />
                       </div>
                       <div>
                         <h3 className="font-semibold">{payment.title}</h3>

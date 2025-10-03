@@ -214,7 +214,7 @@ const CompleteLoanFlow = () => {
                       <ul className="text-xs space-y-1">
                         {loan.features.map((feature, idx) => (
                           <li key={idx} className="flex items-center gap-2">
-                            <CheckCircle className="h-3 w-3 text-green-600 flex-shrink-0" />
+                            <CheckCircle className="h-3 w-3 text-blue-600 flex-shrink-0" />
                             {feature}
                           </li>
                         ))}
@@ -444,13 +444,13 @@ const CompleteLoanFlow = () => {
                   Check Eligibility
                 </Button>
                 
-                <div className="bg-green-50 border border-green-200 rounded-xl p-4">
+                <div className="bg-blue-50 border border-blue-200 rounded-xl p-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <CheckCircle className="h-5 w-5 text-green-600" />
-                    <p className="font-semibold text-green-800">Great! You're eligible</p>
+                    <CheckCircle className="h-5 w-5 text-blue-600" />
+                    <p className="font-semibold text-blue-800">Great! You're eligible</p>
                   </div>
-                  <p className="text-sm text-green-700">Based on your profile, you can get:</p>
-                  <ul className="text-sm text-green-700 mt-2 space-y-1">
+                  <p className="text-sm text-blue-700">Based on your profile, you can get:</p>
+                  <ul className="text-sm text-blue-700 mt-2 space-y-1">
                     <li>• Home Loan: Up to ₹25 Lakhs</li>
                     <li>• Personal Loan: Up to ₹8 Lakhs</li>
                     <li>• Car Loan: Up to ₹15 Lakhs</li>

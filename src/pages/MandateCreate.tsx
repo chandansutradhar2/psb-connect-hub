@@ -65,7 +65,7 @@ const MandateCreate = () => {
   return (
     <div className="flex flex-col min-h-screen pb-16 bg-background">
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#134e5e] to-[#71b280] border-b border-border sticky top-0 z-40 w-full shadow-sm">
+      <div className="bg-gradient-to-r from-[#1178AC] to-[#1397DA] border-b border-border sticky top-0 z-40 w-full shadow-sm">
         <div className="px-4 sm:px-6 py-3 max-w-screen-xl mx-auto">
           <div className="flex items-center space-x-3">
             <Button
@@ -78,7 +78,7 @@ const MandateCreate = () => {
             </Button>
             <div>
               <h1 className="text-lg sm:text-xl font-semibold text-white">Create Autopay Mandate</h1>
-              <p className="text-xs text-white/80">Fill in the details below</p>
+              {/* <p className="text-xs text-white/80">Fill in the details below</p> */}
             </div>
           </div>
         </div>
@@ -87,9 +87,9 @@ const MandateCreate = () => {
       {/* Form Content */}
       <div className="flex-1 px-4 sm:px-6 py-4 max-w-screen-xl mx-auto w-full space-y-3">
         {/* Info Card */}
-        <Card className="bg-[#134e5e]/10 border-[#134e5e]/20 shadow-sm">
+        <Card className="bg-[#1178AC]/10 border-[#1178AC]/20 shadow-sm">
           <CardContent className="p-3 sm:p-4">
-            <p className="text-sm font-medium text-[#134e5e]">
+            <p className="text-sm font-medium text-[#1178AC]">
               {formData.payeeName || 'Enter Payee Name Below'}
             </p>
             <p className="text-xs text-muted-foreground mt-1">
@@ -110,7 +110,7 @@ const MandateCreate = () => {
               placeholder="Enter payee name"
               value={formData.payeeName}
               onChange={(e) => handleInputChange('payeeName', e.target.value)}
-              className="h-9 text-sm border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]"
+              className="h-9 text-sm border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]"
             />
           </div>
 
@@ -124,7 +124,7 @@ const MandateCreate = () => {
               placeholder="username@bankname"
               value={formData.upiId}
               onChange={(e) => handleInputChange('upiId', e.target.value)}
-              className="h-9 text-sm border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]"
+              className="h-9 text-sm border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]"
             />
           </div>
 
@@ -138,7 +138,7 @@ const MandateCreate = () => {
               placeholder="Enter reference ID (optional)"
               value={formData.referenceId}
               onChange={(e) => handleInputChange('referenceId', e.target.value)}
-              className="h-9 text-sm border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]"
+              className="h-9 text-sm border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]"
             />
           </div>
 
@@ -152,7 +152,7 @@ const MandateCreate = () => {
               placeholder="Optional remarks"
               value={formData.remarks}
               onChange={(e) => handleInputChange('remarks', e.target.value)}
-              className="h-9 text-sm border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]"
+              className="h-9 text-sm border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]"
             />
           </div>
 
@@ -167,7 +167,7 @@ const MandateCreate = () => {
                   type="date"
                   value={formData.validFrom}
                   onChange={(e) => handleInputChange('validFrom', e.target.value)}
-                  className="h-9 text-sm mt-0.5 border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]"
+                  className="h-9 text-sm mt-0.5 border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]"
                 />
               </div>
               <div>
@@ -177,7 +177,7 @@ const MandateCreate = () => {
                   type="date"
                   value={formData.validTo}
                   onChange={(e) => handleInputChange('validTo', e.target.value)}
-                  className="h-9 text-sm mt-0.5 border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]"
+                  className="h-9 text-sm mt-0.5 border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]"
                 />
               </div>
             </div>
@@ -189,7 +189,7 @@ const MandateCreate = () => {
               Frequency
             </Label>
             <Select value={formData.frequency} onValueChange={(value) => handleInputChange('frequency', value)}>
-              <SelectTrigger className="h-9 text-sm border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]">
+              <SelectTrigger className="h-9 text-sm border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -212,7 +212,7 @@ const MandateCreate = () => {
               id="cyclesCompleted"
               value="0"
               readOnly
-              className="h-9 text-sm bg-muted/20 text-muted-foreground border-[#134e5e]/20"
+              className="h-9 text-sm bg-muted/20 text-muted-foreground border-[#1178AC]/20"
             />
           </div>
 
@@ -229,7 +229,7 @@ const MandateCreate = () => {
                 placeholder="0.00"
                 value={formData.amountPerCycle}
                 onChange={(e) => handleInputChange('amountPerCycle', e.target.value)}
-                className="h-9 text-sm pl-6 border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]"
+                className="h-9 text-sm pl-6 border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]"
               />
             </div>
           </div>
@@ -240,7 +240,7 @@ const MandateCreate = () => {
               Debit Account
             </Label>
             <Select value={formData.debitAccount} onValueChange={(value) => handleInputChange('debitAccount', value)}>
-              <SelectTrigger className="h-9 text-sm border-[#134e5e]/20 focus:ring-[#71b280] focus:border-[#71b280]">
+              <SelectTrigger className="h-9 text-sm border-[#1178AC]/20 focus:ring-[#1397DA] focus:border-[#1397DA]">
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
@@ -253,10 +253,10 @@ const MandateCreate = () => {
       </div>
 
       {/* Fixed Transfer Mandate Button */}
-      <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-[#134e5e]/20 z-50">
+      <div className="fixed bottom-0 left-0 right-0 bg-background/95 backdrop-blur-sm border-t border-[#1178AC]/20 z-50">
         <div className="px-4 sm:px-6 py-3 max-w-screen-xl mx-auto">
           <Button
-            className="w-full h-12 bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium text-md rounded-md transition-colors duration-200"
+            className="w-full h-12 bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4b] hover:to-[#5e9b6a] text-white font-medium text-md rounded-md transition-colors duration-200"
             onClick={handleSubmit}
           >
             Transfer Mandate

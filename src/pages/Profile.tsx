@@ -69,7 +69,7 @@ const Profile = () => {
     toast({
       title: "Profile Updated",
       description: "Your profile has been successfully updated",
-      className: "bg-green-50 border-green-200 text-green-800"
+      className: "bg-blue-50 border-blue-200 text-blue-800"
     });
   };
 
@@ -273,7 +273,7 @@ const Profile = () => {
                         <ShieldCheck className="h-3 w-3 mr-1" />
                         Verified
                       </Badge>
-                      <Badge variant="secondary" className="bg-green-100 text-green-700 text-xs py-1">
+                      <Badge variant="secondary" className="bg-blue-100 text-blue-700 text-xs py-1">
                         <CheckCircle className="h-3 w-3 mr-1" />
                         Premium
                       </Badge>
@@ -349,7 +349,7 @@ const Profile = () => {
                                 {item.value}
                               </p>
                               {item.verified && (
-                                <Badge className="bg-green-100 text-green-700 text-xs ml-2">
+                                <Badge className="bg-blue-100 text-blue-700 text-xs ml-2">
                                   <CheckCircle className="h-3 w-3 mr-1" />
                                   Verified
                                 </Badge>
@@ -398,7 +398,7 @@ const Profile = () => {
                             )}
                           </div>
                           {item.key === 'kycStatus' && item.value === 'verified' && (
-                            <Badge className="bg-green-100 text-green-700 text-xs mt-1">
+                            <Badge className="bg-blue-100 text-blue-700 text-xs mt-1">
                               <ShieldCheck className="h-3 w-3 mr-1" />
                               Verified
                             </Badge>
@@ -416,8 +416,8 @@ const Profile = () => {
               <Card className="border border-gray-200 rounded-xl overflow-hidden shadow-xs">
                 <CardHeader className="p-4 bg-gray-50">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
-                      <Shield className="h-5 w-5 text-green-600" />
+                    <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+                      <Shield className="h-5 w-5 text-blue-600" />
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Security Settings</h3>
@@ -866,7 +866,7 @@ export default Profile;
 //       toast({
 //         title: "UPI ID Copied",
 //         description: "UPI ID has been copied to clipboard",
-//         className: "bg-green-50 border-green-200 text-green-800",
+//         className: "bg-blue-50 border-blue-200 text-blue-800",
 //       });
 //     } catch (error) {
 //       toast({
@@ -910,7 +910,7 @@ export default Profile;
 //       toast({
 //         title: "Profile Updated",
 //         description: "Your profile has been successfully updated",
-//         className: "bg-green-50 border-green-200 text-green-800",
+//         className: "bg-blue-50 border-blue-200 text-blue-800",
 //       });
 //     } catch (error) {
 //       toast({
@@ -934,7 +934,7 @@ export default Profile;
 //       toast({
 //         title: "Logged Out",
 //         description: "You have been successfully logged out",
-//         className: "bg-green-50 border-green-200 text-green-800",
+//         className: "bg-blue-50 border-blue-200 text-blue-800",
 //       });
 //       navigate('/login');
 //     } catch (error) {
@@ -957,7 +957,7 @@ export default Profile;
 //       toast({
 //         title: "Setting Updated",
 //         description: `Security setting has been ${value ? 'enabled' : 'disabled'}`,
-//         className: "bg-green-50 border-green-200 text-green-800",
+//         className: "bg-blue-50 border-blue-200 text-blue-800",
 //       });
 //     } catch (error) {
 //       toast({
@@ -982,7 +982,7 @@ export default Profile;
 //       toast({
 //         title: "Preference Updated",
 //         description: `Preference has been ${value ? 'enabled' : 'disabled'}`,
-//         className: "bg-green-50 border-green-200 text-green-800",
+//         className: "bg-blue-50 border-blue-200 text-blue-800",
 //       });
 //     } catch (error) {
 //       toast({
@@ -1003,7 +1003,7 @@ export default Profile;
 //       toast({
 //         title: "Language Updated",
 //         description: `App language set to ${value}`,
-//         className: "bg-green-50 border-green-200 text-green-800",
+//         className: "bg-blue-50 border-blue-200 text-blue-800",
 //       });
 //     } catch (error) {
 //       toast({
@@ -1024,7 +1024,7 @@ export default Profile;
 //       toast({
 //         title: "Theme Updated",
 //         description: `App theme set to ${preferences.theme === 'light' ? 'dark' : 'light'}`,
-//         className: "bg-green-50 border-green-200 text-green-800",
+//         className: "bg-blue-50 border-blue-200 text-blue-800",
 //       });
 //     } catch (error) {
 //       toast({
@@ -1039,7 +1039,7 @@ export default Profile;
 
 //   const quickActions = [
 //     { icon: QrCode, label: 'Scan & Pay', color: 'bg-blue-600', action: () => navigate('/qr-payment') },
-//     { icon: Phone, label: 'Recharge', color: 'bg-green-600', action: () => navigate('/recharge') },
+//     { icon: Phone, label: 'Recharge', color: 'bg-blue-600', action: () => navigate('/recharge') },
 //     { icon: Building, label: 'Bank Services', color: 'bg-purple-600', action: () => navigate('/account-summary') },
 //     { icon: CreditCard, label: 'Cards', color: 'bg-orange-600', action: () => navigate('/cards') },
 //   ];
@@ -1074,7 +1074,7 @@ export default Profile;
 //                   aria-label="Edit profile"
 //                   disabled={isLoading}
 //                 >
-//                   <Edit className="h-5 w-5 text-[#134e5e]" />
+//                   <Edit className="h-5 w-5 text-[#1178AC]" />
 //                 </Button>
 //               )}
 //             </div>
@@ -1088,7 +1088,7 @@ export default Profile;
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 0.3 }}
 //           >
-//             <Card className="border-0 shadow-sm rounded-2xl bg-gradient-to-r from-[#134e5e]/10 to-[#71b280]/10">
+//             <Card className="border-0 shadow-sm rounded-2xl bg-gradient-to-r from-[#1178AC]/10 to-[#1397DA]/10">
 //               <CardContent className="p-4">
 //                 <div className="flex items-center justify-between">
 //                   <div>
@@ -1110,14 +1110,14 @@ export default Profile;
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 0.3 }}
 //           >
-//             <Card className="border-0 shadow-sm rounded-2xl bg-gradient-to-r from-[#134e5e]/10 to-[#71b280]/10">
+//             <Card className="border-0 shadow-sm rounded-2xl bg-gradient-to-r from-[#1178AC]/10 to-[#1397DA]/10">
 //               <CardContent className="p-6">
 //                 <div className="flex items-start justify-between">
 //                   <div className="flex items-start gap-4">
 //                     <div className="relative">
 //                       <Avatar className="w-24 h-24 border-4 border-white shadow-lg">
 //                         <AvatarImage src="/placeholder.svg" alt="Profile avatar" />
-//                         <AvatarFallback className="text-2xl font-bold bg-gradient-to-br from-[#134e5e] to-[#71b280] text-white">
+//                         <AvatarFallback className="text-2xl font-bold bg-gradient-to-br from-[#1178AC] to-[#1397DA] text-white">
 //                           {profileData.name.split(' ').map(n => n[0]).join('')}
 //                         </AvatarFallback>
 //                       </Avatar>
@@ -1128,7 +1128,7 @@ export default Profile;
 //                           aria-label="Change profile picture"
 //                           disabled={isLoading}
 //                         >
-//                           <Camera className="h-5 w-5 text-[#134e5e]" />
+//                           <Camera className="h-5 w-5 text-[#1178AC]" />
 //                         </Button>
 //                       )}
 //                     </div>
@@ -1136,7 +1136,7 @@ export default Profile;
 //                       <h2 className="text-2xl font-bold text-gray-900">{profileData.name}</h2>
 //                       <p className="text-sm font-medium text-gray-600">A/C: {showSensitiveInfo ? profileData.accountNumber : 'XXXX XXXX XXXX 3456'}</p>
 //                       <div className="flex items-center gap-2 mt-2">
-//                         <Badge className="bg-green-100 text-green-800 text-xs py-1 px-2">
+//                         <Badge className="bg-blue-100 text-blue-800 text-xs py-1 px-2">
 //                           <ShieldCheck className="h-3 w-3 mr-1" />
 //                           Verified
 //                         </Badge>
@@ -1151,12 +1151,12 @@ export default Profile;
 //                   <Button
 //                     variant="outline"
 //                     size="sm"
-//                     className="rounded-full p-2 border-gray-200 hover:border-[#134e5e] hover:bg-[#134e5e]/5 bg-white"
+//                     className="rounded-full p-2 border-gray-200 hover:border-[#1178AC] hover:bg-[#1178AC]/5 bg-white"
 //                     onClick={() => navigate('/qr-code')}
 //                     aria-label="View QR code"
 //                     disabled={isLoading}
 //                   >
-//                     <QrCode className="h-5 w-5 text-[#134e5e]" />
+//                     <QrCode className="h-5 w-5 text-[#1178AC]" />
 //                   </Button>
 //                 </div>
 //                 <div className="mt-6 bg-white rounded-xl p-4 border border-gray-200 shadow-sm">
@@ -1169,7 +1169,7 @@ export default Profile;
 //                       variant="ghost"
 //                       size="sm"
 //                       onClick={copyUPIId}
-//                       className="text-[#134e5e] hover:bg-[#134e5e]/5 rounded-lg"
+//                       className="text-[#1178AC] hover:bg-[#1178AC]/5 rounded-lg"
 //                       aria-label="Copy UPI ID"
 //                       disabled={isLoading}
 //                     >
@@ -1200,7 +1200,7 @@ export default Profile;
 //                     <Button
 //                       key={index}
 //                       variant="ghost"
-//                       className="flex-col h-24 w-24 p-2 rounded-xl bg-white border border-gray-200 hover:border-[#134e5e]/20 hover:bg-[#134e5e]/5 transition-all duration-300 group shrink-0"
+//                       className="flex-col h-24 w-24 p-2 rounded-xl bg-white border border-gray-200 hover:border-[#1178AC]/20 hover:bg-[#1178AC]/5 transition-all duration-300 group shrink-0"
 //                       onClick={action.action}
 //                       aria-label={action.label}
 //                       disabled={isLoading}
@@ -1208,7 +1208,7 @@ export default Profile;
 //                       <div className={`w-14 h-14 rounded-xl ${action.color} flex items-center justify-center mb-2 shadow-md group-hover:scale-105 transition-transform`}>
 //                         <IconComponent className="h-6 w-6 text-white" />
 //                       </div>
-//                       <span className="text-xs font-medium text-gray-700 group-hover:text-[#134e5e] text-center">{action.label}</span>
+//                       <span className="text-xs font-medium text-gray-700 group-hover:text-[#1178AC] text-center">{action.label}</span>
 //                     </Button>
 //                   );
 //                 })}
@@ -1273,7 +1273,7 @@ export default Profile;
 //                           <div className="flex items-center">
 //                             <p className="text-sm font-medium text-gray-900">{item.value}</p>
 //                             {item.verified !== undefined && (
-//                               <Badge className={`ml-2 text-xs py-1 px-2 ${item.verified ? 'bg-green-100 text-green-800' : 'bg-amber-100 text-amber-800'}`}>
+//                               <Badge className={`ml-2 text-xs py-1 px-2 ${item.verified ? 'bg-blue-100 text-blue-800' : 'bg-amber-100 text-amber-800'}`}>
 //                                 {item.verified ? <ShieldCheck className="h-3 w-3 mr-1" /> : <AlertTriangle className="h-3 w-3 mr-1" />}
 //                                 {item.verified ? 'Verified' : 'Pending'}
 //                               </Badge>
@@ -1314,7 +1314,7 @@ export default Profile;
 //                         <Button
 //                           variant="ghost"
 //                           size="sm"
-//                           className="text-[#134e5e] hover:bg-[#134e5e]/5 rounded-lg"
+//                           className="text-[#1178AC] hover:bg-[#1178AC]/5 rounded-lg"
 //                           onClick={() => navigate('/change-password')}
 //                           aria-label="Change Password or MPIN"
 //                           disabled={isLoading}
@@ -1327,7 +1327,7 @@ export default Profile;
 //                         <Switch
 //                           checked={securitySettings.biometricLogin}
 //                           onCheckedChange={(value) => handleSecurityChange('biometricLogin', value)}
-//                           className="data-[state=checked]:bg-[#134e5e]"
+//                           className="data-[state=checked]:bg-[#1178AC]"
 //                           aria-label="Toggle Biometric Login"
 //                           disabled={isLoading}
 //                         />
@@ -1337,7 +1337,7 @@ export default Profile;
 //                         <Switch
 //                           checked={securitySettings.twoFactorAuth}
 //                           onCheckedChange={(value) => handleSecurityChange('twoFactorAuth', value)}
-//                           className="data-[state=checked]:bg-[#134e5e]"
+//                           className="data-[state=checked]:bg-[#1178AC]"
 //                           aria-label="Toggle Two-Factor Authentication"
 //                           disabled={isLoading}
 //                         />
@@ -1347,7 +1347,7 @@ export default Profile;
 //                         <Switch
 //                           checked={securitySettings.transactionAlerts}
 //                           onCheckedChange={(value) => handleSecurityChange('transactionAlerts', value)}
-//                           className="data-[state=checked]:bg-[#134e5e]"
+//                           className="data-[state=checked]:bg-[#1178AC]"
 //                           aria-label="Toggle Transaction Alerts"
 //                           disabled={isLoading}
 //                         />
@@ -1360,7 +1360,7 @@ export default Profile;
 //                     <div className="space-y-3">
 //                       <div className="flex items-center justify-between py-2">
 //                         <p className="text-sm font-medium text-gray-900">Customer ID: {profileData.customerID}</p>
-//                         <Badge className="bg-green-100 text-green-800 text-xs py-1 px-2">
+//                         <Badge className="bg-blue-100 text-blue-800 text-xs py-1 px-2">
 //                           <ShieldCheck className="h-3 w-3 mr-1" />
 //                           Verified
 //                         </Badge>
@@ -1370,7 +1370,7 @@ export default Profile;
 //                         <Button
 //                           variant="ghost"
 //                           size="sm"
-//                           className="text-gray-500 hover:text-[#134e5e]"
+//                           className="text-gray-500 hover:text-[#1178AC]"
 //                           onClick={toggleSensitiveInfo}
 //                           aria-label={showSensitiveInfo ? 'Hide account number' : 'Show account number'}
 //                           disabled={isEditing || isLoading}
@@ -1383,7 +1383,7 @@ export default Profile;
 //                         <Button
 //                           variant="ghost"
 //                           size="sm"
-//                           className="text-[#134e5e] hover:bg-[#134e5e]/5 rounded-lg"
+//                           className="text-[#1178AC] hover:bg-[#1178AC]/5 rounded-lg"
 //                           onClick={() => navigate('/cards')}
 //                           aria-label="Manage Cards"
 //                           disabled={isLoading}
@@ -1396,7 +1396,7 @@ export default Profile;
 //                         <Button
 //                           variant="ghost"
 //                           size="sm"
-//                           className="text-[#134e5e] hover:bg-[#134e5e]/5 rounded-lg"
+//                           className="text-[#1178AC] hover:bg-[#1178AC]/5 rounded-lg"
 //                           onClick={() => navigate('/linked-accounts')}
 //                           aria-label="Manage Linked Accounts"
 //                           disabled={isLoading}
@@ -1453,7 +1453,7 @@ export default Profile;
 //                       <Switch
 //                         checked={preferences.theme === 'dark'}
 //                         onCheckedChange={handleThemeChange}
-//                         className="data-[state=checked]:bg-[#134e5e]"
+//                         className="data-[state=checked]:bg-[#1178AC]"
 //                         aria-label="Toggle Theme"
 //                         disabled={isLoading}
 //                       />
@@ -1467,7 +1467,7 @@ export default Profile;
 //                         <Switch
 //                           checked={preferences.notifications.sms}
 //                           onCheckedChange={(value) => handlePreferenceChange('sms', value)}
-//                           className="data-[state=checked]:bg-[#134e5e]"
+//                           className="data-[state=checked]:bg-[#1178AC]"
 //                           aria-label="Toggle SMS Notifications"
 //                           disabled={isLoading}
 //                         />
@@ -1477,7 +1477,7 @@ export default Profile;
 //                         <Switch
 //                           checked={preferences.notifications.email}
 //                           onCheckedChange={(value) => handlePreferenceChange('email', value)}
-//                           className="data-[state=checked]:bg-[#134e5e]"
+//                           className="data-[state=checked]:bg-[#1178AC]"
 //                           aria-label="Toggle Email Notifications"
 //                           disabled={isLoading}
 //                         />
@@ -1487,7 +1487,7 @@ export default Profile;
 //                         <Switch
 //                           checked={preferences.notifications.push}
 //                           onCheckedChange={(value) => handlePreferenceChange('push', value)}
-//                           className="data-[state=checked]:bg-[#134e5e]"
+//                           className="data-[state=checked]:bg-[#1178AC]"
 //                           aria-label="Toggle Push Notifications"
 //                           disabled={isLoading}
 //                         />
@@ -1505,11 +1505,11 @@ export default Profile;
 //             animate={{ opacity: 1, y: 0 }}
 //             transition={{ duration: 0.3, delay: 0.5 }}
 //           >
-//             <Card className="border border-green-100 bg-green-50 rounded-xl shadow-sm">
-//               <CardHeader className="p-4 bg-green-100/50">
+//             <Card className="border border-blue-100 bg-blue-50 rounded-xl shadow-sm">
+//               <CardHeader className="p-4 bg-blue-100/50">
 //                 <div className="flex items-center gap-3">
-//                   <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
-//                     <HelpCircle className="h-5 w-5 text-green-600" />
+//                   <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
+//                     <HelpCircle className="h-5 w-5 text-blue-600" />
 //                   </div>
 //                   <h3 className="font-semibold text-gray-900">Support & Help</h3>
 //                 </div>
@@ -1518,13 +1518,13 @@ export default Profile;
 //                 <div className="space-y-3">
 //                   <div className="flex items-center justify-between py-2">
 //                     <div className="flex items-center gap-3">
-//                       <Phone className="h-4 w-4 text-green-600" />
+//                       <Phone className="h-4 w-4 text-blue-600" />
 //                       <p className="text-sm font-medium text-gray-900">Customer Care: 1800-123-4567</p>
 //                     </div>
 //                     <Button
 //                       variant="ghost"
 //                       size="sm"
-//                       className="text-[#134e5e] hover:bg-[#134e5e]/5 rounded-lg"
+//                       className="text-[#1178AC] hover:bg-[#1178AC]/5 rounded-lg"
 //                       onClick={() => navigate('/support/chat')}
 //                       aria-label="Contact Support"
 //                       disabled={isLoading}
@@ -1534,13 +1534,13 @@ export default Profile;
 //                   </div>
 //                   <div className="flex items-center justify-between py-2">
 //                     <div className="flex items-center gap-3">
-//                       <FileText className="h-4 w-4 text-green-600" />
+//                       <FileText className="h-4 w-4 text-blue-600" />
 //                       <p className="text-sm font-medium text-gray-900">FAQs</p>
 //                     </div>
 //                     <Button
 //                       variant="ghost"
 //                       size="sm"
-//                       className="text-[#134e5e] hover:bg-[#134e5e]/5 rounded-lg"
+//                       className="text-[#1178AC] hover:bg-[#1178AC]/5 rounded-lg"
 //                       onClick={() => navigate('/support/faqs')}
 //                       aria-label="View FAQs"
 //                       disabled={isLoading}
@@ -1556,7 +1556,7 @@ export default Profile;
 //                     <Button
 //                       variant="ghost"
 //                       size="sm"
-//                       className="text-[#134e5e] hover:bg-[#134e5e]/5 rounded-lg"
+//                       className="text-[#1178AC] hover:bg-[#1178AC]/5 rounded-lg"
 //                       onClick={() => navigate('/support/report')}
 //                       aria-label="Report Suspicious Activity"
 //                       disabled={isLoading}
@@ -1591,7 +1591,7 @@ export default Profile;
 //                     <Button
 //                       variant="ghost"
 //                       size="sm"
-//                       className="text-[#134e5e] hover:bg-[#134e5e]/5 rounded-lg"
+//                       className="text-[#1178AC] hover:bg-[#1178AC]/5 rounded-lg"
 //                       onClick={() => navigate('/legal/terms')}
 //                       aria-label="View Terms & Conditions"
 //                       disabled={isLoading}
@@ -1604,7 +1604,7 @@ export default Profile;
 //                     <Button
 //                       variant="ghost"
 //                       size="sm"
-//                       className="text-[#134e5e] hover:bg-[#134e5e]/5 rounded-lg"
+//                       className="text-[#1178AC] hover:bg-[#1178AC]/5 rounded-lg"
 //                       onClick={() => navigate('/legal/privacy')}
 //                       aria-label="View Privacy Policy"
 //                       disabled={isLoading}
@@ -1617,7 +1617,7 @@ export default Profile;
 //                     <Switch
 //                       checked={preferences.consents.dataSharing}
 //                       onCheckedChange={(value) => handlePreferenceChange('dataSharing', value)}
-//                       className="data-[state=checked]:bg-[#134e5e]"
+//                       className="data-[state=checked]:bg-[#1178AC]"
 //                       aria-label="Toggle Data Sharing Consent"
 //                       disabled={isLoading}
 //                     />
@@ -1627,7 +1627,7 @@ export default Profile;
 //                     <Switch
 //                       checked={preferences.consents.marketing}
 //                       onCheckedChange={(value) => handlePreferenceChange('marketing', value)}
-//                       className="data-[state=checked]:bg-[#134e5e]"
+//                       className="data-[state=checked]:bg-[#1178AC]"
 //                       aria-label="Toggle Marketing Consent"
 //                       disabled={isLoading}
 //                     />
@@ -1670,7 +1670,7 @@ export default Profile;
 //                 <Button
 //                   onClick={handleSave}
 //                   disabled={!isFormValid || isLoading}
-//                   className="w-full h-12 rounded-xl text-base bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white disabled:opacity-50 disabled:cursor-not-allowed"
+//                   className="w-full h-12 rounded-xl text-base bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white disabled:opacity-50 disabled:cursor-not-allowed"
 //                   aria-label="Save profile changes"
 //                 >
 //                   {isLoading ? (
@@ -1899,7 +1899,7 @@ export default Profile;
 //     toast({
 //       title: "UPI ID Copied",
 //       description: "UPI ID has been copied to clipboard",
-//       className: "bg-green-50 border-green-200 text-green-800",
+//       className: "bg-blue-50 border-blue-200 text-blue-800",
 //     });
 //   }, [profileData.upiId, toast]);
 
@@ -1936,7 +1936,7 @@ export default Profile;
 //     toast({
 //       title: "Profile Updated",
 //       description: "Your profile has been successfully updated",
-//       className: "bg-green-50 border-green-200 text-green-800",
+//       className: "bg-blue-50 border-blue-200 text-blue-800",
 //     });
 //   }, [profileData, validateName, validateEmail, validatePhone, validateAddress, validateOccupation, toast]);
 
@@ -1944,7 +1944,7 @@ export default Profile;
 //     toast({
 //       title: "Logged Out",
 //       description: "You have been successfully logged out",
-//       className: "bg-green-50 border-green-200 text-green-800",
+//       className: "bg-blue-50 border-blue-200 text-blue-800",
 //     });
 //     navigate('/login');
 //   }, [navigate, toast]);
@@ -1953,7 +1953,7 @@ export default Profile;
 //     toast({
 //       title: "Profile Downloaded",
 //       description: "Your profile details have been saved",
-//       className: "bg-green-50 border-green-200 text-green-800",
+//       className: "bg-blue-50 border-blue-200 text-blue-800",
 //     });
 //   }, [toast]);
 
@@ -1965,13 +1965,13 @@ export default Profile;
 //     toast({
 //       title: "Setting Updated",
 //       description: `Security setting has been ${value ? 'enabled' : 'disabled'}`,
-//       className: "bg-green-50 border-green-200 text-green-800",
+//       className: "bg-blue-50 border-blue-200 text-blue-800",
 //     });
 //   }, [toast]);
 
 //   const quickActions = [
 //     { icon: QrCode, label: 'Scan & Pay', color: 'bg-blue-500', action: () => navigate('/qr-payment') },
-//     { icon: Phone, label: 'Recharge', color: 'bg-green-500', action: () => navigate('/recharge') },
+//     { icon: Phone, label: 'Recharge', color: 'bg-blue-500', action: () => navigate('/recharge') },
 //     { icon: Building, label: 'Bank Services', color: 'bg-purple-500', action: () => navigate('/account-summary') },
 //     { icon: CreditCard, label: 'Cards', color: 'bg-orange-500', action: () => navigate('/cards') },
 //   ];
@@ -2114,14 +2114,14 @@ export default Profile;
 
 //             <TabsContent value="profile" className="space-y-6 mt-0">
 //               {/* User Profile Header */}
-//               <Card className="border-0 shadow-sm rounded-2xl overflow-hidden bg-gradient-to-r from-[#134e5e]/10 to-[#71b280]/10">
+//               <Card className="border-0 shadow-sm rounded-2xl overflow-hidden bg-gradient-to-r from-[#1178AC]/10 to-[#1397DA]/10">
 //                 <CardContent className="p-6">
 //                   <div className="flex items-start justify-between">
 //                     <div className="flex items-start gap-4">
 //                       <div className="relative">
 //                         <Avatar className="w-20 h-20 border-4 border-white shadow-lg">
 //                           <AvatarImage src="/placeholder.svg" alt="Profile avatar" />
-//                           <AvatarFallback className="text-2xl font-bold bg-gradient-to-br from-[#134e5e] to-[#71b280] text-white">
+//                           <AvatarFallback className="text-2xl font-bold bg-gradient-to-br from-[#1178AC] to-[#1397DA] text-white">
 //                             {profileData.name.split(' ').map(n => n[0]).join('')}
 //                           </AvatarFallback>
 //                         </Avatar>
@@ -2138,7 +2138,7 @@ export default Profile;
 //                       <div>
 //                         <h2 className="text-2xl font-bold text-gray-900">{profileData.name}</h2>
 //                         <div className="flex items-center gap-2 mt-2">
-//                           <Badge variant="secondary" className="bg-green-100 text-green-700 text-xs py-1">
+//                           <Badge variant="secondary" className="bg-blue-100 text-blue-700 text-xs py-1">
 //                             <ShieldCheck className="h-3 w-3 mr-1" />
 //                             Verified
 //                           </Badge>
@@ -2202,18 +2202,18 @@ export default Profile;
 //                   </CardContent>
 //                 </Card>
 
-//                 <Card className="border-0 shadow-sm bg-gradient-to-br from-green-50 to-green-100 rounded-xl overflow-hidden">
+//                 <Card className="border-0 shadow-sm bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl overflow-hidden">
 //                   <CardContent className="p-5">
 //                     <div className="flex items-center gap-4">
-//                       <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center shadow-md">
+//                       <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-md">
 //                         <Users className="h-6 w-6 text-white" />
 //                       </div>
 //                       <div>
-//                         <p className="text-xl font-bold text-green-900">₹201</p>
-//                         <p className="text-xs text-green-700 font-medium">Refer a friend</p>
+//                         <p className="text-xl font-bold text-blue-900">₹201</p>
+//                         <p className="text-xs text-blue-700 font-medium">Refer a friend</p>
 //                       </div>
 //                     </div>
-//                     <Button size="sm" className="mt-3 h-8 text-xs rounded-lg bg-green-500 hover:bg-green-600">
+//                     <Button size="sm" className="mt-3 h-8 text-xs rounded-lg bg-blue-500 hover:bg-blue-600">
 //                       Invite Friends
 //                     </Button>
 //                   </CardContent>
@@ -2285,7 +2285,7 @@ export default Profile;
 //                                   </div>
 //                                 )}
 //                                 {item.status === 'verified' && (
-//                                   <Badge className="bg-green-100 text-green-700 text-xs mt-1">
+//                                   <Badge className="bg-blue-100 text-blue-700 text-xs mt-1">
 //                                     <ShieldCheck className="h-3 w-3 mr-1" />
 //                                     Verified
 //                                   </Badge>
@@ -2303,17 +2303,17 @@ export default Profile;
 
 //             <TabsContent value="security" className="space-y-6 mt-0">
 //               {/* Security Overview */}
-//               <Card className="border-0 shadow-sm bg-gradient-to-r from-[#134e5e]/10 to-[#71b280]/10 rounded-2xl">
+//               <Card className="border-0 shadow-sm bg-gradient-to-r from-[#1178AC]/10 to-[#1397DA]/10 rounded-2xl">
 //                 <CardContent className="p-6">
 //                   <div className="flex items-center gap-4">
-//                     <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center">
-//                       <ShieldCheck className="h-8 w-8 text-green-600" />
+//                     <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center">
+//                       <ShieldCheck className="h-8 w-8 text-blue-600" />
 //                     </div>
 //                     <div>
 //                       <h3 className="text-lg font-semibold text-gray-900">Security Status</h3>
 //                       <p className="text-sm text-gray-600">Your account is well protected</p>
 //                       <div className="flex items-center gap-2 mt-2">
-//                         <Badge className="bg-green-100 text-green-700">
+//                         <Badge className="bg-blue-100 text-blue-700">
 //                           <ShieldCheck className="h-3 w-3 mr-1" />
 //                           Secure
 //                         </Badge>
@@ -2372,25 +2372,25 @@ export default Profile;
 //               </div>
 
 //               {/* Security Tips */}
-//               <Card className="border border-green-100 bg-green-50 rounded-xl">
+//               <Card className="border border-blue-100 bg-blue-50 rounded-xl">
 //                 <CardContent className="p-5">
 //                   <div className="flex items-start gap-4">
-//                     <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-//                       <Shield className="h-6 w-6 text-green-600" />
+//                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+//                       <Shield className="h-6 w-6 text-blue-600" />
 //                     </div>
 //                     <div>
-//                       <h4 className="font-semibold text-green-800 mb-3">Security Tips</h4>
-//                       <ul className="space-y-2 text-sm text-green-700">
+//                       <h4 className="font-semibold text-blue-800 mb-3">Security Tips</h4>
+//                       <ul className="space-y-2 text-sm text-blue-700">
 //                         <li className="flex items-start gap-2">
-//                           <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2"></div>
+//                           <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2"></div>
 //                           <span>Never share your passwords or OTP with anyone</span>
 //                         </li>
 //                         <li className="flex items-start gap-2">
-//                           <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2"></div>
+//                           <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2"></div>
 //                           <span>Enable two-factor authentication for added security</span>
 //                         </li>
 //                         <li className="flex items-start gap-2">
-//                           <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2"></div>
+//                           <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2"></div>
 //                           <span>Regularly review your account activity</span>
 //                         </li>
 //                       </ul>
@@ -2402,16 +2402,16 @@ export default Profile;
 
 //             <TabsContent value="documents" className="space-y-6 mt-0">
 //               {/* Documents Overview */}
-//               <Card className="border-0 shadow-sm bg-gradient-to-r from-[#134e5e]/10 to-[#71b280]/10 rounded-2xl">
+//               <Card className="border-0 shadow-sm bg-gradient-to-r from-[#1178AC]/10 to-[#1397DA]/10 rounded-2xl">
 //                 <CardContent className="p-6">
 //                   <div className="flex items-center gap-4">
-//                     <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center">
-//                       <FileText className="h-8 w-8 text-green-600" />
+//                     <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center">
+//                       <FileText className="h-8 w-8 text-blue-600" />
 //                     </div>
 //                     <div>
 //                       <h3 className="text-lg font-semibold text-gray-900">Your Documents</h3>
 //                       <p className="text-sm text-gray-600">Access and manage your financial documents</p>
-//                       <Badge className="bg-green-100 text-green-700 mt-2">
+//                       <Badge className="bg-blue-100 text-blue-700 mt-2">
 //                         <ShieldCheck className="h-3 w-3 mr-1" />
 //                         All documents verified
 //                       </Badge>
@@ -2462,18 +2462,18 @@ export default Profile;
 //               </Card>
 
 //               {/* Upload Section */}
-//               <Card className="border border-green-100 bg-green-50 rounded-xl">
+//               <Card className="border border-blue-100 bg-blue-50 rounded-xl">
 //                 <CardContent className="p-5">
 //                   <div className="flex items-start gap-4">
-//                     <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-//                       <Upload className="h-6 w-6 text-green-600" />
+//                     <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+//                       <Upload className="h-6 w-6 text-blue-600" />
 //                     </div>
 //                     <div>
-//                       <h4 className="font-semibold text-green-800 mb-2">Need to upload a document?</h4>
-//                       <p className="text-sm text-green-700 mb-3">
+//                       <h4 className="font-semibold text-blue-800 mb-2">Need to upload a document?</h4>
+//                       <p className="text-sm text-blue-700 mb-3">
 //                         Upload supporting documents for verification or additional services
 //                       </p>
-//                       <Button size="sm" className="bg-green-600 hover:bg-green-700 rounded-lg">
+//                       <Button size="sm" className="bg-blue-600 hover:bg-blue-700 rounded-lg">
 //                         <Upload className="h-4 w-4 mr-1" />
 //                         Upload Document
 //                       </Button>
@@ -2485,24 +2485,24 @@ export default Profile;
 //           </Tabs>
 
 //           {/* Support Section */}
-//           <Card className="border border-green-100 bg-green-50 rounded-xl">
+//           <Card className="border border-blue-100 bg-blue-50 rounded-xl">
 //             <CardContent className="p-5">
 //               <div className="flex items-start gap-4">
-//                 <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-//                   <HelpCircle className="h-6 w-6 text-green-600" />
+//                 <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center">
+//                   <HelpCircle className="h-6 w-6 text-blue-600" />
 //                 </div>
 //                 <div>
-//                   <h4 className="font-semibold text-green-800 mb-3">Need Help?</h4>
+//                   <h4 className="font-semibold text-blue-800 mb-3">Need Help?</h4>
 //                   <div className="space-y-2">
-//                     <div className="flex items-center text-green-700">
+//                     <div className="flex items-center text-blue-700">
 //                       <Phone className="h-4 w-4 mr-3" />
 //                       <span className="text-sm">Customer Care: 1800-123-4567</span>
 //                     </div>
-//                     <div className="flex items-center text-green-700">
+//                     <div className="flex items-center text-blue-700">
 //                       <Mail className="h-4 w-4 mr-3" />
 //                       <span className="text-sm">Email: support@psbank.in</span>
 //                     </div>
-//                     <div className="flex items-center text-green-700">
+//                     <div className="flex items-center text-blue-700">
 //                       <Clock className="h-4 w-4 mr-3" />
 //                       <span className="text-sm">Available 24/7</span>
 //                     </div>
@@ -2531,7 +2531,7 @@ export default Profile;
 //               <Button
 //                 onClick={handleSave}
 //                 disabled={!isFormValid}
-//                 className="w-full h-12 rounded-xl text-base bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white disabled:opacity-50"
+//                 className="w-full h-12 rounded-xl text-base bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white disabled:opacity-50"
 //                 aria-label="Save profile changes"
 //               >
 //                 <Save className="h-4 w-4 mr-2" />
@@ -2589,7 +2589,7 @@ export default Profile;
 
 //   const quickActions = [
 //     { icon: QrCode, label: 'Scan & Pay', color: 'bg-blue-500', action: () => navigate('/qr-payment') },
-//     { icon: Phone, label: 'Recharge', color: 'bg-green-500', action: () => navigate('/recharge') },
+//     { icon: Phone, label: 'Recharge', color: 'bg-blue-500', action: () => navigate('/recharge') },
 //     { icon: Building, label: 'Bank Services', color: 'bg-purple-500', action: () => navigate('/account-summary') },
 //     { icon: CreditCard, label: 'Cards', color: 'bg-orange-500', action: () => navigate('/cards') },
 //   ];
@@ -2721,7 +2721,7 @@ export default Profile;
 //                         <Badge variant="secondary" className="bg-blue-50 text-blue-600 text-xs">
 //                           Verified
 //                         </Badge>
-//                         <Badge variant="secondary" className="bg-green-50 text-green-600 text-xs">
+//                         <Badge variant="secondary" className="bg-blue-50 text-blue-600 text-xs">
 //                           Premium
 //                         </Badge>
 //                       </div>
@@ -2774,15 +2774,15 @@ export default Profile;
 //               </CardContent>
 //             </Card>
 
-//             <Card className="bg-gradient-to-br from-green-50 to-green-100 border border-green-100 rounded-xl">
+//             <Card className="bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-100 rounded-xl">
 //               <CardContent className="p-4">
 //                 <div className="flex items-center gap-3">
-//                   <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center shadow-md">
+//                   <div className="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center shadow-md">
 //                     <Users className="h-5 w-5 text-white" />
 //                   </div>
 //                   <div>
-//                     <p className="text-lg font-bold text-green-800">₹201</p>
-//                     <p className="text-xs text-green-700">Refer a friend</p>
+//                     <p className="text-lg font-bold text-blue-800">₹201</p>
+//                     <p className="text-xs text-blue-700">Refer a friend</p>
 //                   </div>
 //                 </div>
 //               </CardContent>

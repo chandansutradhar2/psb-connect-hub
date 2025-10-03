@@ -22,7 +22,7 @@ export const LoanOffersWidget = () => {
       amount: '₹50,00,000',
       rate: '8.75% p.a.',
       icon: <Home className="h-4 w-4" />,
-      color: 'from-green-500 to-green-600',
+      color: 'from-blue-500 to-blue-600',
       preApproved: false,
       popular: false
     },

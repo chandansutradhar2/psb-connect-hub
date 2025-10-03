@@ -74,7 +74,7 @@ const ForexServices = () => {
       title: "Forex Card",
       description: "Multi-currency travel card",
       icon: <Globe className="h-5 w-5" />,
-      color: "bg-green-50 text-green-600"
+      color: "bg-blue-50 text-blue-600"
     },
     {
       title: "Wire Transfer",
@@ -142,7 +142,7 @@ const ForexServices = () => {
                     <div className="flex items-center gap-2">
                       <span className="font-semibold">₹{rate.buyRate}</span>
                       <div className={`flex items-center gap-1 ${
-                        rate.change >= 0 ? "text-green-600" : "text-red-600"
+                        rate.change >= 0 ? "text-blue-600" : "text-red-600"
                       }`}>
                         {rate.change >= 0 ? 
                           <TrendingUp className="h-4 w-4" /> : 

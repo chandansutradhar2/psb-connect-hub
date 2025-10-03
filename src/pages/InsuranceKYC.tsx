@@ -96,7 +96,7 @@ const InsuranceKYC = () => {
           <p className="text-lg text-gray-600 mb-4">Plan details not found</p>
           <Button
             onClick={() => navigate('/insurance-plans')}
-            className="rounded-lg bg-green-600 hover:bg-green-700 text-white"
+            className="rounded-lg bg-blue-600 hover:bg-blue-700 text-white"
             aria-label="Go back to insurance plans"
           >
             Go Back
@@ -183,10 +183,10 @@ const InsuranceKYC = () => {
             variant="ghost"
             size="icon"
             onClick={() => navigate(-1)}
-            className="rounded-full hover:bg-green-50 transition-colors"
+            className="rounded-full hover:bg-blue-50 transition-colors"
             aria-label="Go back to previous page"
           >
-            <ArrowLeft className="h-5 w-5 text-green-600" />
+            <ArrowLeft className="h-5 w-5 text-blue-600" />
           </Button>
           <h1 className="text-xl font-semibold text-gray-900">KYC & Personal Details</h1>
           <div className="w-10" /> {/* Spacer for alignment */}
@@ -195,7 +195,7 @@ const InsuranceKYC = () => {
         {/* Progress Bar */}
         <section>
           <div className="flex items-center space-x-2">
-            <div className="flex-1 h-2 bg-green-600 rounded-full" />
+            <div className="flex-1 h-2 bg-blue-600 rounded-full" />
             <div className="flex-1 h-2 bg-gray-200 rounded-full" />
             <div className="flex-1 h-2 bg-gray-200 rounded-full" />
             <div className="flex-1 h-2 bg-gray-200 rounded-full" />
@@ -204,21 +204,21 @@ const InsuranceKYC = () => {
         </section>
 
         {/* Plan Summary */}
-        <BankingCard className="rounded-2xl bg-gradient-to-r from-green-50 to-emerald-50 border-green-200 shadow-md">
+        <BankingCard className="rounded-2xl bg-gradient-to-r from-blue-50 to-emerald-50 border-blue-200 shadow-md">
           <div className="flex items-center justify-between">
             <div>
-              <h3 className="font-semibold text-green-800">{plan.name}</h3>
+              <h3 className="font-semibold text-blue-800">{plan.name}</h3>
               <p className="text-sm text-gray-600">Coverage: {plan.coverage}</p>
             </div>
             <div className="text-right">
-              <p className="font-semibold text-green-800">{plan.premium}</p>
+              <p className="font-semibold text-blue-800">{plan.premium}</p>
               <p className="text-xs text-gray-600">Annual Premium</p>
             </div>
           </div>
         </BankingCard>
 
         {/* Personal Details */}
-        <BankingCard title="Personal Details" icon={<User className="h-5 w-5 text-green-600" />} className="rounded-2xl shadow-md">
+        <BankingCard title="Personal Details" icon={<User className="h-5 w-5 text-blue-600" />} className="rounded-2xl shadow-md">
           <div className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
@@ -354,7 +354,7 @@ const InsuranceKYC = () => {
 
         {/* Health Details (for Health/Life Insurance) */}
         {(insuranceType === 'health' || insuranceType === 'life') && (
-          <BankingCard title="Health Information" icon={<Shield className="h-5 w-5 text-green-600" />} className="rounded-2xl shadow-md">
+          <BankingCard title="Health Information" icon={<Shield className="h-5 w-5 text-blue-600" />} className="rounded-2xl shadow-md">
             <div className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
@@ -445,7 +445,7 @@ const InsuranceKYC = () => {
         )}
 
         {/* Nominee Details */}
-        <BankingCard title="Nominee Details" icon={<Users className="h-5 w-5 text-green-600" />} className="rounded-2xl shadow-md">
+        <BankingCard title="Nominee Details" icon={<Users className="h-5 w-5 text-blue-600" />} className="rounded-2xl shadow-md">
           <div className="space-y-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>

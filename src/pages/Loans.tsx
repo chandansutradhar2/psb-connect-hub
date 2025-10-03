@@ -6,6 +6,9 @@ import { BankingCard } from '@/components/BankingCard';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Progress } from '@/components/ui/progress';
+import { toast } from "@/components/ui/use-toast"; // your toast
+
+
 import { 
   ArrowLeft, 
   Home, 
@@ -27,6 +30,13 @@ import {
 const Loans = () => {
   const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState<'apply' | 'existing'>('existing');
+    const handleComingSoon = (feature: string) => {
+    toast({
+      title: "Coming Soon",
+      description: `${feature} feature is coming soon!`,
+      duration: 3000,
+    });
+  };
 
   const loanTypes = [
     { 
@@ -41,7 +51,7 @@ const Loans = () => {
       title: 'Personal Loan', 
       subtitle: 'Up to ₹50L at 11% p.a.', 
       icon: <CreditCard className="h-5 w-5" />,
-      color: 'bg-green-500'
+      color: 'bg-blue-500'
     },
     { 
       key: 'car', 
@@ -133,7 +143,7 @@ const Loans = () => {
   <div className="flex items-center justify-between">
     {/* Left side content */}
     <div className="flex items-center gap-3">
-      {/* <div className="h-10 w-10 flex items-center justify-center rounded-full bg-green-600 text-white shadow-md">
+      {/* <div className="h-10 w-10 flex items-center justify-center rounded-full bg-blue-600 text-white shadow-md">
         <span className="text-sm font-bold">C</span>
       </div> */}
       <div>
@@ -198,8 +208,8 @@ const Loans = () => {
                     </p>
                     <p className="text-xs text-gray-600 mt-1">Total Outstanding</p>
                   </div>
-                  <div className="text-center p-3 rounded-lg bg-green-50">
-                    <p className="text-lg font-bold text-green-600">
+                  <div className="text-center p-3 rounded-lg bg-blue-50">
+                    <p className="text-lg font-bold text-blue-600">
                       ₹{(existingLoans.reduce((sum, loan) => sum + loan.emiAmount, 0)).toLocaleString()}                      
                     </p>
                     <p className="text-xs text-gray-600 mt-1">Monthly EMI</p>
@@ -265,6 +275,8 @@ const Loans = () => {
                     <div className="flex gap-2">
                       <Button 
                         variant="outline" 
+                         onClick={() => handleComingSoon("Statement")}
+
                         size="sm" 
                         className="flex-1 rounded-lg text-xs h-8"
                       >
@@ -290,15 +302,15 @@ const Loans = () => {
           {activeTab === 'apply' && (
             <div className="space-y-4">
               {/* Loan Calculator Quick Access */}
-              <BankingCard className="rounded-xl bg-gradient-to-r from-green-50 to-teal-50 border-green-200">
+              <BankingCard className="rounded-xl bg-gradient-to-r from-blue-50 to-teal-50 border-blue-200">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="font-semibold text-green-800 text-sm">EMI Calculator</h3>
-                    <p className="text-xs text-green-600">Plan your loan repayments</p>
+                    <h3 className="font-semibold text-blue-800 text-sm">EMI Calculator</h3>
+                    <p className="text-xs text-blue-600">Plan your loan repayments</p>
                   </div>
                   <Button 
                     size="sm"
-                    className="rounded-lg bg-green-600 hover:bg-green-700 text-xs h-8"
+                    className="rounded-lg bg-blue-600 hover:bg-blue-700 text-xs h-8"
                     onClick={() => navigate('/emi-calculator')}
                   >
                     <Calculator className="h-3 w-3 mr-1" />

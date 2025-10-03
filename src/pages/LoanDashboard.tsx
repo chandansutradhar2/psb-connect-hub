@@ -36,7 +36,7 @@ const LoanDashboard = () => {
       title: 'Home Loan',
       subtitle: 'Up to ₹10Cr at 8.5% p.a.',
       icon: <Home className="h-6 w-6" />,
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       features: ['Tax benefits', 'Attractive rates', 'Balance transfer']
     },
     {
@@ -166,7 +166,7 @@ const LoanDashboard = () => {
                 //       <p className="text-sm text-muted-foreground">
                 //         Up to {offer.amount} at {offer.rate} p.a.
                 //       </p>
-                //       <p className="text-xs text-green-600">Valid till {offer.validTill}</p>
+                //       <p className="text-xs text-blue-600">Valid till {offer.validTill}</p>
                 //     </div>
                 //   </div>
                 //   <div className="flex space-x-2">
@@ -192,7 +192,7 @@ const LoanDashboard = () => {
       <p className="text-sm text-muted-foreground">
         Up to {offer.amount} at {offer.rate} p.a.
       </p>
-      <p className="text-xs text-green-600">Valid till {offer.validTill}</p>
+      <p className="text-xs text-blue-600">Valid till {offer.validTill}</p>
     </div>
   </div>
 
@@ -201,7 +201,7 @@ const LoanDashboard = () => {
     <Button
       size="sm"
       variant="outline"
-      className="w-full sm:w-auto bg-green-50 hover:bg-green-100"
+      className="w-full sm:w-auto bg-blue-50 hover:bg-blue-100"
       onClick={() => navigate('/loan-details', { state: offer })}
     >
       View Details

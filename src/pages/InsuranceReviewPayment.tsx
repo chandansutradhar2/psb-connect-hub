@@ -163,10 +163,10 @@ const InsuranceReviewPayment = () => {
               <div className="flex items-center justify-between p-3 rounded-xl border border-border">
                 <div className="flex items-center space-x-3">
                   <RadioGroupItem value="upi" id="upi" />
-                  <Smartphone className="h-5 w-5 text-green-600" />
+                  <Smartphone className="h-5 w-5 text-blue-600" />
                   <Label htmlFor="upi" className="font-medium">UPI Payment</Label>
                 </div>
-                <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Instant</span>
+                <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">Instant</span>
               </div>
 
               <div className="flex items-center justify-between p-3 rounded-xl border border-border">

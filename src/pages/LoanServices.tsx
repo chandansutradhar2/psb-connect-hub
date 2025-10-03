@@ -18,7 +18,7 @@ const LoanServices = () => {
       description: "Finance your dream home",
       rate: "8.5% p.a.",
       icon: <FileText className="h-6 w-6" />,
-      color: "bg-green-50 text-green-600"
+      color: "bg-blue-50 text-blue-600"
     },
     {
       title: "Car Loan",

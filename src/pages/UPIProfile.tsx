@@ -111,7 +111,7 @@ const UPIProfile = () => {
 
   return (
     <BankingLayout showHeader={false}>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-green-50 to-yellow-50">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-yellow-50">
         {/* Header */}
         <div className="bg-transparent px-4 py-4 relative">
           <div className="flex items-center justify-between">

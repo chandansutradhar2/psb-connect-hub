@@ -38,7 +38,7 @@ const Shopping = () => {
     <BankingLayout>
       <div className="min-h-screen bg-gradient-to-br from-primary/5 via-white to-secondary/5 sm:p-6">
         {/* Header */}
-        <header className="bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white p-4 rounded-b-2xl shadow-md sticky top-0 z-10">
+        <header className="bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white p-4 rounded-b-2xl shadow-md sticky top-0 z-10">
           <div className="flex items-center justify-between">
             <Button
               variant="ghost"
@@ -64,7 +64,7 @@ const Shopping = () => {
                 placeholder="Search for products..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10 pr-4 py-2 rounded-lg border-gray-200 focus:ring-2 focus:ring-[#71b280] transition-all"
+                className="pl-10 pr-4 py-2 rounded-lg border-gray-200 focus:ring-2 focus:ring-[#1397DA] transition-all"
                 aria-label="Search products"
               />
               {searchQuery && (
@@ -97,7 +97,7 @@ const Shopping = () => {
                 <Filter className="h-4 w-4 mr-2" />
                 Filters
               </Button>
-              <Badge className="bg-[#71b280] text-white">{filteredProducts.length} Products</Badge>
+              <Badge className="bg-[#1397DA] text-white">{filteredProducts.length} Products</Badge>
             </div>
             <AnimatePresence>
               {showFilters && (
@@ -144,7 +144,7 @@ const Shopping = () => {
                       ₹{product.price.toLocaleString('en-IN')}
                     </p>
                     <Button
-                      className="w-full mt-3 bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4b] hover:to-[#5f9b6a] text-white rounded-lg"
+                      className="w-full mt-3 bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4b] hover:to-[#5f9b6a] text-white rounded-lg"
                     //   onClick={(e) => {
                     //     e.stopPropagation();
                     //     navigate('/cart', { state: { product } });
@@ -163,7 +163,7 @@ const Shopping = () => {
               className="mt-6"
             >
               <Button
-                className="w-full rounded-lg bg-gradient-to-r from-[#134e5e] to-[#71b280] hover:from-[#0f3f4b] hover:to-[#5f9b6a] text-white"
+                className="w-full rounded-lg bg-gradient-to-r from-[#1178AC] to-[#1397DA] hover:from-[#0f3f4b] hover:to-[#5f9b6a] text-white"
                 // onClick={() => navigate('/cart')}
                 aria-label="View cart"
               >

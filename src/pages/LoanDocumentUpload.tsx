@@ -186,7 +186,7 @@ const LoanDocumentUpload = () => {
                         <p className="font-medium text-sm">{doc.name}</p>
                         <div className="flex items-center space-x-2">
                           {doc.required && <Badge variant="destructive" className="text-xs">Required</Badge>}
-                          {doc.uploaded && <CheckCircle className="h-4 w-4 text-green-600" />}
+                          {doc.uploaded && <CheckCircle className="h-4 w-4 text-blue-600" />}
                         </div>
                       </div>
                     </div>
@@ -227,10 +227,10 @@ const LoanDocumentUpload = () => {
                       </Button>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-200">
+                    <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-200">
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        <span className="text-sm text-green-800">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span className="text-sm text-blue-800">
                           {doc.file?.name || `${doc.name} uploaded`}
                         </span>
                       </div>
@@ -256,7 +256,7 @@ const LoanDocumentUpload = () => {
                         <p className="font-medium text-sm">{doc.name}</p>
                         <div className="flex items-center space-x-2">
                           {doc.required && <Badge variant="destructive" className="text-xs">Required</Badge>}
-                          {doc.uploaded && <CheckCircle className="h-4 w-4 text-green-600" />}
+                          {doc.uploaded && <CheckCircle className="h-4 w-4 text-blue-600" />}
                         </div>
                       </div>
                     </div>
@@ -297,10 +297,10 @@ const LoanDocumentUpload = () => {
                       </Button>
                     </div>
                   ) : (
-                    <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-200">
+                    <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-200">
                       <div className="flex items-center space-x-2">
-                        <CheckCircle className="h-4 w-4 text-green-600" />
-                        <span className="text-sm text-green-800">
+                        <CheckCircle className="h-4 w-4 text-blue-600" />
+                        <span className="text-sm text-blue-800">
                           {doc.file?.name || `${doc.name} uploaded`}
                         </span>
                       </div>

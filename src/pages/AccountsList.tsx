@@ -207,7 +207,7 @@ const AccountsList = () => {
                     </div>
                     <div>
                       <p className="text-muted-foreground">Maturity Amount</p>
-                      <p className="font-semibold text-green-600">{formatCurrency(fd.maturityAmount)}</p>
+                      <p className="font-semibold text-blue-600">{formatCurrency(fd.maturityAmount)}</p>
                     </div>
                   </div>
 

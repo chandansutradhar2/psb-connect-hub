@@ -63,7 +63,7 @@ const InvestmentGoalSetup = ({ onGoalSelected }: { onGoalSelected: (goal: any) =
       title: 'Home Purchase',
       icon: <Home className="h-6 w-6" />,
       description: 'Save for your dream home down payment',
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       timeHorizon: '3-10 years',
       riskLevel: 'Moderate'
     },
@@ -227,7 +227,7 @@ const InvestmentGoalSetup = ({ onGoalSelected }: { onGoalSelected: (goal: any) =
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm">
                     <span>Monthly SIP Required:</span>
-                    <span className="font-semibold text-green-600">₹{calculateSipAmount().toLocaleString()}</span>
+                    <span className="font-semibold text-blue-600">₹{calculateSipAmount().toLocaleString()}</span>
                   </div>
                   <div className="flex justify-between text-sm">
                     <span>Total Investment:</span>
@@ -235,7 +235,7 @@ const InvestmentGoalSetup = ({ onGoalSelected }: { onGoalSelected: (goal: any) =
                   </div>
                   <div className="flex justify-between text-sm">
                     <span>Expected Returns:</span>
-                    <span className="text-green-600">₹{(goalAmount - (calculateSipAmount() * timeHorizon[0] * 12)).toLocaleString()}</span>
+                    <span className="text-blue-600">₹{(goalAmount - (calculateSipAmount() * timeHorizon[0] * 12)).toLocaleString()}</span>
                   </div>
                   <div className="text-xs text-muted-foreground mt-2">
                     *Assuming 12% annual returns

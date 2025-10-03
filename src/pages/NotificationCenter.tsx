@@ -19,7 +19,7 @@ const NotificationCenter = () => {
       timestamp: '2 minutes ago',
       read: false,
       icon: <Banknote className="h-5 w-5" />,
-      color: 'bg-green-50 text-green-600'
+      color: 'bg-blue-50 text-blue-600'
     },
     {
       id: 2,
@@ -148,7 +148,7 @@ const NotificationCenter = () => {
             </Card>
             <Card>
               <CardContent className="p-4 text-center">
-                <div className="text-2xl font-bold text-green-500">{notifications.length - unreadCount}</div>
+                <div className="text-2xl font-bold text-blue-500">{notifications.length - unreadCount}</div>
                 <div className="text-sm text-muted-foreground">Read</div>
               </CardContent>
             </Card>

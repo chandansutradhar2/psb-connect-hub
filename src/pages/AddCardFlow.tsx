@@ -175,7 +175,7 @@ const AddCardFlow = () => {
       toast({
         title: "Card Added Successfully",
         description: `Your ${cardBrand || "card"} has been added and is ready for use.`,
-        className: "bg-green-50 border-green-200 text-green-800",
+        className: "bg-blue-50 border-blue-200 text-blue-800",
       });
 
       navigate("/cards-management");
@@ -233,7 +233,7 @@ const AddCardFlow = () => {
         <div className="flex-1 p-4">
           <div className="max-w-md mx-auto">
             {/* Card Preview */}
-            <Card className="mb-6 bg-gradient-to-br from-[#134e5e] to-[#71b280] text-white border-0 shadow-lg">
+            <Card className="mb-6 bg-gradient-to-br from-[#1178AC] to-[#1397DA] text-white border-0 shadow-lg">
               <CardContent className="p-5">
                 <div className="flex justify-between items-start mb-6">
                   <div>
@@ -281,7 +281,7 @@ const AddCardFlow = () => {
                   <Button
                     variant="ghost"
                     size="sm"
-                    className="h-8 text-xs text-[#134e5e] flex items-center gap-1"
+                    className="h-8 text-xs text-[#1178AC] flex items-center gap-1"
                     onClick={handleScanCard}
                   >
                     <Scan className="h-3 w-3" />
@@ -414,7 +414,7 @@ const AddCardFlow = () => {
         <div className="bg-white border-t p-4 sticky bottom-0">
           <div className="max-w-md mx-auto">
             <Button
-              className="w-full h-12 rounded-xl text-base bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white"
+              className="w-full h-12 rounded-xl text-base bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white"
               onClick={handleSubmit}
               disabled={isLoading || !isFormValid}
               aria-label="Add Card"

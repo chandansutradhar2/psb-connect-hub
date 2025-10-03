@@ -144,7 +144,7 @@ const RiskProfileAssessment = ({ onAssessmentComplete }: RiskProfileAssessmentPr
     switch (type) {
       case 'Aggressive': return 'text-red-600 bg-red-50 border-red-200';
       case 'Moderate': return 'text-orange-600 bg-orange-50 border-orange-200';
-      case 'Conservative': return 'text-green-600 bg-green-50 border-green-200';
+      case 'Conservative': return 'text-blue-600 bg-blue-50 border-blue-200';
       default: return 'text-gray-600 bg-gray-50 border-gray-200';
     }
   };
@@ -202,8 +202,8 @@ const RiskProfileAssessment = ({ onAssessmentComplete }: RiskProfileAssessmentPr
 
           <div className="bg-primary/5 p-4 rounded-xl">
             <div className="flex items-center gap-2 mb-2">
-              <CheckCircle className="h-4 w-4 text-green-600" />
-              <span className="font-medium text-green-700">Assessment Complete</span>
+              <CheckCircle className="h-4 w-4 text-blue-600" />
+              <span className="font-medium text-blue-700">Assessment Complete</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Based on your responses, we'll recommend suitable investment products that match your risk profile.

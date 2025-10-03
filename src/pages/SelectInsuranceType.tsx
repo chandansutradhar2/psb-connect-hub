@@ -45,7 +45,7 @@
 //       subtitle: 'Medical Coverage Plans',
 //       description: 'Comprehensive health coverage with cashless treatment',
 //       icon: <Shield className="h-6 w-6" />,
-//       color: 'bg-green-100 text-green-600',
+//       color: 'bg-blue-100 text-blue-600',
 //       features: [
 //         '10,000+ network hospitals',
 //         'Family floater options',
@@ -178,7 +178,7 @@
 //                       </div>
 //                     </div>
 //                     <div className="text-right">
-//                       <p className="text-sm font-medium text-green-600">{insurance.startingPremium}</p>
+//                       <p className="text-sm font-medium text-blue-600">{insurance.startingPremium}</p>
 //                       <p className="text-xs text-gray-500">Starting from</p>
 //                     </div>
 //                   </div>
@@ -280,7 +280,7 @@ const SelectInsuranceType = () => {
       subtitle: 'Medical Coverage',
       description: 'Cashless treatment at 10,000+ hospitals',
       icon: <Shield className="h-5 w-5" />,
-      color: 'bg-green-100 text-green-600',
+      color: 'bg-blue-100 text-blue-600',
       features: [
         'Network hospitals',
         'Family floater',
@@ -413,7 +413,7 @@ const SelectInsuranceType = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs font-medium text-green-600">{insurance.startingPremium}</p>
+                      <p className="text-xs font-medium text-blue-600">{insurance.startingPremium}</p>
                       <p className="text-[10px] text-gray-500">Starting from</p>
                     </div>
                   </div>

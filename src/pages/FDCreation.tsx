@@ -124,7 +124,7 @@ const FDCreation = () => {
                   </div>
                   <div className="flex justify-between">
                     <span>Interest Rate:</span>
-                    <span className="text-green-600">{getInterestRate()}% p.a.</span>
+                    <span className="text-blue-600">{getInterestRate()}% p.a.</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Tenure:</span>
@@ -258,7 +258,7 @@ const FDCreation = () => {
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Interest Rate:</span>
-                <span className="font-semibold text-green-600">{getInterestRate()}% p.a.</span>
+                <span className="font-semibold text-blue-600">{getInterestRate()}% p.a.</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Interest Payout:</span>

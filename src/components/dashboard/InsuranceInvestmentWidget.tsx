@@ -117,7 +117,7 @@ export const InsuranceInvestmentWidget = () => {
         <CardHeader className="pb-3">
           <div className="flex items-center justify-between">
             <CardTitle className="text-base font-bold flex items-center">
-              <TrendingUp className="h-4 w-4 text-green-600 mr-2" />
+              <TrendingUp className="h-4 w-4 text-blue-600 mr-2" />
               Investment Summary
             </CardTitle>
             <Button 
@@ -136,7 +136,7 @@ export const InsuranceInvestmentWidget = () => {
             <div key={index} className="space-y-2">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="p-2 bg-green-100 text-green-600 rounded-lg">
+                  <div className="p-2 bg-blue-100 text-blue-600 rounded-lg">
                     {investment.icon}
                   </div>
                   <div className="space-y-1">

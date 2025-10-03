@@ -153,7 +153,7 @@ const DepositServices = () => {
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div>
                         <p className="text-muted-foreground">Interest Rate</p>
-                        <p className="font-medium text-green-600">{fd.interestRate}% p.a.</p>
+                        <p className="font-medium text-blue-600">{fd.interestRate}% p.a.</p>
                       </div>
                       <div>
                         <p className="text-muted-foreground">Maturity Date</p>
@@ -204,7 +204,7 @@ const DepositServices = () => {
                       </div>
                       <div>
                         <p className="text-muted-foreground">Interest Rate</p>
-                        <p className="font-medium text-green-600">{rd.interestRate}% p.a.</p>
+                        <p className="font-medium text-blue-600">{rd.interestRate}% p.a.</p>
                       </div>
                       <div>
                         <p className="text-muted-foreground">Maturity Date</p>
@@ -278,7 +278,7 @@ const DepositServices = () => {
                     </div>
                     <div className="flex justify-between">
                       <span>Interest Earned:</span>
-                      <span className="font-medium text-green-600">₹37,500</span>
+                      <span className="font-medium text-blue-600">₹37,500</span>
                     </div>
                     <div className="flex justify-between text-lg font-bold">
                       <span>Maturity Amount:</span>

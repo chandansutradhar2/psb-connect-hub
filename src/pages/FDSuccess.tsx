@@ -19,13 +19,13 @@ const FDSuccess = () => {
       <div className="space-y-6 text-center">
         {/* Success Icon */}
         <div className="flex justify-center">
-          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-            <CheckCircle className="h-12 w-12 text-green-600" />
+          <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+            <CheckCircle className="h-12 w-12 text-blue-600" />
           </div>
         </div>
 
         <div>
-          <h1 className="text-2xl font-bold text-green-600 mb-2">FD Created Successfully!</h1>
+          <h1 className="text-2xl font-bold text-blue-600 mb-2">FD Created Successfully!</h1>
           <p className="text-muted-foreground">Your Fixed Deposit has been created and activated</p>
         </div>
 
@@ -48,7 +48,7 @@ const FDSuccess = () => {
             </div>
             <div className="flex justify-between">
               <span className="text-muted-foreground">Interest Rate:</span>
-              <span className="font-semibold text-green-600">7.5% p.a.</span>
+              <span className="font-semibold text-blue-600">7.5% p.a.</span>
             </div>
             <div className="flex justify-between">
               <span className="text-muted-foreground">Tenure:</span>

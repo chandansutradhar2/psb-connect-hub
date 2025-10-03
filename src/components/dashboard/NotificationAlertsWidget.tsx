@@ -79,10 +79,10 @@ export const NotificationAlertsWidget = () => {
         };
       case 'success':
         return {
-          bgColor: 'bg-green-50 border-green-200',
-          iconColor: 'text-green-600 bg-green-100',
-          textColor: 'text-green-800',
-          badgeColor: 'bg-green-100 text-green-800 border-green-200'
+          bgColor: 'bg-blue-50 border-blue-200',
+          iconColor: 'text-blue-600 bg-blue-100',
+          textColor: 'text-blue-800',
+          badgeColor: 'bg-blue-100 text-blue-800 border-blue-200'
         };
       default:
         return {

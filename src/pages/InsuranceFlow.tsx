@@ -47,7 +47,7 @@ const InsuranceFlow = () => {
       subtitle: 'Comprehensive medical coverage',
       description: 'Cashless treatment at 10,000+ hospitals',
       icon: <Shield className="h-6 w-6" />,
-      color: 'bg-green-500',
+      color: 'bg-blue-500',
       features: ['Cashless claims', 'Pre & post hospitalization', 'Family floater'],
       premiumFrom: '₹8,000/year',
       coverageUpTo: '₹25 Lakh'
@@ -160,8 +160,8 @@ const InsuranceFlow = () => {
         {myPolicies.length > 0 && (
           <BankingCard title="Insurance Summary" className="rounded-2xl">
             <div className="grid grid-cols-2 gap-4">
-              <div className="text-center p-4 rounded-xl bg-green-50">
-                <p className="text-2xl font-bold text-green-600">
+              <div className="text-center p-4 rounded-xl bg-blue-50">
+                <p className="text-2xl font-bold text-blue-600">
                   {formatCurrency(totalCoverage)}
                 </p>
                 <p className="text-sm text-muted-foreground">Total Coverage</p>
@@ -230,7 +230,7 @@ const InsuranceFlow = () => {
                         <h3 className="font-semibold">{insurance.title}</h3>
                         <p className="text-sm text-muted-foreground">{insurance.subtitle}</p>
                         <div className="flex items-center justify-between mt-2">
-                          <span className="text-xs text-green-600">From {insurance.premiumFrom}</span>
+                          <span className="text-xs text-blue-600">From {insurance.premiumFrom}</span>
                           <span className="text-xs text-blue-600">Up to {insurance.coverageUpTo}</span>
                         </div>
                         <div className="flex flex-wrap gap-1 mt-2">

@@ -81,7 +81,7 @@ export const ChatbotWidget = () => {
               <p className="text-sm font-semibold text-blue-900">PSB Assistant</p>
               <p className="text-xs text-blue-700">AI-powered help, available 24/7</p>
             </div>
-            <Badge className="bg-green-100 text-green-800 border-green-200 text-xs">
+            <Badge className="bg-blue-100 text-blue-800 border-blue-200 text-xs">
               Online
             </Badge>
           </div>
@@ -146,7 +146,7 @@ export const ChatbotWidget = () => {
                 <div className="flex items-center space-x-2">
                   <Badge className={`text-xs ${
                     channel.status === 'online' 
-                      ? 'bg-green-100 text-green-800 border-green-200'
+                      ? 'bg-blue-100 text-blue-800 border-blue-200'
                       : 'bg-blue-100 text-blue-800 border-blue-200'
                   }`}>
                     {channel.badge}

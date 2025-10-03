@@ -126,9 +126,9 @@ const VideoKYC = () => {
                 {documents.map((doc, index) => (
                   <div key={index} className="flex items-center justify-between p-3 border rounded-xl">
                     <div className="flex items-center space-x-3">
-                      <div className={`p-2 rounded-lg ${doc.status === 'uploaded' ? 'bg-green-100' : 'bg-gray-100'}`}>
+                      <div className={`p-2 rounded-lg ${doc.status === 'uploaded' ? 'bg-blue-100' : 'bg-gray-100'}`}>
                         {doc.status === 'uploaded' ? (
-                          <CheckCircle className="h-4 w-4 text-green-600" />
+                          <CheckCircle className="h-4 w-4 text-blue-600" />
                         ) : (
                           <Upload className="h-4 w-4 text-gray-600" />
                         )}
@@ -181,11 +181,11 @@ const VideoKYC = () => {
 
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-2 p-3 border rounded-xl">
-                    <Camera className="h-5 w-5 text-green-600" />
+                    <Camera className="h-5 w-5 text-blue-600" />
                     <span className="text-sm">Camera Ready</span>
                   </div>
                   <div className="flex items-center space-x-2 p-3 border rounded-xl">
-                    <Mic className="h-5 w-5 text-green-600" />
+                    <Mic className="h-5 w-5 text-blue-600" />
                     <span className="text-sm">Microphone Ready</span>
                   </div>
                 </div>
@@ -219,7 +219,7 @@ const VideoKYC = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <h3 className="font-semibold">Live Verification Call</h3>
-                  <Badge className="bg-green-100 text-green-800">Connected</Badge>
+                  <Badge className="bg-blue-100 text-blue-800">Connected</Badge>
                 </div>
 
                 <div className="aspect-video bg-gray-900 rounded-xl relative overflow-hidden">
@@ -272,12 +272,12 @@ const VideoKYC = () => {
                   </div>
                 </div>
 
-                <div className="p-4 bg-green-50 rounded-xl">
+                <div className="p-4 bg-blue-50 rounded-xl">
                   <div className="flex items-start space-x-3">
-                    <AlertCircle className="h-5 w-5 text-green-600 mt-0.5" />
+                    <AlertCircle className="h-5 w-5 text-blue-600 mt-0.5" />
                     <div>
-                      <h4 className="font-medium text-green-800">Verification in Progress</h4>
-                      <p className="text-sm text-green-700 mt-1">
+                      <h4 className="font-medium text-blue-800">Verification in Progress</h4>
+                      <p className="text-sm text-blue-700 mt-1">
                         Please follow the officer's instructions and show your documents when requested.
                       </p>
                     </div>
@@ -293,12 +293,12 @@ const VideoKYC = () => {
           <div className="space-y-6">
             <BankingCard className="rounded-2xl">
               <div className="text-center space-y-6">
-                <div className="mx-auto w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-                  <CheckCircle className="h-12 w-12 text-green-600" />
+                <div className="mx-auto w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                  <CheckCircle className="h-12 w-12 text-blue-600" />
                 </div>
                 
                 <div>
-                  <h2 className="text-2xl font-bold text-green-800 mb-2">KYC Verification Completed!</h2>
+                  <h2 className="text-2xl font-bold text-blue-800 mb-2">KYC Verification Completed!</h2>
                   <p className="text-muted-foreground">
                     Your video KYC has been successfully completed. You will receive a confirmation within 24 hours.
                   </p>
@@ -376,11 +376,11 @@ const VideoKYC = () => {
                 {steps.map((step) => (
                   <div key={step.id} className="text-center">
                     <div className={`w-6 h-6 rounded-full mx-auto mb-1 flex items-center justify-center text-xs font-semibold ${
-                      currentStep >= step.id ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-600'
+                      currentStep >= step.id ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'
                     }`}>
                       {currentStep > step.id ? '✓' : step.id}
                     </div>
-                    <p className={currentStep >= step.id ? 'text-green-600 font-medium' : 'text-muted-foreground'}>
+                    <p className={currentStep >= step.id ? 'text-blue-600 font-medium' : 'text-muted-foreground'}>
                       {step.title}
                     </p>
                   </div>

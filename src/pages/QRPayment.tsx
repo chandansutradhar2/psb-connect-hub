@@ -284,13 +284,13 @@ const QRPayment = () => {
                         <div className="absolute inset-0 flex items-center justify-center">
                           <div className="relative w-64 h-64">
                             {/* Corner markers */}
-                            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-green-400 rounded-tl-lg" />
-                            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-green-400 rounded-tr-lg" />
-                            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-green-400 rounded-bl-lg" />
-                            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-green-400 rounded-br-lg" />
+                            <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-blue-400 rounded-tl-lg" />
+                            <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-blue-400 rounded-tr-lg" />
+                            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-blue-400 rounded-bl-lg" />
+                            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-blue-400 rounded-br-lg" />
                             
                             {/* Scanning animation */}
-                            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-green-400 animate-pulse"></div>
+                            <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-blue-400 animate-pulse"></div>
                           </div>
                         </div>
                         
@@ -298,7 +298,7 @@ const QRPayment = () => {
                         <div className="absolute bottom-4 left-0 right-0 flex justify-center">
                           <Button 
                             onClick={simulateQRScan}
-                            className="bg-green-600 hover:bg-green-700 text-white"
+                            className="bg-blue-600 hover:bg-blue-700 text-white"
                             size="sm"
                           >
                             Simulate Scan
@@ -320,10 +320,10 @@ const QRPayment = () => {
                 )}
 
                 {scanResult && (
-                  <div className="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
+                  <div className="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
                     <div className="flex items-center gap-2 mb-2">
-                      <CheckCircle className="h-5 w-5 text-green-600" />
-                      <h3 className="font-medium text-green-800">QR Code Scanned</h3>
+                      <CheckCircle className="h-5 w-5 text-blue-600" />
+                      <h3 className="font-medium text-blue-800">QR Code Scanned</h3>
                     </div>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between">
@@ -340,7 +340,7 @@ const QRPayment = () => {
                       </div>
                     </div>
                     <Button 
-                      className="w-full mt-3 h-10 rounded-lg bg-green-600 hover:bg-green-700"
+                      className="w-full mt-3 h-10 rounded-lg bg-blue-600 hover:bg-blue-700"
                       onClick={handlePayment}
                     >
                       Pay Now
@@ -387,7 +387,7 @@ const QRPayment = () => {
                     </div>
                   </div>
                   <Button 
-                    className="w-full h-12 rounded-lg bg-gradient-to-r from-[#134e5e] to-[#71b280] text-white"
+                    className="w-full h-12 rounded-lg bg-gradient-to-r from-[#1178AC] to-[#1397DA] text-white"
                     disabled={!phoneNumber || !amount || phoneNumber.length !== 10}
                     onClick={handlePayment}
                   >
@@ -455,10 +455,10 @@ const QRPayment = () => {
                 <div key={payment.id} className="p-4 flex items-center justify-between hover:bg-gray-50 cursor-pointer" onClick={() => navigate('/transaction-details', { state: { payment } })}>
                   <div className="flex items-center space-x-3">
                     <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
-                      payment.type === 'credit' ? 'bg-green-100' : 'bg-blue-100'
+                      payment.type === 'credit' ? 'bg-blue-100' : 'bg-blue-100'
                     }`}>
                       {payment.type === 'credit' ? (
-                        <User className="h-5 w-5 text-green-600" />
+                        <User className="h-5 w-5 text-blue-600" />
                       ) : (
                         <IndianRupee className="h-5 w-5 text-blue-600" />
                       )}
@@ -473,7 +473,7 @@ const QRPayment = () => {
                   </div>
                   <div className="text-right">
                     <p className={`font-semibold text-sm ${
-                      payment.type === 'credit' ? 'text-green-600' : 'text-gray-900'
+                      payment.type === 'credit' ? 'text-blue-600' : 'text-gray-900'
                     }`}>
                       {payment.type === 'credit' ? '+' : '-'}₹{payment.amount}
                     </p>
@@ -481,7 +481,7 @@ const QRPayment = () => {
                       variant="outline" 
                       className={`text-xs ${
                         payment.status === 'Success' 
-                          ? 'bg-green-50 text-green-600 border-green-100' 
+                          ? 'bg-blue-50 text-blue-600 border-blue-100' 
                           : 'bg-blue-50 text-blue-600 border-blue-100'
                       }`}
                     >
@@ -764,7 +764,7 @@ export default QRPayment;
 //                 </div>
 //                 <div className="text-right">
 //                   <p className="font-semibold text-sm">-₹{payment.amount}</p>
-//                   <Badge variant="outline" className="text-xs bg-green-50 text-green-600 border-green-100">
+//                   <Badge variant="outline" className="text-xs bg-blue-50 text-blue-600 border-blue-100">
 //                     {payment.status}
 //                   </Badge>
 //                 </div>

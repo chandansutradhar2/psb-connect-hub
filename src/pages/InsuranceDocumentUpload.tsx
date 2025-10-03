@@ -113,9 +113,9 @@ const InsuranceDocumentUpload = () => {
             <BankingCard key={doc.id} className="rounded-2xl">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className={`p-2 rounded-xl ${doc.uploaded ? 'bg-green-100' : 'bg-gray-100'}`}>
+                  <div className={`p-2 rounded-xl ${doc.uploaded ? 'bg-blue-100' : 'bg-gray-100'}`}>
                     {doc.uploaded ? (
-                      <CheckCircle className="h-5 w-5 text-green-600" />
+                      <CheckCircle className="h-5 w-5 text-blue-600" />
                     ) : (
                       <FileText className="h-5 w-5 text-gray-600" />
                     )}
@@ -129,7 +129,7 @@ const InsuranceDocumentUpload = () => {
                         {doc.required ? 'Required' : 'Optional'}
                       </span>
                       {doc.uploaded && (
-                        <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">
+                        <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
                           Uploaded
                         </span>
                       )}

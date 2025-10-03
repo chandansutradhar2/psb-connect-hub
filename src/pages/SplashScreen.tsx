@@ -52,7 +52,7 @@ const SplashScreen = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen  bg-gradient-to-b from-[#134e5e] to-[#71b280] flex items-center justify-center">
+      <div className="min-h-screen  bg-gradient-to-b from-[#1178AC] to-[#1397DA] flex items-center justify-center">
         <div className="text-center">
           {/* <div className="w-24 h-24 mx-auto mb-6 rounded-3xl bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center">
           </div> */}
@@ -76,7 +76,7 @@ const SplashScreen = () => {
   }
 
   return (
-    <div className="min-h-screen  bg-gradient-to-b from-[#134e5e] to-[#71b280] flex flex-col">
+    <div className="min-h-screen  bg-gradient-to-b from-[#1178AC] to-[#1397DA] flex flex-col">
       {/* Background Pattern */}
       <div 
         className="absolute inset-0 opacity-20" 

@@ -39,11 +39,11 @@ const InsurancePolicySuccess = () => {
       <div className="space-y-6">
         {/* Success Header */}
         <div className="text-center space-y-4 py-8">
-          <div className="mx-auto w-20 h-20 bg-green-100 rounded-full flex items-center justify-center">
-            <CheckCircle className="h-12 w-12 text-green-600" />
+          <div className="mx-auto w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+            <CheckCircle className="h-12 w-12 text-blue-600" />
           </div>
           <div>
-            <h1 className="text-2xl font-bold text-green-800">
+            <h1 className="text-2xl font-bold text-blue-800">
               {isInstant ? 'Policy Activated!' : 'Application Submitted!'}
             </h1>
             <p className="text-muted-foreground">
@@ -56,14 +56,14 @@ const InsurancePolicySuccess = () => {
         </div>
 
         {/* Policy Details */}
-        <BankingCard className="rounded-2xl bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
+        <BankingCard className="rounded-2xl bg-gradient-to-r from-blue-50 to-blue-50 border-blue-200">
           <div className="space-y-4">
             <div className="flex items-center justify-between">
               <div>
-                <h3 className="text-xl font-bold text-green-800">{plan?.name}</h3>
-                <p className="text-sm text-green-600">{plan?.insurer}</p>
+                <h3 className="text-xl font-bold text-blue-800">{plan?.name}</h3>
+                <p className="text-sm text-blue-600">{plan?.insurer}</p>
               </div>
-              <Badge className="bg-green-100 text-green-800">
+              <Badge className="bg-blue-100 text-blue-800">
                 {isInstant ? 'Active' : 'Under Review'}
               </Badge>
             </div>
@@ -71,11 +71,11 @@ const InsurancePolicySuccess = () => {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-sm text-muted-foreground">Policy Number</p>
-                <p className="font-bold text-green-700">{policyNumber}</p>
+                <p className="font-bold text-blue-700">{policyNumber}</p>
               </div>
               <div>
                 <p className="text-sm text-muted-foreground">Coverage</p>
-                <p className="font-bold text-green-700">{formatCurrency(coverageData?.sumAssured || 500000)}</p>
+                <p className="font-bold text-blue-700">{formatCurrency(coverageData?.sumAssured || 500000)}</p>
               </div>
             </div>
 
@@ -139,7 +139,7 @@ const InsurancePolicySuccess = () => {
                 <h4 className="font-medium">Application Process:</h4>
                 <div className="space-y-2">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="h-4 w-4 text-green-600" />
+                    <CheckCircle className="h-4 w-4 text-blue-600" />
                     <span className="text-sm">Application Submitted</span>
                   </div>
                   <div className="flex items-center space-x-3">

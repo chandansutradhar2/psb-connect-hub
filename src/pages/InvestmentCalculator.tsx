@@ -144,7 +144,7 @@ export const InvestmentCalculator = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Estimated Returns:</span>
-                  <span className="font-semibold text-green-600">
+                  <span className="font-semibold text-blue-600">
                     {formatCurrency(calculateSIP() - monthlyInvestment * timePeriod * 12)}
                   </span>
                 </div>
@@ -227,7 +227,7 @@ export const InvestmentCalculator = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Estimated Returns:</span>
-                  <span className="font-semibold text-green-600">
+                  <span className="font-semibold text-blue-600">
                     {formatCurrency(calculateLumpsum() - investmentAmount)}
                   </span>
                 </div>
@@ -314,7 +314,7 @@ export const InvestmentCalculator = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Wealth Gained:</span>
-                  <span className="font-semibold text-green-600">
+                  <span className="font-semibold text-blue-600">
                     {formatCurrency(goalAmount - calculateGoal() * timePeriod * 12)}
                   </span>
                 </div>

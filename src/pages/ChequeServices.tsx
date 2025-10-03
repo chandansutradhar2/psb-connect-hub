@@ -47,7 +47,7 @@ const ChequeServices = () => {
 
           <BankingCard className="cursor-pointer hover:shadow-md">
             <div className="text-center space-y-3">
-              <CheckCircle className="h-8 w-8 mx-auto text-green-600" />
+              <CheckCircle className="h-8 w-8 mx-auto text-blue-600" />
               <h3 className="font-semibold">Positive Pay</h3>
               <p className="text-sm text-muted-foreground">Submit cheque details</p>
               <Button size="sm" className="w-full">Submit</Button>

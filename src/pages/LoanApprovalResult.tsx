@@ -88,23 +88,23 @@ const LoanApprovalResult = () => {
                 </div>
                 <Progress value={processingProgress} className="h-3" />
                 <div className="space-y-2 text-left">
-                  <div className={`flex items-center space-x-2 ${processingProgress >= 20 ? 'text-green-600' : 'text-muted-foreground'}`}>
+                  <div className={`flex items-center space-x-2 ${processingProgress >= 20 ? 'text-blue-600' : 'text-muted-foreground'}`}>
                     <CheckCircle className="h-4 w-4" />
                     <span className="text-sm">Application received</span>
                   </div>
-                  <div className={`flex items-center space-x-2 ${processingProgress >= 40 ? 'text-green-600' : 'text-muted-foreground'}`}>
+                  <div className={`flex items-center space-x-2 ${processingProgress >= 40 ? 'text-blue-600' : 'text-muted-foreground'}`}>
                     <CheckCircle className="h-4 w-4" />
                     <span className="text-sm">Documents verified</span>
                   </div>
-                  <div className={`flex items-center space-x-2 ${processingProgress >= 60 ? 'text-green-600' : 'text-muted-foreground'}`}>
+                  <div className={`flex items-center space-x-2 ${processingProgress >= 60 ? 'text-blue-600' : 'text-muted-foreground'}`}>
                     <CheckCircle className="h-4 w-4" />
                     <span className="text-sm">Credit assessment</span>
                   </div>
-                  <div className={`flex items-center space-x-2 ${processingProgress >= 80 ? 'text-green-600' : 'text-muted-foreground'}`}>
+                  <div className={`flex items-center space-x-2 ${processingProgress >= 80 ? 'text-blue-600' : 'text-muted-foreground'}`}>
                     <CheckCircle className="h-4 w-4" />
                     <span className="text-sm">Risk evaluation</span>
                   </div>
-                  <div className={`flex items-center space-x-2 ${processingProgress >= 100 ? 'text-green-600' : 'text-muted-foreground'}`}>
+                  <div className={`flex items-center space-x-2 ${processingProgress >= 100 ? 'text-blue-600' : 'text-muted-foreground'}`}>
                     <CheckCircle className="h-4 w-4" />
                     <span className="text-sm">Final approval</span>
                   </div>
@@ -123,50 +123,50 @@ const LoanApprovalResult = () => {
         <div className="space-y-6">
           {/* Success Header */}
           <div className="text-center py-8">
-            <div className="p-6 rounded-full bg-green-100 w-fit mx-auto mb-6">
-              <CheckCircle className="h-12 w-12 text-green-600" />
+            <div className="p-6 rounded-full bg-blue-100 w-fit mx-auto mb-6">
+              <CheckCircle className="h-12 w-12 text-blue-600" />
             </div>
-            <h1 className="text-2xl font-bold text-green-800 mb-2">
+            <h1 className="text-2xl font-bold text-blue-800 mb-2">
               Congratulations! 🎉
             </h1>
-            <p className="text-lg text-green-700 mb-2">Your loan has been approved</p>
+            <p className="text-lg text-blue-700 mb-2">Your loan has been approved</p>
             <p className="text-muted-foreground">
               Application ID: {applicationId}
             </p>
           </div>
 
           {/* Approval Details */}
-          <BankingCard title="Loan Approval Details" className="rounded-2xl bg-green-50 border-green-200">
+          <BankingCard title="Loan Approval Details" className="rounded-2xl bg-blue-50 border-blue-200">
             <div className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-3 rounded-xl bg-white border border-green-200">
-                  <IndianRupee className="h-5 w-5 text-green-600 mx-auto mb-1" />
+                <div className="text-center p-3 rounded-xl bg-white border border-blue-200">
+                  <IndianRupee className="h-5 w-5 text-blue-600 mx-auto mb-1" />
                   <p className="text-sm text-muted-foreground">Approved Amount</p>
-                  <p className="font-bold text-green-600">₹{loanDetails?.amount.toLocaleString()}</p>
+                  <p className="font-bold text-blue-600">₹{loanDetails?.amount.toLocaleString()}</p>
                 </div>
-                <div className="text-center p-3 rounded-xl bg-white border border-green-200">
-                  <Star className="h-5 w-5 text-green-600 mx-auto mb-1" />
+                <div className="text-center p-3 rounded-xl bg-white border border-blue-200">
+                  <Star className="h-5 w-5 text-blue-600 mx-auto mb-1" />
                   <p className="text-sm text-muted-foreground">Interest Rate</p>
-                  <p className="font-bold text-green-600">{loanDetails?.interestRate}% p.a.</p>
+                  <p className="font-bold text-blue-600">{loanDetails?.interestRate}% p.a.</p>
                 </div>
-                <div className="text-center p-3 rounded-xl bg-white border border-green-200">
-                  <Calendar className="h-5 w-5 text-green-600 mx-auto mb-1" />
+                <div className="text-center p-3 rounded-xl bg-white border border-blue-200">
+                  <Calendar className="h-5 w-5 text-blue-600 mx-auto mb-1" />
                   <p className="text-sm text-muted-foreground">Tenure</p>
-                  <p className="font-bold text-green-600">{loanDetails?.tenure} months</p>
+                  <p className="font-bold text-blue-600">{loanDetails?.tenure} months</p>
                 </div>
-                <div className="text-center p-3 rounded-xl bg-white border border-green-200">
-                  <IndianRupee className="h-5 w-5 text-green-600 mx-auto mb-1" />
+                <div className="text-center p-3 rounded-xl bg-white border border-blue-200">
+                  <IndianRupee className="h-5 w-5 text-blue-600 mx-auto mb-1" />
                   <p className="text-sm text-muted-foreground">Monthly EMI</p>
-                  <p className="font-bold text-green-600">₹{loanDetails?.emi.toLocaleString()}</p>
+                  <p className="font-bold text-blue-600">₹{loanDetails?.emi.toLocaleString()}</p>
                 </div>
               </div>
 
-              <div className="p-4 rounded-xl bg-gradient-to-r from-green-100 to-emerald-100 border border-green-200">
+              <div className="p-4 rounded-xl bg-gradient-to-r from-blue-100 to-emerald-100 border border-blue-200">
                 <div className="flex items-center space-x-2 mb-2">
-                  <CheckCircle className="h-5 w-5 text-green-600" />
-                  <span className="font-semibold text-green-800">Instant Approval</span>
+                  <CheckCircle className="h-5 w-5 text-blue-600" />
+                  <span className="font-semibold text-blue-800">Instant Approval</span>
                 </div>
-                <p className="text-sm text-green-700">
+                <p className="text-sm text-blue-700">
                   Your loan amount will be credited to your account within 24 hours
                 </p>
               </div>
@@ -264,14 +264,14 @@ const LoanApprovalResult = () => {
             
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-600" />
+                <CheckCircle className="h-5 w-5 text-blue-600" />
                 <div>
                   <p className="font-medium">Application Submitted</p>
                   <p className="text-sm text-muted-foreground">Completed</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-600" />
+                <CheckCircle className="h-5 w-5 text-blue-600" />
                 <div>
                   <p className="font-medium">Document Verification</p>
                   <p className="text-sm text-muted-foreground">Completed</p>

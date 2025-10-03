@@ -198,7 +198,7 @@ const LoanApplication = () => {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Rate:</span>
-                    <span className="font-medium text-green-600">{config.rate}% p.a.</span>
+                    <span className="font-medium text-blue-600">{config.rate}% p.a.</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Tenure:</span>
@@ -266,8 +266,8 @@ const LoanApplication = () => {
             </div>
 
             {formData.monthlyIncome && (
-              <div className="bg-green-50 p-4 rounded-lg border border-green-100">
-                <h4 className="font-medium text-sm text-green-800 mb-3">Eligibility Check</h4>
+              <div className="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                <h4 className="font-medium text-sm text-blue-800 mb-3">Eligibility Check</h4>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Income:</span>
@@ -291,7 +291,7 @@ const LoanApplication = () => {
                     <span className={`font-medium ${
                       ((calculateEMI() + parseFloat(formData.existingEMI || '0')) / parseFloat(formData.monthlyIncome)) * 100 > 50 
                         ? 'text-red-600' 
-                        : 'text-green-600'
+                        : 'text-blue-600'
                     }`}>
                       {(((calculateEMI() + parseFloat(formData.existingEMI || '0')) / parseFloat(formData.monthlyIncome)) * 100).toFixed(1)}%
                     </span>
@@ -363,7 +363,7 @@ const LoanApplication = () => {
         return (
           <div className="bg-white rounded-xl p-6 border border-gray-200 space-y-6">
             <div className="flex items-center gap-2 mb-4">
-              <BadgeCheck className="h-5 w-5 text-green-600" />
+              <BadgeCheck className="h-5 w-5 text-blue-600" />
               <h3 className="font-semibold text-gray-900">Review Application</h3>
             </div>
             
@@ -382,7 +382,7 @@ const LoanApplication = () => {
               </div>
               <div className="flex justify-between py-2 border-b border-gray-100">
                 <span className="text-gray-600">Interest Rate:</span>
-                <span className="font-medium text-green-600">{config.rate}% p.a.</span>
+                <span className="font-medium text-blue-600">{config.rate}% p.a.</span>
               </div>
               <div className="flex justify-between py-2 border-b border-gray-100">
                 <span className="text-gray-600">Monthly EMI:</span>
@@ -418,8 +418,8 @@ const LoanApplication = () => {
               </div>
             </div>
 
-            <div className="bg-green-50 p-3 rounded-lg border border-green-100">
-              <p className="text-xs text-green-700">
+            <div className="bg-blue-50 p-3 rounded-lg border border-blue-100">
+              <p className="text-xs text-blue-700">
                 By submitting, you agree to our Terms & Conditions and confirm that all information provided is accurate.
               </p>
             </div>
@@ -458,7 +458,7 @@ const LoanApplication = () => {
     <div className="flex justify-between items-center">
       <span className="text-gray-600">{label}</span>
       <span className={`inline-flex items-center text-xs font-medium ${
-        uploaded ? 'text-green-600' : 'text-amber-600'
+        uploaded ? 'text-blue-600' : 'text-amber-600'
       }`}>
         {uploaded ? (
           <>
@@ -548,7 +548,7 @@ const LoanApplication = () => {
               ) : (
                 <Button 
                   onClick={handleSubmit} 
-                  className="flex-1 h-12 bg-green-600 hover:bg-green-700"
+                  className="flex-1 h-12 bg-blue-600 hover:bg-blue-700"
                 >
                   Submit Application
                 </Button>
@@ -752,7 +752,7 @@ export default LoanApplication;
 //                   </div>
 //                   <div className="flex justify-between">
 //                     <span>Rate:</span>
-//                     <span className="text-green-600">{config.rate}% p.a.</span>
+//                     <span className="text-blue-600">{config.rate}% p.a.</span>
 //                   </div>
 //                   <div className="flex justify-between">
 //                     <span>Tenure:</span>
@@ -820,7 +820,7 @@ export default LoanApplication;
 //             </div>
 
 //             {formData.monthlyIncome && (
-//               <div className="bg-green-50 p-3 rounded-lg">
+//               <div className="bg-blue-50 p-3 rounded-lg">
 //                 <h4 className="font-medium text-sm mb-2">Eligibility Check</h4>
 //                 <div className="space-y-1 text-sm">
 //                   <div className="flex justify-between">
@@ -842,7 +842,7 @@ export default LoanApplication;
 //                   </div>
 //                   <div className="flex justify-between text-xs">
 //                     <span>EMI/Income:</span>
-//                     <span className={`${((calculateEMI() + parseFloat(formData.existingEMI || '0')) / parseFloat(formData.monthlyIncome)) * 100 > 50 ? 'text-red-600' : 'text-green-600'}`}>
+//                     <span className={`${((calculateEMI() + parseFloat(formData.existingEMI || '0')) / parseFloat(formData.monthlyIncome)) * 100 > 50 ? 'text-red-600' : 'text-blue-600'}`}>
 //                       {(((calculateEMI() + parseFloat(formData.existingEMI || '0')) / parseFloat(formData.monthlyIncome)) * 100).toFixed(1)}%
 //                     </span>
 //                   </div>
@@ -925,7 +925,7 @@ export default LoanApplication;
 //               </div>
 //               <div className="flex justify-between">
 //                 <span className="text-gray-500">Rate:</span>
-//                 <span className="text-green-600">{config.rate}% p.a.</span>
+//                 <span className="text-blue-600">{config.rate}% p.a.</span>
 //               </div>
 //               <div className="flex justify-between">
 //                 <span className="text-gray-500">EMI:</span>
@@ -955,8 +955,8 @@ export default LoanApplication;
 //               </div>
 //             </div>
 
-//             <div className="bg-green-50 p-3 rounded-lg">
-//               <p className="text-xs text-green-700">
+//             <div className="bg-blue-50 p-3 rounded-lg">
+//               <p className="text-xs text-blue-700">
 //                 By submitting, you agree to our Terms & Conditions
 //               </p>
 //             </div>
@@ -993,7 +993,7 @@ export default LoanApplication;
 //   const DocumentStatus = ({ label, uploaded }: { label: string; uploaded: boolean }) => (
 //     <div className="flex justify-between">
 //       <span>{label}:</span>
-//       <span className={uploaded ? 'text-green-600' : 'text-red-600'}>
+//       <span className={uploaded ? 'text-blue-600' : 'text-red-600'}>
 //         {uploaded ? 'Uploaded' : 'Pending'}
 //       </span>
 //     </div>
@@ -1263,7 +1263,7 @@ export default LoanApplication;
 //                   </div>
 //                   <div className="flex justify-between">
 //                     <span>Interest Rate:</span>
-//                     <span className="text-green-600">{config.rate}% p.a.</span>
+//                     <span className="text-blue-600">{config.rate}% p.a.</span>
 //                   </div>
 //                   <div className="flex justify-between">
 //                     <span>Tenure:</span>
@@ -1350,7 +1350,7 @@ export default LoanApplication;
 //                   </div>
 //                   <div className="flex justify-between text-xs">
 //                     <span>EMI to Income Ratio:</span>
-//                     <span className={`${((calculateEMI() + parseFloat(formData.existingEMI || '0')) / parseFloat(formData.monthlyIncome)) * 100 > 50 ? 'text-red-600' : 'text-green-600'}`}>
+//                     <span className={`${((calculateEMI() + parseFloat(formData.existingEMI || '0')) / parseFloat(formData.monthlyIncome)) * 100 > 50 ? 'text-red-600' : 'text-blue-600'}`}>
 //                       {(((calculateEMI() + parseFloat(formData.existingEMI || '0')) / parseFloat(formData.monthlyIncome)) * 100).toFixed(1)}%
 //                     </span>
 //                   </div>
@@ -1464,7 +1464,7 @@ export default LoanApplication;
 //                 </div>
 //                 <div className="flex justify-between">
 //                   <span className="text-muted-foreground">Interest Rate:</span>
-//                   <span className="font-semibold text-green-600">{config.rate}% p.a.</span>
+//                   <span className="font-semibold text-blue-600">{config.rate}% p.a.</span>
 //                 </div>
 //                 <div className="flex justify-between">
 //                   <span className="text-muted-foreground">Monthly EMI:</span>
@@ -1484,24 +1484,24 @@ export default LoanApplication;
 //                 </div>
 //               </div>
 
-//               <div className="bg-green-50 p-4 rounded-xl">
-//                 <h4 className="font-medium text-green-800 mb-2">Documents Status</h4>
+//               <div className="bg-blue-50 p-4 rounded-xl">
+//                 <h4 className="font-medium text-blue-800 mb-2">Documents Status</h4>
 //                 <div className="space-y-1 text-sm">
 //                   <div className="flex justify-between">
 //                     <span>Identity Proof:</span>
-//                     <span className={formData.documentsUploaded.identity ? 'text-green-600' : 'text-red-600'}>
+//                     <span className={formData.documentsUploaded.identity ? 'text-blue-600' : 'text-red-600'}>
 //                       {formData.documentsUploaded.identity ? 'Uploaded' : 'Pending'}
 //                     </span>
 //                   </div>
 //                   <div className="flex justify-between">
 //                     <span>Income Proof:</span>
-//                     <span className={formData.documentsUploaded.income ? 'text-green-600' : 'text-red-600'}>
+//                     <span className={formData.documentsUploaded.income ? 'text-blue-600' : 'text-red-600'}>
 //                       {formData.documentsUploaded.income ? 'Uploaded' : 'Pending'}
 //                     </span>
 //                   </div>
 //                   <div className="flex justify-between">
 //                     <span>Address Proof:</span>
-//                     <span className={formData.documentsUploaded.address ? 'text-green-600' : 'text-red-600'}>
+//                     <span className={formData.documentsUploaded.address ? 'text-blue-600' : 'text-red-600'}>
 //                       {formData.documentsUploaded.address ? 'Uploaded' : 'Pending'}
 //                     </span>
 //                   </div>

@@ -84,7 +84,7 @@ export const PinChange = ({
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
       <Card className="w-full max-w-sm p-6 space-y-6">
         <div className="text-center space-y-2">
-          <div className="mx-auto w-16 h-16 bg-gradient-to-br from-[#134e5e] to-[#71b280] rounded-full flex items-center justify-center">
+          <div className="mx-auto w-16 h-16 bg-gradient-to-br from-[#1178AC] to-[#1397DA] rounded-full flex items-center justify-center">
             <Key className="h-8 w-8 text-white" />
           </div>
           <h2 className="text-xl font-semibold">{title}</h2>
@@ -175,7 +175,7 @@ export const PinChange = ({
             </Button>
             <Button
               onClick={handlePinSubmit}
-              className="flex-1 bg-gradient-to-br from-[#134e5e] to-[#71b280]"
+              className="flex-1 bg-gradient-to-br from-[#1178AC] to-[#1397DA]"
               disabled={(hasExistingPin && currentPin.length !== 4) || newPin.length !== 4 || confirmPin.length !== 4 || isSubmitting}
             >
               {isSubmitting ? (

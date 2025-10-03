@@ -190,7 +190,7 @@ const DigitalLocker = () => {
                           {doc.category}
                         </Badge>
                         {doc.isEncrypted && (
-                          <div className="flex items-center gap-1 text-xs text-green-600">
+                          <div className="flex items-center gap-1 text-xs text-blue-600">
                             <Lock className="h-3 w-3" />
                             <span>Encrypted</span>
                           </div>
@@ -226,7 +226,7 @@ const DigitalLocker = () => {
             <CardContent className="space-y-3">
               <div className="flex items-center justify-between p-3 border rounded-lg">
                 <div className="flex items-center gap-3">
-                  <Lock className="h-5 w-5 text-green-600" />
+                  <Lock className="h-5 w-5 text-blue-600" />
                   <div>
                     <p className="font-medium">256-bit Encryption</p>
                     <p className="text-sm text-muted-foreground">Military-grade security</p>
@@ -236,7 +236,7 @@ const DigitalLocker = () => {
               </div>
               <div className="flex items-center justify-between p-3 border rounded-lg">
                 <div className="flex items-center gap-3">
-                  <Shield className="h-5 w-5 text-green-600" />
+                  <Shield className="h-5 w-5 text-blue-600" />
                   <div>
                     <p className="font-medium">Auto Backup</p>
                     <p className="text-sm text-muted-foreground">Daily secure backups</p>
@@ -246,7 +246,7 @@ const DigitalLocker = () => {
               </div>
               <div className="flex items-center justify-between p-3 border rounded-lg">
                 <div className="flex items-center gap-3">
-                  <Eye className="h-5 w-5 text-green-600" />
+                  <Eye className="h-5 w-5 text-blue-600" />
                   <div>
                     <p className="font-medium">Access Logs</p>
                     <p className="text-sm text-muted-foreground">Track document access</p>

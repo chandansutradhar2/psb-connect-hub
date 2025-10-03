@@ -60,14 +60,14 @@ export const CibilScoreCard = ({ onScoreUpdate }: CibilScoreCardProps) => {
   };
 
   const getScoreStatus = (score: number) => {
-    if (score >= 750) return { status: 'Excellent', color: 'text-green-600', bgColor: 'bg-green-50' };
+    if (score >= 750) return { status: 'Excellent', color: 'text-blue-600', bgColor: 'bg-blue-50' };
     if (score >= 700) return { status: 'Good', color: 'text-blue-600', bgColor: 'bg-blue-50' };
     if (score >= 650) return { status: 'Fair', color: 'text-orange-600', bgColor: 'bg-orange-50' };
     return { status: 'Poor', color: 'text-red-600', bgColor: 'bg-red-50' };
   };
 
   const getScoreColor = (score: number) => {
-    if (score >= 750) return 'text-green-600';
+    if (score >= 750) return 'text-blue-600';
     if (score >= 700) return 'text-blue-600';
     if (score >= 650) return 'text-orange-600';
     return 'text-red-600';

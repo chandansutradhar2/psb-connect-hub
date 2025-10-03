@@ -64,7 +64,7 @@ const InvestmentProductCard = ({ product, onInvest }: InvestmentProductCardProps
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'mutual_fund': return 'bg-blue-50 text-blue-600 border-blue-200';
-      case 'fd': return 'bg-green-50 text-green-600 border-green-200';
+      case 'fd': return 'bg-blue-50 text-blue-600 border-blue-200';
       case 'rd': return 'bg-purple-50 text-purple-600 border-purple-200';
       case 'bond': return 'bg-orange-50 text-orange-600 border-orange-200';
       case 'nps': return 'bg-indigo-50 text-indigo-600 border-indigo-200';
@@ -77,7 +77,7 @@ const InvestmentProductCard = ({ product, onInvest }: InvestmentProductCardProps
     switch (risk) {
       case 'High': return 'bg-red-50 text-red-600 border-red-200';
       case 'Moderate': return 'bg-orange-50 text-orange-600 border-orange-200';
-      case 'Low': return 'bg-green-50 text-green-600 border-green-200';
+      case 'Low': return 'bg-blue-50 text-blue-600 border-blue-200';
       default: return 'bg-gray-50 text-gray-600 border-gray-200';
     }
   };
@@ -87,7 +87,7 @@ const InvestmentProductCard = ({ product, onInvest }: InvestmentProductCardProps
   };
 
   const getReturnColor = (returnValue: number) => {
-    return returnValue >= 0 ? 'text-green-600' : 'text-red-600';
+    return returnValue >= 0 ? 'text-blue-600' : 'text-red-600';
   };
 
   return (
@@ -105,7 +105,7 @@ const InvestmentProductCard = ({ product, onInvest }: InvestmentProductCardProps
                   {product.type.replace('_', ' ').toUpperCase()}
                 </Badge>
                 {product.taxBenefit && (
-                  <Badge variant="outline" className="bg-green-50 text-green-600 border-green-200">
+                  <Badge variant="outline" className="bg-blue-50 text-blue-600 border-blue-200">
                     Tax Benefit
                   </Badge>
                 )}

@@ -51,8 +51,8 @@ export const BiometricAuth = ({ onSuccess, onCancel, type = 'both' }: BiometricA
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
       <Card className="w-full max-w-sm p-6 space-y-6">
         <div className="text-center space-y-2">
-          <div className="mx-auto w-16 h-16 bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center">
-            <Shield className="h-8 w-8 text-green-600" />
+          <div className="mx-auto w-16 h-16 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center">
+            <Shield className="h-8 w-8 text-blue-600" />
           </div>
           <h2 className="text-xl font-semibold">Secure Authentication</h2>
           <p className="text-sm text-muted-foreground">
@@ -70,7 +70,7 @@ export const BiometricAuth = ({ onSuccess, onCancel, type = 'both' }: BiometricA
             >
               <Fingerprint className="h-5 w-5" />
               <span>Use Fingerprint</span>
-              {isAuthenticating && <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-green-600" />}
+              {isAuthenticating && <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600" />}
             </Button>
           )}
 
@@ -83,7 +83,7 @@ export const BiometricAuth = ({ onSuccess, onCancel, type = 'both' }: BiometricA
             >
               <Eye className="h-5 w-5" />
               <span>Use Face ID</span>
-              {isAuthenticating && <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-green-600" />}
+              {isAuthenticating && <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600" />}
             </Button>
           )}
 

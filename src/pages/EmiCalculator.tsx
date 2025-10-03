@@ -119,7 +119,7 @@ const EmiCalculator = () => {
               <div className="flex gap-2">
                 <Button
                   onClick={handleCalculate}
-                  className="flex-1 rounded-lg bg-green-600 hover:bg-green-700 text-xs h-8"
+                  className="flex-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-xs h-8"
                   disabled={!loanAmount || !interestRate || !tenure}
                 >
                   <Calculator className="h-3 w-3 mr-1" />
@@ -138,23 +138,23 @@ const EmiCalculator = () => {
 
           {/* Results */}
           {emiResult && (
-            <BankingCard className="rounded-xl bg-gradient-to-r from-green-50 to-teal-50 border-green-200">
+            <BankingCard className="rounded-xl bg-gradient-to-r from-blue-50 to-teal-50 border-blue-200">
               <h3 className="font-semibold text-sm mb-3">EMI Details</h3>
               <div className="grid grid-cols-2 gap-3">
-                <div className="text-center p-3 rounded-lg bg-white border border-green-200">
-                  <p className="text-lg font-bold text-green-600">₹{parseFloat(emiResult.monthlyEmi).toLocaleString()}</p>
+                <div className="text-center p-3 rounded-lg bg-white border border-blue-200">
+                  <p className="text-lg font-bold text-blue-600">₹{parseFloat(emiResult.monthlyEmi).toLocaleString()}</p>
                   <p className="text-xs text-gray-600 mt-1">Monthly EMI</p>
                 </div>
-                <div className="text-center p-3 rounded-lg bg-white border border-green-200">
-                  <p className="text-lg font-bold text-green-600">₹{parseFloat(emiResult.totalInterest).toLocaleString()}</p>
+                <div className="text-center p-3 rounded-lg bg-white border border-blue-200">
+                  <p className="text-lg font-bold text-blue-600">₹{parseFloat(emiResult.totalInterest).toLocaleString()}</p>
                   <p className="text-xs text-gray-600 mt-1">Total Interest</p>
                 </div>
-                <div className="text-center p-3 rounded-lg bg-white border border-green-200">
-                  <p className="text-lg font-bold text-green-600">₹{parseFloat(emiResult.totalAmount).toLocaleString()}</p>
+                <div className="text-center p-3 rounded-lg bg-white border border-blue-200">
+                  <p className="text-lg font-bold text-blue-600">₹{parseFloat(emiResult.totalAmount).toLocaleString()}</p>
                   <p className="text-xs text-gray-600 mt-1">Total Amount</p>
                 </div>
-                <div className="text-center p-3 rounded-lg bg-white border border-green-200">
-                  <p className="text-lg font-bold text-green-600">{tenure} Years</p>
+                <div className="text-center p-3 rounded-lg bg-white border border-blue-200">
+                  <p className="text-lg font-bold text-blue-600">{tenure} Years</p>
                   <p className="text-xs text-gray-600 mt-1">Tenure</p>
                 </div>
               </div>

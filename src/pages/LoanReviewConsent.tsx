@@ -203,9 +203,9 @@ Loans offered based on repayment capacity assessment.
         <BankingCard title="Documents Uploaded" className="rounded-2xl">
           <div className="space-y-3">
             {documents?.map((doc: any, index: number) => (
-              <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-green-50 border border-green-200">
+              <div key={index} className="flex items-center justify-between p-3 rounded-lg bg-blue-50 border border-blue-200">
                 <div className="flex items-center space-x-3">
-                  <CheckCircle className="h-4 w-4 text-green-600" />
+                  <CheckCircle className="h-4 w-4 text-blue-600" />
                   <span className="text-sm font-medium">{doc.name}</span>
                 </div>
                 <Badge variant="secondary" className="text-xs">Uploaded</Badge>

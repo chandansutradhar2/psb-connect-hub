@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import { Button } from '@/components/ui/button';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { toast } from "@/components/ui/use-toast"; // your toast
+
 import { 
   Plus, 
   ChevronRight,
@@ -62,6 +64,13 @@ export const RecentContacts = ({
     onAddContact?.();
   };
 
+    const handleComingSoon = (feature: string) => {
+    toast({
+      title: "Coming Soon",
+      description: `${feature} feature is coming soon!`,
+      duration: 3000,
+    });
+  };
   const contactActions = [
     { icon: Phone, label: 'Call', action: () => console.log('Call', selectedContact?.name) },
     { icon: MessageCircle, label: 'Message', action: () => console.log('Message', selectedContact?.name) },
@@ -79,7 +88,9 @@ export const RecentContacts = ({
           <Button 
             variant="ghost" 
             size="xs" 
-            className="text-gray-600 hover:text-[#134e5e] rounded-full"
+            className="text-gray-600 hover:text-[#1178AC] rounded-full"
+                        onClick={() => handleComingSoon("View All")}
+
           >
             View All
             <ChevronRight className="h-4 w-4 ml-1" />
@@ -91,20 +102,20 @@ export const RecentContacts = ({
         {displayContacts.map((contact) => (
           <div 
             key={contact.id} 
-            className="flex flex-col items-center p-4 rounded-xl hover:bg-gradient-to-br hover:from-[#134e5e]/5 hover:to-[#71b280]/5 cursor-pointer transition-all duration-200 group"
+            className="flex flex-col items-center p-4 rounded-xl hover:bg-gradient-to-br hover:from-[#1178AC]/5 hover:to-[#1397DA]/5 cursor-pointer transition-all duration-200 group"
             onClick={() => handleContactClick(contact)}
           >
             <div className="relative mb-3">
-              <Avatar className="w-14 h-14 border-2 border-white shadow-md group-hover:border-[#134e5e]/30 transition-colors">
+              <Avatar className="w-14 h-14 border-2 border-white shadow-md group-hover:border-[#1178AC]/30 transition-colors">
                 <AvatarImage src={contact.avatar} alt={contact.name} />
-                <AvatarFallback className="bg-gradient-to-br from-[#134e5e] to-[#71b280] text-white font-semibold text-lg">
+                <AvatarFallback className="bg-gradient-to-br from-[#1178AC] to-[#1397DA] text-white font-semibold text-lg">
                   {contact.name.split(' ').map(n => n[0]).join('')}
                 </AvatarFallback>
               </Avatar>
             </div>
             <div className="text-center">
               <p 
-                className="text-xs gap-2 text-gray-800 truncate max-w-[80px] hover:text-[#134e5e] cursor-pointer"
+                className="text-xs gap-2 text-gray-800 truncate max-w-[80px] hover:text-[#1178AC] cursor-pointer"
                 onClick={() => handleContactClick(contact)}
               >
                 {contact.name}
@@ -114,13 +125,13 @@ export const RecentContacts = ({
         ))}
         
         <div 
-          className="flex flex-col items-center p-3 rounded-xl hover:bg-gradient-to-br hover:from-[#134e5e]/5 hover:to-[#71b280]/5 cursor-pointer transition-all duration-200 group"
+          className="flex flex-col items-center p-3 rounded-xl hover:bg-gradient-to-br hover:from-[#1178AC]/5 hover:to-[#1397DA]/5 cursor-pointer transition-all duration-200 group"
           onClick={handleAddContact}
         >
-          <div className="w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mb-3 group-hover:from-[#134e5e]/10 group-hover:to-[#71b280]/10 transition-all duration-200">
-            <Plus className="h-6 w-6 text-gray-500 group-hover:text-[#134e5e] transition-colors" />
+          <div className="w-14 h-14 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full flex items-center justify-center mb-3 group-hover:from-[#1178AC]/10 group-hover:to-[#1397DA]/10 transition-all duration-200">
+            <Plus className="h-6 w-6 text-gray-500 group-hover:text-[#1178AC] transition-colors" />
           </div>
-          <p className="text-xs text-gray-600 group-hover:text-[#134e5e] transition-colors">Add</p>
+          <p className="text-xs text-gray-600 group-hover:text-[#1178AC] transition-colors">Add</p>
         </div>
       </div>
 
@@ -142,12 +153,12 @@ export const RecentContacts = ({
             <div className="text-center mb-6">
               <Avatar className="w-24 h-24 mx-auto mb-4 border-4 border-white shadow-lg">
                 <AvatarImage src={selectedContact.avatar} alt={selectedContact.name} />
-                <AvatarFallback className="bg-gradient-to-br from-[#134e5e] to-[#71b280] text-white text-2xl font-semibold">
+                <AvatarFallback className="bg-gradient-to-br from-[#1178AC] to-[#1397DA] text-white text-2xl font-semibold">
                   {selectedContact.name.split(' ').map(n => n[0]).join('')}
                 </AvatarFallback>
               </Avatar>
               <h4 
-                className="text-xl font-semibold text-gray-800 mb-1 hover:text-[#134e5e] cursor-pointer"
+                className="text-xl font-semibold text-gray-800 mb-1 hover:text-[#1178AC] cursor-pointer"
                 onClick={() => handleContactClick(selectedContact)}
               >
                 {selectedContact.name}
@@ -163,10 +174,10 @@ export const RecentContacts = ({
                   <Button
                     key={index}
                     variant="outline"
-                    className="h-12 flex-col py-2 rounded-xl border-gray-200 hover:border-[#134e5e] hover:bg-[#134e5e]/5"
+                    className="h-12 flex-col py-2 rounded-xl border-gray-200 hover:border-[#1178AC] hover:bg-[#1178AC]/5"
                     onClick={action.action}
                   >
-                    <IconComponent className="h-5 w-5 mb-1 text-[#134e5e]" />
+                    <IconComponent className="h-5 w-5 mb-1 text-[#1178AC]" />
                     <span className="text-xs text-gray-600">{action.label}</span>
                   </Button>
                 );
@@ -176,7 +187,7 @@ export const RecentContacts = ({
             <div className="flex space-x-3">
               <Button 
                 variant="outline" 
-                className="flex-1 rounded-xl border-gray-200 hover:border-[#134e5e] hover:bg-[#134e5e]/5"
+                className="flex-1 rounded-xl border-gray-200 hover:border-[#1178AC] hover:bg-[#1178AC]/5"
                 onClick={() => navigate(`/transfer/${selectedContact.id}`, {
                   state: {
                     name: selectedContact.name,
@@ -186,21 +197,21 @@ export const RecentContacts = ({
                   },
                 })}
               >
-                <span className="text-[#134e5e]">Transfer</span>
+                <span className="text-[#1178AC]">Transfer</span>
               </Button>
               <Button 
                 variant="outline" 
-                className="flex-1 rounded-xl border-gray-200 hover:border-[#134e5e] hover:bg-[#134e5e]/5"
+                className="flex-1 rounded-xl border-gray-200 hover:border-[#1178AC] hover:bg-[#1178AC]/5"
               >
-                <UserPlus className="h-4 w-4 mr-2 text-[#134e5e]" />
-                <span className="text-[#134e5e]">Add to Contacts</span>
+                <UserPlus className="h-4 w-4 mr-2 text-[#1178AC]" />
+                <span className="text-[#1178AC]">Add to Contacts</span>
               </Button>
               <Button 
                 variant="outline" 
-                className="flex-1 rounded-xl border-gray-200 hover:border-[#134e5e] hover:bg-[#134e5e]/5"
+                className="flex-1 rounded-xl border-gray-200 hover:border-[#1178AC] hover:bg-[#1178AC]/5"
               >
-                <MoreVertical className="h-4 w-4 mr-2 text-[#134e5e]" />
-                <span className="text-[#134e5e]">More</span>
+                <MoreVertical className="h-4 w-4 mr-2 text-[#1178AC]" />
+                <span className="text-[#1178AC]">More</span>
               </Button>
             </div>
           </div>

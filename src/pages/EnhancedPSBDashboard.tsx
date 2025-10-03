@@ -62,47 +62,13 @@ const EnhancedPSBDashboard = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // Account carousel data
-  // const accounts = [
-  //   { 
-  //     type: 'Savings Account', 
-  //     balance: 125430.50, 
-  //     number: '****2675', 
-  //     color: 'from-primary to-primary-dark',
-  //     icon: <PiggyBank className="h-5 w-5 text-white" />,
-  //     growth: 2.5
-  //   },
-  //   { 
-  //     type: 'Current Account', 
-  //     balance: 45280.00, 
-  //     number: '****1234', 
-  //     color: 'from-secondary to-secondary-dark',
-  //     icon: <Building className="h-5 w-5 text-white" />,
-  //     growth: 1.2
-  //   },
-  //   { 
-  //     type: 'Credit Card', 
-  //     balance: 75000.00, 
-  //     number: '****5678', 
-  //     color: 'from-amber-500 to-amber-600',
-  //     icon: <CreditCard className="h-5 w-5 text-white" />,
-  //     utilization: 45
-  //   },
-  //   { 
-  //     type: 'Fixed Deposit', 
-  //     balance: 200000.00, 
-  //     number: '****9012', 
-  //     color: 'from-emerald-500 to-emerald-600',
-  //     icon: <TrendingUp className="h-5 w-5 text-white" />,
-  //     maturity: '15 Oct 2024'
-  //   }
-  // ];
+  
   const accounts = [
   { 
     type: 'Savings Account', 
     balance: 125430.50, 
     number: '****2675', 
-    color: 'from-[#134e5e] to-[#71b280]', // Teal → Emerald
+    color: 'from-[#1178AC] to-[#1397DA]', // Teal → Emerald
     icon: <PiggyBank className="h-5 w-5 text-white" />,
     growth: 2.5
   },
@@ -110,7 +76,7 @@ const EnhancedPSBDashboard = () => {
     type: 'Current Account', 
     balance: 45280.00, 
     number: '****1234', 
-    color: 'from-[#134e5e] to-[#71b280]', // Teal → Emerald
+    color: 'from-[#1178AC] to-[#1397DA]', // Teal → Emerald
     icon: <Building className="h-5 w-5 text-white" />,
     growth: 1.2
   },
@@ -118,7 +84,7 @@ const EnhancedPSBDashboard = () => {
     type: 'Credit Card', 
     balance: 75000.00, 
     number: '****5678', 
-    color: 'from-[#134e5e] to-[#71b280]', // Teal → Emerald
+    color: 'from-[#1178AC] to-[#1397DA]', // Teal → Emerald
     icon: <CreditCard className="h-5 w-5 text-white" />,
     utilization: 45
   },
@@ -126,7 +92,7 @@ const EnhancedPSBDashboard = () => {
     type: 'Fixed Deposit', 
     balance: 200000.00, 
     number: '****9012', 
-    color: 'from-[#134e5e] to-[#71b280]', // Teal → Emerald
+    color: 'from-[#1178AC] to-[#1397DA]', // Teal → Emerald
     icon: <TrendingUp className="h-5 w-5 text-white" />,
     maturity: '15 Oct 2024'
   }
@@ -198,41 +164,34 @@ const EnhancedPSBDashboard = () => {
     }
   ];
 
-
-// const quickActions = [
-//   { icon: PaperAirplaneIcon, label: "Transfer", path: "/transfer", color: "from-green-500 to-emerald-600" },
-//     { icon: Repeat, label: "Autopay", path: "/mandates", color: "from-green-500 to-emerald-600" },
-//   // { icon: QrCodeIcon, label: "Scan & Pay", path: "/qr-payment", color: "from-green-500 to-emerald-600" },
-//   { icon: ReceiptPercentIcon, label: "Pay Bills", path: "/bills", color: "from-green-500 to-emerald-600" },
-//   { icon: DevicePhoneMobileIcon, label: "Recharge", path: "/recharge", color: "from-green-500 to-emerald-600" },
-//   { icon: ChartBarIcon, label: "Mutual Fund", path: "/investments", color: "from-green-500 to-emerald-600" },
-//   { icon: BanknotesIcon, label: "Deposits", path: "/deposit-management", color: "from-green-500 to-emerald-600" },
-//   { icon: ShieldCheckIcon, label: "Insurance", path: "/insurance-dashboard", color: "from-green-500 to-emerald-600" },
-//   { icon: CurrencyRupeeIcon, label: "Loan", path: "/loans", color: "from-green-500 to-emerald-600" },
-// ];
-
 const quickActions = [
-  { icon: PaperAirplaneIcon, label: "Transfer", path: "/transfer", color: "from-green-500 to-emerald-600" },
-  { icon: Repeat, label: "Autopay", path: "/mandates", color: "from-green-500 to-emerald-600" },
-  { icon: ReceiptPercentIcon, label: "Pay Bills", path: "/bills", color: "from-green-500 to-emerald-600" },
-  { icon: DevicePhoneMobileIcon, label: "Recharge", path: "/recharge", color: "from-green-500 to-emerald-600" },
+  { icon: PaperAirplaneIcon, label: "Transfer", path: "/transfer", color: "from-blue-500 to-emerald-600" },
+  { icon: Repeat, label: "Autopay", path: "/mandates", color: "from-blue-500 to-emerald-600" },
+  { icon: ReceiptPercentIcon, label: "Pay Bills", path: "/bills", color: "from-blue-500 to-emerald-600" },
+  { icon: DevicePhoneMobileIcon, label: "Recharge", path: "/recharge", color: "from-blue-500 to-emerald-600" },
 ];
+
+ const handleComingSoon = (feature: string) => {
+    toast({
+      title: "Coming Soon",
+      description: `${feature} feature is coming soon!`,
+      duration: 3000,
+    });
+  };
 
 const moreServices = [
-  { icon: ChartBarIcon, label: "Mutual Fund", path: "/investments", color: "from-green-500 to-emerald-600" },
-  { icon: BanknotesIcon, label: "Deposits", path: "/deposit-management", color: "from-green-500 to-emerald-600" },
-  { icon: ShieldCheckIcon, label: "Insurance", path: "/insurance-dashboard", color: "from-green-500 to-emerald-600" },
-  { icon: CurrencyRupeeIcon, label: "Loan", path: "/loans", color: "from-green-500 to-emerald-600" },
-  { icon: ShoppingCartIcon, label: "Shopping", path: "/shopping", color: "from-green-500 to-emerald-600" },
-  { icon: PlaneIcon, label: "Flights", path: "/flights", color: "from-green-500 to-emerald-600" },
+  { icon: ChartBarIcon, label: "Mutual Fund", path: "/investments", color: "from-blue-500 to-emerald-600" },
+  { icon: BanknotesIcon, label: "Deposits", path: "/deposit-management", color: "from-blue-500 to-emerald-600" },
+  { icon: ShieldCheckIcon, label: "Insurance", path: "/insurance-dashboard", color: "from-blue-500 to-emerald-600" },
+  { icon: CurrencyRupeeIcon, label: "Loan", path: "/loans", color: "from-blue-500 to-emerald-600" },
+  { icon: ShoppingCartIcon, label: "Shopping", path: "/shopping", color: "from-blue-500 to-emerald-600" },
+  { icon: PlaneIcon, label: "Flights", path: "/flights", color: "from-blue-500 to-emerald-600" },
 ];
-
-
   // Spending categories for insights
   const spendingData = [
     { category: 'Food & Dining', amount: 8500, percentage: 35, color: 'bg-red-500', icon: <Receipt className="h-4 w-4" /> },
     { category: 'Shopping', amount: 6200, percentage: 25, color: 'bg-blue-500', icon: <CreditCard className="h-4 w-4" /> },
-    { category: 'Transport', amount: 4800, percentage: 20, color: 'bg-green-500', icon: <Smartphone className="h-4 w-4" /> },
+    { category: 'Transport', amount: 4800, percentage: 20, color: 'bg-blue-500', icon: <Smartphone className="h-4 w-4" /> },
     { category: 'Utilities', amount: 4900, percentage: 20, color: 'bg-yellow-500', icon: <Lightbulb className="h-4 w-4" /> }
   ];
 
@@ -318,7 +277,7 @@ const moreServices = [
               <div className="flex items-center space-x-3">
                 <Avatar className="h-10 w-10 border-2 border-primary/20 shadow-md">
                   <AvatarImage src="/placeholder-avatar.jpg" />
-                  <AvatarFallback className="bg-gradient-to-b from-[#134e5e] to-[#71b280] text-white font-bold">
+                  <AvatarFallback className="bg-gradient-to-b from-[#1178AC] to-[#1397DA] text-white font-bold">
                     {userName.split(' ').map(n => n[0]).join('')}
                   </AvatarFallback>
                 </Avatar>
@@ -426,13 +385,7 @@ const moreServices = [
                               </Button>
                             </div>
                           </div>
-                          {/* {account.maturity && (
-                            <div className="mt-3 pt-2 border-t border-white/20">
-                              <p className="text-xs text-white/80 flex items-center">
-                                <Clock className="h-3 w-3 mr-1" /> Matures on {account.maturity}
-                              </p>
-                            </div>
-                          )} */}
+                     
                         </CardContent>
                       </Card>
                     </div>
@@ -456,33 +409,7 @@ const moreServices = [
             )}
           </div>
 
-          {/* Quick Actions Grid */}
-          {/* <div>
-            <h3 className="text-base font-bold text-gray-900 mb-3 flex items-center">
-              <Zap className="h-4 w-4 text-primary mr-2" />
-              Quick Actions
-            </h3>
-            <div className="grid grid-cols-4 gap-2">
-              {quickActions.map((action, index) => (
-                <button
-                  key={index}
-                
-                  className="flex-col  rounded-xl hover:shadow-sm transition-all duration-200 group"
-                  onClick={() => navigate(action.path)}
-                  aria-label={action.label}
-                >
-                  <div
-                    className={`w-14 h-14 rounded-xl ${action.color} flex items-center justify-center mb-1 group-hover:scale-105 transition-transform duration-200 shadow-md`}
-                  >
-                    {action.icon}
-                  </div>
-                  <span className="text-xs font-medium text-gray-700 text-center leading-tight">
-                    {action.label}
-                  </span>
-                </button>
-              ))}
-            </div>
-          </div> */}
+
 
   <div className="w-full">
    <div>
@@ -501,9 +428,9 @@ const moreServices = [
             className="flex flex-col items-center p-2 rounded-lg focus:ring-2 focus:ring-primary/50 focus:outline-none transition-all duration-200 group hover:bg-gray-50"
           >
             <div
-              className={`w-14 h-14 flex items-center justify-center rounded-xl ${action.color} mb-2 group-hover:scale-110 transition-transform border -1 bg-green-50 duration-200 shadow-sm`}
+              className={`w-14 h-14 flex items-center justify-center rounded-xl ${action.color} mb-2 group-hover:scale-110 transition-transform border -1 bg-blue-50 duration-200 shadow-sm`}
             >
-              <action.icon  className="h-8 w-8 text-green-900" />
+              <action.icon  className="h-8 w-8 text-[#1178AC]" />
             </div>
             <span className="text-xs font-medium text-gray-800 text-center leading-tight">
               {action.label}
@@ -524,10 +451,11 @@ const moreServices = [
           variant="ghost"
           size="sm"
           className="text-primary font-medium hover:bg-primary/10 rounded-lg h-8 px-2"
-          onClick={() => navigate('/services')}
-        >
+     onClick={() => handleComingSoon("Service")}        >
           View All <ChevronRight className="h-3 w-3 ml-1" />
         </Button>
+
+
       </div>
     </CardHeader>
     <CardContent className="px-4 py-2">
@@ -540,9 +468,9 @@ const moreServices = [
             className="flex flex-col items-center p-2 rounded-lg focus:ring-2 focus:ring-primary/50 focus:outline-none transition-all duration-200 group hover:bg-gray-50"
           >
             <div
-              className={`w-14 h-14 flex items-center justify-center rounded-xl ${service.color} mb-2 group-hover:scale-110 transition-transform border -1 bg-green-50 duration-200 shadow-sm`}
+              className={`w-14 h-14 flex items-center justify-center rounded-xl ${service.color} mb-2 group-hover:scale-110 transition-transform border -1 bg-blue-50 duration-200 shadow-sm`}
             >
-              <service.icon className="h-8 w-8 text-green-900" />
+              <service.icon className="h-8 w-8 text-[#1178AC]" />
             </div>
             <span className="text-xs font-medium text-gray-800 text-center leading-tight">
               {service.label}
@@ -614,10 +542,12 @@ const moreServices = [
                   <div 
                     key={transaction.id} 
                     className="flex items-center justify-between p-2 rounded-xl hover:bg-gray-50 transition-colors duration-200 cursor-pointer"
-                    onClick={() => navigate(`/transaction/${transaction.id}`)}
+                    // onClick={() => navigate(`/transaction/${transaction.id}`)}
+                                onClick={() => handleComingSoon("Share")}
+
                   >
                     <div className="flex items-center space-x-3">
-                      <div className={`p-2 rounded-lg ${transaction.type === 'credit' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}>
+                      <div className={`p-2 rounded-lg ${transaction.type === 'credit' ? 'bg-blue-100 text-blue-600' : 'bg-red-100 text-red-600'}`}>
                         {transaction.icon}
                       </div>
                       <div>
@@ -631,7 +561,7 @@ const moreServices = [
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className={`font-bold text-sm ${transaction.type === 'credit' ? 'text-green-600' : 'text-red-600'}`}>
+                      <p className={`font-bold text-sm ${transaction.type === 'credit' ? 'text-blue-600' : 'text-red-600'}`}>
                         {transaction.type === 'credit' ? '+' : '-'}{formatCurrency(transaction.amount)}
                       </p>
                       <Badge 
@@ -716,14 +646,28 @@ const moreServices = [
                 <div>
                   <h3 className="text-base font-bold mb-1">🎉 Special Offers</h3>
                   <p className="text-xs text-white/90 mb-3">Get 5% cashback on shopping with PSB Credit Card</p>
-                  <Button 
+                  {/* <Button 
                     variant="secondary" 
                     size="sm" 
                     className="rounded-lg font-medium h-8 px-3 text-xs"
                     onClick={() => navigate('/offers')}
                   >
                     Explore Offers
-                  </Button>
+                  </Button> */}
+                  <Button 
+  variant="secondary" 
+  size="sm" 
+  className="rounded-lg font-medium h-8 px-3 text-xs"
+  onClick={() => {
+    toast({
+      title: "Coming Soon",
+      description: "This feature is coming soon!",
+      duration: 3000,
+    });
+  }}
+>
+  Explore Offers
+</Button>
                 </div>
                 <Gift className="h-12 w-12 text-white/80" />
               </div>
@@ -734,7 +678,7 @@ const moreServices = [
   aria-label="Open chatbot"
 >
   <button
-    className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#134e5e] to-[#71b280] text-white shadow-lg hover:scale-105 transition-all duration-300"
+    className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#1178AC] to-[#1397DA] text-white shadow-lg hover:scale-105 transition-all duration-300"
     onClick={() => navigate('/chat-support')}
   >
     <MessageCircle className="h-6 w-6" />
@@ -764,7 +708,7 @@ const moreServices = [
                   className="flex-col h-16 rounded-xl hover:shadow-sm transition-all duration-200"
                   onClick={() => navigate('/branch-locator')}
                 >
-                  <MapPin className="h-4 w-4 mb-1.5 text-green-500" />
+                  <MapPin className="h-4 w-4 mb-1.5 text-blue-500" />
                   <span className="text-xs font-medium">Find Branch</span>
                 </Button>
                 <Button 

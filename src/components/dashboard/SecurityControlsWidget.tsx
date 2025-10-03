@@ -55,7 +55,7 @@ export const SecurityControlsWidget = () => {
       icon: <Eye className="h-4 w-4" />,
       action: () => navigate('/security-settings'),
       urgency: 'low',
-      color: 'bg-green-100 text-green-600 hover:bg-green-200'
+      color: 'bg-blue-100 text-blue-600 hover:bg-blue-200'
     }
   ];
 
@@ -72,7 +72,7 @@ export const SecurityControlsWidget = () => {
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className="text-base font-bold flex items-center">
-            <Shield className="h-4 w-4 text-green-600 mr-2" />
+            <Shield className="h-4 w-4 text-blue-600 mr-2" />
             Security & Controls
           </CardTitle>
           <Button 
@@ -88,16 +88,16 @@ export const SecurityControlsWidget = () => {
       </CardHeader>
       <CardContent className="space-y-4">
         {/* Security Status */}
-        <div className="bg-green-50 border border-green-200 rounded-lg p-3">
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
           <div className="flex items-center space-x-2 mb-2">
-            <div className="p-1.5 bg-green-100 text-green-600 rounded-lg">
+            <div className="p-1.5 bg-blue-100 text-blue-600 rounded-lg">
               <Shield className="h-3 w-3" />
             </div>
             <div className="flex-1">
-              <p className="text-sm font-medium text-green-800">Account Secure</p>
-              <p className="text-xs text-green-600">All security features are active</p>
+              <p className="text-sm font-medium text-blue-800">Account Secure</p>
+              <p className="text-xs text-blue-600">All security features are active</p>
             </div>
-            <Badge className="bg-green-100 text-green-800 border-green-200 text-xs">
+            <Badge className="bg-blue-100 text-blue-800 border-blue-200 text-xs">
               Protected
             </Badge>
           </div>
@@ -117,7 +117,7 @@ export const SecurityControlsWidget = () => {
                 </div>
               </div>
               <div className="flex items-center space-x-2">
-                <Badge className={`text-xs ${setting.enabled ? 'bg-green-100 text-green-800 border-green-200' : 'bg-gray-100 text-gray-800 border-gray-200'}`}>
+                <Badge className={`text-xs ${setting.enabled ? 'bg-blue-100 text-blue-800 border-blue-200' : 'bg-gray-100 text-gray-800 border-gray-200'}`}>
                   {setting.enabled ? 'ON' : 'OFF'}
                 </Badge>
                 <Switch
