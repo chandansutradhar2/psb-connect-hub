@@ -1,5 +1,5 @@
 
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, HashRouter,Routes, Route } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Toaster } from '@/components/ui/toaster';
 import { ResponsiveLayout } from '@/components/ResponsiveLayout';
@@ -98,7 +98,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ResponsiveLayout>
-        <Router>
+        <HashRouter>
           <MobileNavigation>
             <Routes>
           {/* <Route path="/" element={<Index />} /> */}
@@ -191,7 +191,7 @@ function App() {
             </Routes>
             <Toaster />
           </MobileNavigation>
-        </Router>
+        </HashRouter>
       </ResponsiveLayout>
     </QueryClientProvider>
   );
