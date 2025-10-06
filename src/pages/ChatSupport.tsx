@@ -234,7 +234,7 @@ const ChatSupport = () => {
                 variant="outline" 
                 className="rounded-full"
                 // onClick={handleCallSupport}
-                            onClick={() => handleComingSoon("Share")}
+                            onClick={() => handleComingSoon("Call")}
 
               >
                 <Phone className="h-4 w-4" />
@@ -244,7 +244,7 @@ const ChatSupport = () => {
                 variant="outline" 
                 className="rounded-full"
                 // onClick={handleVideoCall}
-                            onClick={() => handleComingSoon("Share")}
+                            onClick={() => handleComingSoon("Video Call")}
 
               >
                 <Video className="h-4 w-4" />

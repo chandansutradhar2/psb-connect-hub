@@ -366,7 +366,7 @@ export const AppNavigation = ({ children }: AppNavigationProps) => {
       <div className="flex flex-col flex-grow pt-5 pb-4 overflow-y-auto">
         <div className="flex items-center flex-shrink-0 px-4">
           <img className="h-8 w-auto" src="/images/simbollogo-psb.png" alt="PSB Logo" />
-          <span className="ml-2 text-lg font-bold text-primary">PSB Connect</span>
+          <span className="ml-2 text-lg font-bold text-primary">Bank Name</span>
         </div>
         <nav className="mt-8 flex-1 px-2 space-y-8">
           {sidebarItems.map((section) => (

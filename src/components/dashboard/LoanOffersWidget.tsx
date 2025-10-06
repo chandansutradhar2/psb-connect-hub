@@ -115,7 +115,7 @@ export const LoanOffersWidget = () => {
             <p className="text-sm font-medium text-amber-800">Special Offer</p>
           </div>
           <p className="text-xs text-amber-700 mt-1">
-            Get instant loan approval with PSB Connect. No paperwork required for pre-approved loans.
+            Get instant loan approval with Bank Name. No paperwork required for pre-approved loans.
           </p>
         </div>
       </CardContent>

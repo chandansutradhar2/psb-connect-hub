@@ -2089,7 +2089,7 @@ const CardManagement = () => {
             <div className="ml-auto">
               <Button 
                 size="sm" 
-                className="flex items-center gap-1 h-9 rounded-lg bg-gradient-to-r from-[#ffffff] to-[#ddf4ff] hover:from-[#1178AC] hover:to-[#1397DA] text-[#0b75aa] font-medium" 
+                className="flex items-center gap-1 h-9 rounded-lg bg-gradient-to-r from-[#ffffff] to-[#ddf4ff]   text-[#0b75aa] font-medium" 
                 onClick={() => navigate("/add-new-card")}
               >
                 <Plus className="h-4 w-4" />
@@ -2134,7 +2134,7 @@ const CardManagement = () => {
                   {cards.map((card) => (
                     <div key={card.id} className="bg-white rounded-lg overflow-hidden shadow-sm border border-[#1178AC]/20">
                       <div
-                        className={`${card.type === "Credit Card" ? "bg-gradient-to-r from-[#1178AC] to-[#1397DA]" : "bg-gradient-to-r from-[#1178AC] to-[#1397DA]"} text-white p-5 relative cursor-pointer`}
+                        className={`${card.type === "Credit Card" ? "bg-gradient-to-r from-[#1178AC] to-[#1397DA]" : "bg-gradient-to-r from-[#1178AC] to-[#1397DA]"} text-white p-4 pb-8 relative cursor-pointer`}
                         onClick={() => toggleCardExpand(card.id)}
                       >
                         {/* <div className="absolute top-4 right-4 opacity-80">
@@ -2244,7 +2244,8 @@ const CardManagement = () => {
                                   variant="outline"
                                   size="sm"
                                   className="h-8 text-xs rounded-lg bg-[#1178AC]/10 border-[#1178AC]/20 text-[#1178AC] hover:bg-[#1397DA]/20"
-                                  onClick={() => handleCardAction("rewards")}
+                                  // onClick={() => handleCardAction("rewards")}
+                                  onClick={() => handleComingSoon("Rewards")}
                                   disabled={actionLoading}
                                 >
                                   {actionLoading && selectedCard?.id === card.id ? (
@@ -2262,7 +2263,8 @@ const CardManagement = () => {
                               variant="outline"
                               size="sm"
                               className="h-9 text-xs flex-1 rounded-lg border-[#1178AC]/20"
-                              onClick={() => handleCardAction("statement", card)}
+                                onClick={() => handleComingSoon("Statement")}
+                              // onClick={() => handleCardAction("statement", card)}
                               disabled={actionLoading && selectedCard?.id === card.id}
                             >
                               {actionLoading && selectedCard?.id === card.id ? (
@@ -2276,6 +2278,7 @@ const CardManagement = () => {
                               size="sm"
                               className="h-9 text-xs flex-1 rounded-lg border-[#1178AC]/20"
                               onClick={() => handleCardAction(card.status === "Active" ? "block" : "unblock", card)}
+                            
                               disabled={actionLoading && selectedCard?.id === card.id}
                             >
                               {actionLoading && selectedCard?.id === card.id ? (
@@ -2287,7 +2290,7 @@ const CardManagement = () => {
                                 </>
                               )}
                             </Button>
-                            <DropdownMenu>
+                            {/* <DropdownMenu>
                               <DropdownMenuTrigger asChild>
                                 <Button variant="outline" size="sm" className="h-9 w-9 p-0 rounded-lg border-[#1178AC]/20">
                                   <MoreHorizontal className="h-4 w-4" />
@@ -2307,7 +2310,7 @@ const CardManagement = () => {
                                   Report Lost
                                 </DropdownMenuItem>
                               </DropdownMenuContent>
-                            </DropdownMenu>
+                            </DropdownMenu> */}
                           </div>
                         </div>
                       )}
@@ -2326,7 +2329,7 @@ const CardManagement = () => {
                       key={index} 
                       className="bg-white rounded-lg p-4 cursor-pointer hover:shadow-md transition-shadow border border-[#1178AC]/20"
                       // onClick={() => handleCardAction(service.action)}
-                           onClick={() => handleComingSoon("Filter")}
+                           onClick={() => handleComingSoon(" Card Service")}
                     >
                       <div className={`w-12 h-12 rounded-lg ${service.color} flex items-center justify-center mb-2`}>
                         {service.icon}
@@ -2431,7 +2434,7 @@ const CardManagement = () => {
                             size="sm" 
                             variant="outline" 
                             className="flex-1 h-9 rounded-lg border-[#1178AC]/20 text-[#1178AC] hover:bg-[#1397DA]/10"
-                                 onClick={() => handleComingSoon("Filter")}
+                                 onClick={() => handleComingSoon("More Details")}
                           >
                            More Details
                           </Button>
